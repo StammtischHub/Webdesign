@@ -105,7 +105,7 @@ section {
 }
 
 .specs{
-  min-height: 95vh;
+  min-height: auto;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -176,7 +176,11 @@ section {
   align-items: center;
   min-height: 400px;
   border-radius: 16px;
-  background-color: #262626;
+  background-color: black;
+}
+
+.canvas{
+  background-color: black;
 }
 
 .audio{
