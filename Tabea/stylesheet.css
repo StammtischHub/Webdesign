@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -48,6 +52,7 @@ section {
   justify-content: center;
   align-items: center;
   padding: 0px 15%;
+  scroll-margin-top: 70px;
 }
 
 .home{
@@ -102,20 +107,29 @@ section {
 .specs{
   min-height: 95vh;
   display: flex;
-  flex-direction: column;
-  align-items:flex-start;
-  justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  gap: 40px;
   background-color: #080808;  
   border-top: 2px solid #CC0000;
 }
 
-.specs h1{
+.info{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.info h1{
   font-size: 50px;
   margin-top: 10px;
 }
 
 .list{
-  width:  30%;
+  width:  100%;
 }
 
 .list dl{
@@ -146,8 +160,28 @@ section {
   margin: 0;
 }
 
-.speedometer{
+.canvas-audio{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  margin-top: 10%;
+  min-height: 480px;
+  border-radius: 16px;
+}
 
+.speedometer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  border-radius: 16px;
+  background-color: #262626;
+}
+
+.audio{
+  display: flex;
+  justify-content: center;
 }
 
 /* Footer*/
@@ -171,6 +205,14 @@ section {
     font-size: 15px;
   }
 
+  .specs{
+    flex-direction: column;
+  }
+
+  .info, .canvas-audio{
+    width: 100%;
+  }
+
   .item{
     flex-direction: column ;
     align-items: flex-start;
@@ -179,5 +221,9 @@ section {
 
   .item dd{
     margin-top: 4px;
+  }
+
+  .canvas-audio{
+    margin-top: 5%;
   }
 }
