@@ -15,15 +15,15 @@
             <ul id="nav"> 
                 <li><a href="#home">Home</a></li>
                 <li><a href="#specs">Technische Daten</a></li>
-                <li><a  href="#bilder">Bilder</a></li>
-                <li><a  href="#video">Video</a></li>
-                <li><a  href="#erlebnisse">Erlebnisse</a></li>
-                <li><a  href="#pdf">PDF</a></li>
+                <li><a href="#pictures">Bilder</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#experiences">Erlebnisse</a></li>
+                <li><a href="#pdf">PDF</a></li>
             </ul>
         </nav>   
     </header>
 
-        <section class="home">
+        <section id="home" class="home">
             <div class="home-inner">
                 <h1>
                     <span class="white">CFMOTO</span> <br>
@@ -34,56 +34,70 @@
         </section>
 
     <main>
-        <section class="specs">
-            <p class="subtitle">Technische Daten</p>
-            <div class="line"></div>
-            <h1>
-                <span class="white">Was steckt in der</span> <br>
-                <span class="red">450SR</span> 
-                <span class="white">?</span>
-            </h1>
-            <div class="list">
-                <dl>
-                    <div class="item">
-                        <dt>Hubraum</dt>
-                        <dd>449.5 cm<sup>3</sup></dd>
-                    </div>
-                    <div class="item">
-                        <dt>Leistung</dt>
-                        <dd>48 PS</dd>
-                    </div>
-                    <div class="item">  
-                        <dt>max. Drehmoment</dt>
-                        <dd>40 Nm</dd>
-                    </div>
-                    <div class="item"> 
-                        <dt>max. Leistung</dt>
-                        <dd>38 kW</dd>
-                    </div>
-                    <div class="item">
-                        <dt>Beschleunigung 0-100km/h</dt>
-                        <dd>4,8s</dd>
-                    </div>
-                    <div class="item">
-                        <dt>Höchstgeschwindigkeit</dt>
-                        <dd>190 km/h</dd>
-                    </div>
-                </dl>
+        <section id="specs" class="specs">
+            <div class="info">
+                <p class="subtitle">Technische Daten</p>
+                <div class="line"></div>
+                <h1>
+                    <span class="white">Was steckt in der</span> <br>
+                    <span class="red">450SR</span> 
+                    <span class="white">?</span>
+                </h1>
+                <div class="list">
+                    <dl>
+                        <div class="item">
+                            <dt>Hubraum</dt>
+                            <dd>449.5 cm<sup>3</sup></dd>
+                        </div>
+                        <div class="item">
+                            <dt>Leistung</dt>
+                            <dd>48 PS</dd>
+                        </div>
+                        <div class="item">  
+                            <dt>max. Drehmoment</dt>
+                            <dd>40 Nm</dd>
+                        </div>
+                        <div class="item"> 
+                            <dt>max. Leistung</dt>
+                            <dd>38 kW</dd>
+                        </div>
+                        <div class="item">
+                            <dt>Beschleunigung 0-100km/h</dt>
+                            <dd>4,8s</dd>
+                        </div>
+                        <div class="item">
+                            <dt>Höchstgeschwindigkeit</dt>
+                            <dd>190 km/h</dd>
+                        </div>
+                    </dl>
+                </div>
             </div>
-            <div class="speedometer">
-
+            <div class="canvas-audio">
+                <div class="speedometer">
+                    <canvas id="canvas" role="img" aria-label="Drehzahlmesser">
+                        Dein Browser unterstützt das Canvas-Element nicht.
+                    </canvas>
+                    <p class="caption">Drehzahlmesser, Canvas 2D</p>
+                </div>
+                <div class="audio"> 
+                    <audio controls>
+                        <source src="assets/audio/cfmoto_sound_schlecht.mp3" type="audio/mpeg">
+                        <source src="assets/audio/cfmoto_sound_schlecht.ogg" type="audio/ogg">
+                        Dein Browser unterstützt das Audio-Element nicht.
+                    </audio>
+                </div>
             </div>
         </section>
         
-        <section class="bilder">
+        <section id="pictures" class="pictures">
 
         </section>
 
-        <section class="video">
+        <section id="video" class="video">
 
         </section>
 
-        <section class="erlebnisse">
+        <section id="experiences" class="experiences">
 
         </section>
 
