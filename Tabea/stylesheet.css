@@ -22,18 +22,17 @@ header {
 }
 
 nav ul{
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 nav a {
-  float: right;
   color: #f2f2f2;
   text-align: center;
   margin: 10px;
   padding: 16px 18px;
   text-decoration: none;
-  font-size: 18 px;
+  font-size: 18px;
 }
 
 nav a:hover {
@@ -48,23 +47,24 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0px 15%;
 }
 
 .home{
-  height: 95vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  background-image: url('assets/img/front_light.jpeg');
+  background-image: url('assets/img/front_light.jpg');
   background-size: cover;
-  background-position: center 5%;
+  background-position: center 10%;
 }
 
 .home-inner{
   background-color: rgb(8,8,8,0.7);
-  margin-left: 5%;
   padding: 10px;
+  border-radius: 10px;
 }
 
 .home h1{
@@ -85,20 +85,8 @@ section {
   font-size: 20px;
 }
 
-.specs{
-  height: 95vh;
-  display: flex;
-  flex-direction: column;
-  align-items:flex-start;
-  justify-content: flex-start;
-  background-color: #080808;  
-  border-top: 2px solid #CC0000;
-
-}
-
 .subtitle{
   font-size: 15px;
-  margin-left: 5%;
   margin-top: 5%;
   margin-bottom: 0;
   color: #CC0000;
@@ -107,15 +95,89 @@ section {
 .line{
   height: 2px;
   width: 50px;
-  margin-left: 5%;
   background-color: #CC0000;
+  flex-shrink: 0;
+}
+
+.specs{
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: flex-start;
+  background-color: #080808;  
+  border-top: 2px solid #CC0000;
 }
 
 .specs h1{
   font-size: 50px;
-  margin-left: 5%;
   margin-top: 10px;
 }
 
+.list{
+  width:  30%;
+}
+
+.list dl{
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+}
+
+.item{
+  display: flex;
+  justify-content: space-between;  
+  align-items: baseline;
+  min-width: 160px;
+  padding: 22px 40px 22px 40px;
+  border-bottom: 1px solid #262626;
+}
+
+.item dt{
+  color: #7a7a7a;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin: 0;
+}
+
+.item dd{
+  color: white;
+  font-size: 15px;
+  margin: 0;
+}
+
+.speedometer{
+
+}
 
 /* Footer*/
+
+
+/*Media Queries*/
+@media (max-width: 600px){
+  header{
+    flex-direction: column;
+    height: auto;
+  }
+
+  nav ul{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a{
+    margin: 4px;
+    padding: 10px 12;
+    font-size: 15px;
+  }
+
+  .item{
+    flex-direction: column ;
+    align-items: flex-start;
+    padding: 16px 20px;
+  }
+
+  .item dd{
+    margin-top: 4px;
+  }
+}
