@@ -97,7 +97,7 @@ section {
 
 .line{
   height: 2px;
-  width: 50px;
+  width: 30px;
   background-color: #CC0000;
   flex-shrink: 0;
 }
@@ -170,12 +170,15 @@ section {
 
 .speedometer{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 400px;
   border-radius: 16px;
   background-color: black;
+  color: #7a7a7a;
 }
+
 
 .audio{
   display: flex;
@@ -196,6 +199,7 @@ section {
 
 .pictures-format{
   display: flex;
+  flex-direction: column;
   width: 100%;
   gap: 20px;
 }
@@ -203,7 +207,7 @@ section {
 .pic-column{
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   gap: 20px;
   background-color: white;
 }
