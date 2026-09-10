@@ -118,7 +118,6 @@ section {
   min-height: auto;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -190,8 +189,6 @@ section {
   min-height: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #080808;  
@@ -251,8 +248,6 @@ section {
   min-height: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #080808;  
@@ -275,27 +270,44 @@ section {
 }
 
 /*Experiences*/
-  .experiences{
+.experiences{
   min-height: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #080808;  
 }
 
 /*PDF*/
-  .pdf{
-  min-height: auto;
+.pdf{
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #080808;  
+}
+
+.section-head{
+  width: 50%;
+}
+
+.pdf-download{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pdf-download img{
+  width: 150px;
+  height: 150px;
+  display: block;
 }
 
 /* Footer*/
@@ -353,4 +365,23 @@ section {
   .canvas-audio{
     margin-top: 5%;
   }
+
+  .pdf{
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 220px;
+  }
+
+  .section-head{
+    width: 100%;
+  }
+
+  .pdf-download{
+    top: auto;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50px);
+  }
+
+
 }
