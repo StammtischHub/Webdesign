@@ -2,6 +2,9 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Indormationsseite über mein Motorrad der CFMOTO 450SR" />
+  <meta name="keywords" content="HTML5, CSS, AI_WS24-I, Gruppe_5" />
   <meta name="author" content="tabea.boehm" />
   <title>CfMoto 450sr</title>
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -117,7 +120,9 @@
                             <img class="pic-small" src="assets/img/front_no_light.jpeg" alt="CFMOTO 450SR von Vorne">
                             <img class="pic-small" src="assets/img/Display.jpeg" alt="CFMOTO 450SR Display">
                         </div>
-                        <img class="pic-big" src="assets/svg/front.svg" alt="SVG von der CFMOTO 450SR Frontmaske"> <!--Kann man das so machen?-->
+                        <object class="pic-svg" data="assets/svg/front.svg" type="image/svg+xml" width="400" height="450">
+                            <img class="pic-big" src="assets/img/front.jpg" alt="CFMOTO 450SR Frontmaske">
+                        </object> 
                     </div>
                 </div>
             </div>
@@ -131,12 +136,13 @@
                     <span class="white">Die 450SR in Action</span> <br>
                 </h1>
             </div>
-            <div class="video-format">
+            <figure class="video-format">
                 <video controls>
                     <source src="assets/video/video_cfmoto450sr.mp4" type="video/mp4">
                     Dein Browser Unterstützt dieses Videoformat nicht.
                 </video>
                 <figcaption>450sr Video</figcaption>
+            </figure>
         </section>
 
         <section id="experiences" class="experiences">
@@ -149,10 +155,10 @@
             </div>
             <div class="experiences-content">
                 <div class="content">
-                    <div class="content-img">
-                        <img class="tour-img" src="assets/img/Bikes_Kornsand.jpeg">
+                    <figure class="content-img">
+                        <img class="tour-img" src="assets/img/Bikes_Kornsand.jpeg" alt="Motorräder am Kornsand">
                         <figcaption class="img-cap">Fährhäusschen am Kornsand</figcaption>
-                    </div>
+                    </figure>
                     <div class="content-text">
                         <h3 class="title">Hausstrecke</h3>
                         <p class="text">Unsere Hausstrecke führt durch das schöne Ried. Die Strecke insgesamt hat ungefähr 140km. Einer der Zwischenstops ist am Fährhäusschen am Kornsand. Das ist ein Motorrad und Fahrrad treff mit leckerem Kuchen und Würstchen zur stärkung. Wahlweise kann man von dort mit derFähre über den Rhein übersetzten und in der Rheinlandpfalz weiter fahren.</p>
@@ -163,16 +169,16 @@
                         <h3 class="title">Tour</h3>
                         <p class="text">Text</p>
                     </div>
-                    <div class="content-img">
-                        <img class="tour-img">
+                    <figure class="content-img">
+                        <img class="tour-img" src="" alt="">
                         <figcaption class="img-cap">Bildunterschrift</figcaption>
-                    </div>
+                    </figure>
                 </div>
                 <div class="content">
-                    <div class="content-img">
-                        <img class="tour-img">
+                    <figure class="content-img">
+                        <img class="tour-img" src="" alt="">
                         <figcaption class="img-cap">Bildunterschrift</figcaption>
-                    </div>
+                    </figure>
                     <div class="content-text">
                         <h3 class="title">Tour</h3>
                         <p class="text">Text</p>
@@ -183,10 +189,10 @@
                         <h3 class="title">Tour</h3>
                         <p class="text">Text</p>
                     </div>
-                    <div class="content-img">
-                        <img class="tour-img">
+                    <figure class="content-img">
+                        <img class="tour-img" src="" alt="">
                         <figcaption class="img-cap">Bildunterschrift</figcaption>
-                    </div>
+                    </figure>
                 </div>
             </div>
         </section>
