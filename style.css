@@ -163,7 +163,7 @@ h2 {
 
 
 #formel {
-    background-color: #cc0000;
+    background-color: #0a1628;
 }
 
 #formel > h3 {
@@ -171,11 +171,11 @@ h2 {
 }
 
 #formel > hr {
-    background: #ffffff;
+    background: #4fc3f7;
 }
 
 #formel:hover {
-    border-top: 3px solid #ffffff;
+    border-top: 3px solid #4fc3f7;
 }
 
 
