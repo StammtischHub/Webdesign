@@ -1,145 +1,213 @@
-* {
-    font-family: sans-serif;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
 body {
-    background-color: #FFEDE3;
-}
-
-#wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-
-#nav {
-    list-style: none;
+    background-color: #000000;
     margin: 0;
     padding: 0;
 }
 
-#nav li {
-    position: absolute;
-    overflow: hidden;
-    background-color: #ffffff;
-    border: 2px solid #8A4A3A;
-}
-
-#nav img {
-    display: block;
+#top {
     width: 100%;
-    height: 100%;
 }
 
-#ad-top {
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 696px;
-    height: 100px;
-    margin: 0 auto;
-}
-
-#ad-bottom {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 696px;
-    height: 100px;
-    margin: 0 auto;
-}
-
-#ad-left-top {
-    top: 0;
-    left: 0;
-    width: 248px;
-    height: 450px;
-}
-
-#ad-left-bottom {
-    top: 450px;
-    left: 0;
-    width: 248px;
-    height: 450px;
-}
-
-#ad-right-top {
-    top: 0;
-    right: 0;
-    width: 248px;
-    height: 450px;
-}
-
-#ad-right-bottom {
-    top: 450px;
-    right: 0;
-    width: 248px;
-    height: 450px;
-}
-
-#recipy {
-    position: absolute;
-    top: 100px;
-    left: 250px;
-    right: 250px;
-    bottom: 100px;
-    padding: 20px;
-    border: 2px solid #8A4A3A;
-    background-color: #fff8f8;
-    overflow: auto;
-}
-
-.indented {
-    padding-left: 4em;
-    margin: 0;
+a {
+    text-decoration: none;
 }
 
 h1 {
-    font-size: 2em;
-    margin-bottom: 0.2em;
-    color: #5A2A1E;
+    font-family: monospace;
+    color: #ffffff;
+    letter-spacing: 0.5em;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    font-family: sans-serif;
+    text-transform: uppercase;
+
 }
 
 h2 {
-    font-size: 1.5em;
-    margin-top: 1.2em;
-    margin-bottom: 0.4em;
-    color: #8A4A3A;
+    color: #ffffff;
+    font-size: 5em;
 }
 
-h3 {
-    font-size: 1.2em;
-    margin-top: 1em;
-    margin-bottom: 0.3em;
-    color: #8A4A3A;
+#top {
+    width: 100%;
+    padding: 1em;
+    border-bottom: 3px solid #ffffff;
 }
 
-h4 {
-    font-size: 1em;
-    margin-top: 0.8em;
-    margin-bottom: 0.2em;
-    color: #8A4A3A;
+#header-section {
+    padding: 2em;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
-p {
-    line-height: 1.4em;
-    margin-bottom: 1em;
+#header-section > h2 {
+    margin: 0;
+    padding: 0;
 }
 
-ul,
-ol {
-    margin-left: 2em;
-    margin-bottom: 1em;
+#header-section > p {
+    color: #888888;
+    font-family: sans-serif;
 }
 
-li {
-    margin-bottom: 0.4em;
+#main {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+#main > ul {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main > ul > li.row {
+    display: table-row;
+}
+
+
+.card {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding: 3em;
+    border-top: 3px solid #000000;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative; 
+}
+
+.card > h3 {
+    font-size: 3em;
+    font-weight: 800;
+    margin: 0.7em 0;
+}
+
+.card > span {
+    font-family: monospace;
+    color: #ffffff;
+}
+
+.card > p {
+    font-family: sans-serif;
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+.card > hr {
+    height: 3px; 
+    font-size: 0;
+    border: 0;
+}
+
+.card-link {
+    position: absolute;
+    inset: 0; 
+}
+
+#motorrad {
+    background-color: #0f0f0f;
+}
+
+#motorrad > h3{
+    color: #f5c518;
+}
+
+#motorrad > hr {
+    background: #f5c518;
+}
+
+#motorrad:hover {
+    border-top: 3px solid #f5c518;
+}
+
+
+#oldtimer {
+    background-color: #3b2007;
+}
+
+#oldtimer > h3 {
+    color: #f5deb3;
+}
+ 
+#oldtimer > hr {
+    background: #f5deb3;;
+}
+
+#oldtimer:hover {
+    border-top: 3px solid #f5deb3;
+}
+
+
+#basketball {
+    background-color: #ff6b00;
+}
+
+#basketball > h3 {
+    color: #000000;
+}
+
+#basketball > hr {
+    background: #000000;;
+}
+
+#basketball:hover {
+    border-top: 3px solid #ffffff;
+}
+
+
+#formel {
+    background-color: #cc0000;
+}
+
+#formel > h3 {
+    color: #ffffff;
+}
+
+#formel > hr {
+    background: #ffffff;
+}
+
+#formel:hover {
+    border-top: 3px solid #ffffff;
+}
+
+
+#feuerwehr {
+    background-color: #cc0000;
+}
+
+#feuerwehr  > h3 {
+    color: #ffffff;
+}
+
+#feuerwehr  > hr {
+    background: #ffffff;
+}
+
+#feuerwehr:hover {
+    border-top: 3px solid #ffffff;
+}
+
+
+#videospiel {
+    background-color: #0d0d0d;
+}
+
+#videospiel > h3 {
+    color: #00ff22;
+}
+
+#videospiel > hr {
+    background: #00ff22;
+}
+
+#videospiel:hover {
+    border-top: 3px solid #00ff22;
 }
