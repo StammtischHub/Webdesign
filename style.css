@@ -2,10 +2,7 @@ body {
     background-color: #000000;
     margin: 0;
     padding: 0;
-}
-
-#top {
-    width: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -23,7 +20,6 @@ h1 {
 h2, h3 {
     font-family: sans-serif;
     text-transform: uppercase;
-
 }
 
 h2 {
