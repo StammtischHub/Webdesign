@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="no-index">
-    <meta name="description" content="Eineliebhaberseite für den BMW E28, ein Autobahnstar der 80er der Extraklasse">
+    <meta name="description" content="Eine Liebhaberseite für den BMW E28, ein Autobahnstar der Extraklasse in den 80ern.">
     <meta name="keywords" content="BMW, E28, 520i, cars, oldtimer">
     <meta name="author" content="Jannis Dickel">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
@@ -16,7 +16,12 @@
 <body>
     <section class="vid">
         <div class="holder">
-            <video src="./assets/e28.mp4" preload="auto" autoplay muted loop playsinline></video>
+            <video preload="auto" autoplay muted loop playsinline>
+                <source src="./assets/e28.mp4" type="video/mp4">
+                <source src="./assets/e28.webm" type="video/webm">
+                <source src="./assets/e28.avi" type="video/avi">
+                Dieser Browser unterstützt keine Video-tags!
+            </video>
         </div>
         <div class="story">
             <div>
@@ -70,8 +75,8 @@
                     </div>
 
                     <figure class="img-card">
-                        <div>
-                            <figcaption class="text-section">
+                        <div></div>
+                        <figcaption class="text-section">
                                 <h2>Ikonische Doppelniere</h2>
                                 <p>
                                     Aggressiv, kraftvoll und elegant. <br>
@@ -79,7 +84,6 @@
                                     von klassischer Eleganz zu moderner, kraftvoller Formensprache.
                                 </p>
                             </figcaption>
-                        </div>
                     </figure>
 
                 </div>
@@ -87,168 +91,183 @@
         </div>
     </section>
 
-    <section id="specs">
-        <h2>Leidenschaft aus 6-Zylindern</h2>
-        <div>
-            <div class="specs">
-                <div class="left-text">
-                    <div class="text-section">
-                        <h3>Der erste M5</h3>
-                        <p>
-                            Als Krönung der E28er-Serie stellte die M-Motorsport GmbH Mitte der 80er den ersten in
-                            Handarbeit, mit einem M88/3 Motor ausgestatteten, gefertigten M5 vor.
-                        </p>
-                    </div>
-                    <img src="./assets/BMW-Logo.svg" alt="Der BMW M88/3 Motor" height="250" width="343">
-                </div>
+    <div id="wrapper">
+        <section id="specs">
+            <h2>Leidenschaft aus 6-Zylindern</h2>
+            <div>
+                <div class="specs">
+                    <div class="left-text">
+                        <div class="text-section">
+                            <h3>Der erste M5</h3>
+                            <p>
+                                Als Krönung der E28er-Serie stellte die M-Motorsport GmbH Mitte der 80er den ersten in
+                                Handarbeit, mit einem M88/3 Motor ausgestatteten, gefertigten M5 vor.
+                            </p>
+                        </div>
 
-                <div class="spec-grid">
-                    <div class="spec-box">
-                        <div class="icon"></div>
-                        <h4>Konfiguration</h4>
-                        <div class="counter">
-                            <span data-count="6">0</span>
-                            <p>Zylinder Reihe</p>
-                        </div>
+                        <video controls preload="auto" playsinline>
+                            <source src="./assets/BMWShot.mp4" type="video/mp4">
+                            <source src="./assets/BMWShot.webm" type="video/webm">
+                            <source src="./assets/BMWShot.avi" type="video/avi">
+                            Dieser Browser unterstützt keine Video-tags!
+                        </video>
                     </div>
-                    <div class="spec-box">
-                        <div class="icon"></div>
-                        <h4>Hubraum</h4>
-                        <div class="counter">
-                            <span data-count="3453">0</span>
-                            <p>ccm</p>
-                        </div>
-                    </div>
-                    <div class="spec-box">
-                        <div class="icon"></div>
-                        <h4>Hub</h4>
-                        <div class="counter">
-                            <span data-count="84">0</span>
-                            <p>mm</p>
-                        </div>
-                    </div>
-                    <div class="spec-box">
-                        <div class="icon"></div>
-                        <h4>Verdichtung</h4>
-                        <div class="counter">
-                            <span data-count="10.5">0</span>
-                            <p>: 1</p>
-                        </div>
-                    </div>
-                    <div class="spec-box">
-                        <div class="icon"></div>
-                        <h4>Leistung</h4>
-                        <div class="counter">
-                            <span data-count="240">0</span>
-                            <p>kW /</p>
-                            <span data-count="286">0</span>
-                            <p>PS</p>
-                        </div>
-                    </div>
-                    <div class="spec-box">
-                        <div class="icon"></div>
-                        <h4>Drehmoment</h4>
-                        <div class="counter">
-                            <span data-count="340">0</span>
-                            <p>Nm</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="performance-benchmarks">
-        <h3>Performance Benchmarks</h3>
-        <div>
-            <div class="performance-card">
-                <h4>Höchstgeschwindigkeit</h4>
-                <div>
-                    <span>245</span>
-                    <p>km/h</p>
+                    <div class="spec-grid">
+                        <div class="spec-box">
+                            <div class="icon"></div>
+                            <h4>Konfiguration</h4>
+                            <div class="counter">
+                                <span data-count="6">0</span>
+                                <p>Zylinder Reihe</p>
+                            </div>
+                        </div>
+                        <div class="spec-box">
+                            <div class="icon"></div>
+                            <h4>Hubraum</h4>
+                            <div class="counter">
+                                <span data-count="3453">0</span>
+                                <p>ccm</p>
+                            </div>
+                        </div>
+                        <div class="spec-box">
+                            <div class="icon"></div>
+                            <h4>Hub</h4>
+                            <div class="counter">
+                                <span data-count="84">0</span>
+                                <p>mm</p>
+                            </div>
+                        </div>
+                        <div class="spec-box">
+                            <div class="icon"></div>
+                            <h4>Verdichtung</h4>
+                            <div class="counter">
+                                <span data-count="10.5">0</span>
+                                <p>: 1</p>
+                            </div>
+                        </div>
+                        <div class="spec-box">
+                            <div class="icon"></div>
+                            <h4>Leistung</h4>
+                            <div class="counter">
+                                <span data-count="240">0</span>
+                                <p>kW /</p>
+                                <span data-count="286">0</span>
+                                <p>PS</p>
+                            </div>
+                        </div>
+                        <div class="spec-box">
+                            <div class="icon"></div>
+                            <h4>Drehmoment</h4>
+                            <div class="counter">
+                                <span data-count="340">0</span>
+                                <p>Nm</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="performance-card">
-                <h4>0 &#8211; 100 km/h</h4>
-                <div>
-                    <span>6,3</span>
-                    <p>sec</p>
+        </section>
+
+        <section id="performance-benchmarks">
+            <h3>Performance Benchmarks</h3>
+            <div>
+                <div class="performance-card">
+                    <h4>Höchstgeschwindigkeit</h4>
+                    <div>
+                        <span>245</span>
+                        <p>km/h</p>
+                    </div>
+                </div>
+                <div class="performance-card">
+                    <h4>0 &#8211; 100 km/h</h4>
+                    <div>
+                        <span>6,3</span>
+                        <p>sec</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="history">
-        <h2>Chronik der Exzellenz</h2>
+        <section id="history">
+            <h2>Chronik der Exzellenz</h2>
 
-        <div class="timeline">
-            <div class="card timeline-box">
-                <div class="spot"></div>
-                <span class="tagline">1981</span>
-                <h3>Die Geburt einer Legende</h3>
-                <p>
-                    Die E28 5er Serie wird offiziell an der IAA i Frankfurt präsentiert, und tritt damit die Nachfolge
-                    des E12 an. Mit ihm debütieren moderne Technologien wie das Check-Control-Panel sowie ein konsequent
-                    fahrerorientiertes Cockpit, das die Gestaltung zukünftiger BMW-Innenräume maßgeblich beeinflusst.
-                </p>
+            <div class="timeline">
+                <div class="card timeline-box">
+                    <div class="spot"></div>
+                    <span class="tagline">1981</span>
+                    <h3>Die Geburt einer Legende</h3>
+                    <p>
+                        Die E28 5er Serie wird offiziell an der IAA i Frankfurt präsentiert, und tritt damit die
+                        Nachfolge
+                        des E12 an. Mit ihm debütieren moderne Technologien wie das Check-Control-Panel sowie ein
+                        konsequent
+                        fahrerorientiertes Cockpit, das die Gestaltung zukünftiger BMW-Innenräume maßgeblich
+                        beeinflusst.
+                    </p>
+                </div>
+
+                <div class="card timeline-box">
+                    <div class="spot"></div>
+                    <span class="tagline">1983</span>
+                    <h3>ABS für die Sicherheit</h3>
+                    <p>
+                        Die ABS-Technologie wird zunächst als Option eingeführt und später bei den leistungsstärkeren
+                        Varianten zur Standardausstattung. Sie trägt spürbar zur Fahrstabilität bei, verhindert das
+                        Blockieren der Räder und sorgt für deutlich kürzere, besser kontrollierbare Bremswege &#8211;
+                        besonders auf nassen oder rutschigen Straßen.
+                    </p>
+                </div>
+
+                <div class="card timeline-box">
+                    <div class="spot"></div>
+                    <span class="tagline">1985</span>
+                    <h3>Der erste M5</h3>
+                    <p>
+                        Als erstes Motorsport-Modell der E28-Serie stellte die M-Motorsport GmbH den handgefertigten,
+                        mit
+                        dem M88/3-Motor ausgestatteten M5 vor und legte damit den Grundstein für die spätere
+                        M5-Baureihe.
+                    </p>
+                </div>
+
+                <div class="card timeline-box">
+                    <div class="spot"></div>
+                    <span class="tagline">1987</span>
+                    <h3>Die letzte Evolution</h3>
+                    <p>
+                        Gegen Ende der Produktionszeit erreicht der E28 seine höchste Reife, und die 535i-„Special
+                        Edition“-Modelle erscheinen in mehreren Märkten. Sie bieten die exklusivste Kombination aus
+                        Luxus
+                        und Leistung innerhalb der Baureihe und markieren den letzten Höhepunkt, bevor der E28 den
+                        Staffelstab an den E34 weitergibt.
+                    </p>
+                </div>
+
             </div>
+        </section>
 
-            <div class="card timeline-box">
-                <div class="spot"></div>
-                <span class="tagline">1983</span>
-                <h3>ABS für die Sicherheit</h3>
-                <p>
-                    Die ABS-Technologie wird zunächst als Option eingeführt und später bei den leistungsstärkeren
-                    Varianten zur Standardausstattung. Sie trägt spürbar zur Fahrstabilität bei, verhindert das
-                    Blockieren der Räder und sorgt für deutlich kürzere, besser kontrollierbare Bremswege &#8211;
-                    besonders auf nassen oder rutschigen Straßen.
-                </p>
+        <section id="gallery">
+            <span class="tagline">Fotogalerie</span>
+            <h2>Die Haifischnase im Profil</h2>
+            <p>
+                Noch nicht ganz im Bann des BMW E28? Dann lass dich von dieser Auswahl ikonischer Momente in die 80er
+                verführen &#8211; ein Mix aus kantigem Design, zeitloser Eleganz und dem unverwechselbaren Charakter,
+                der
+                diesen Klassiker bis heute so begehrenswert macht.
+            </p>
+
+            <div class="gallery">
+                <img id="tl" src="./assets/gallery-full.jpg" alt="Der BMW E28 im Profil">
+                <img id="tr" src="./assets/gallery-front.jpg" alt="Die Front des E28">
+                <img id="ml" src="./assets/gallery-interior.webp" alt="Das Interior des E28">
+                <img id="mm" src="./assets/gallery-side.jpeg" alt="Der meistverkaufte E28, ein 518i">
+                <img id="mr" src="./assets/gallery-e28-m5-logo.jpg" alt="Der erste M">
+                <img id="bl" src="./assets/gallery-sharknose.jpg" alt="Die Haifischnase des E28">
+                <img id="br" src="./assets/gallery-e28-alpina.jpg" alt="Der E28 Alpina von hinten">
             </div>
-
-            <div class="card timeline-box">
-                <div class="spot"></div>
-                <span class="tagline">1985</span>
-                <h3>Der erste M5</h3>
-                <p>
-                    Als erstes Motorsport-Modell der E28-Serie stellte die M-Motorsport GmbH den handgefertigten, mit
-                    dem M88/3-Motor ausgestatteten M5 vor und legte damit den Grundstein für die spätere M5-Baureihe.
-                </p>
-            </div>
-
-            <div class="card timeline-box">
-                <div class="spot"></div>
-                <span class="tagline">1987</span>
-                <h3>Die letzte Evolution</h3>
-                <p>
-                    Gegen Ende der Produktionszeit erreicht der E28 seine höchste Reife, und die 535i-„Special
-                    Edition“-Modelle erscheinen in mehreren Märkten. Sie bieten die exklusivste Kombination aus Luxus
-                    und Leistung innerhalb der Baureihe und markieren den letzten Höhepunkt, bevor der E28 den
-                    Staffelstab an den E34 weitergibt.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="gallery">
-        <span class="tagline">Fotogalerie</span>
-        <h2>Die Haifischnase im Profil</h2>
-        <p>
-            Noch nicht ganz im Bann des BMW E28? Dann lass dich von dieser Auswahl ikonischer Momente in die 80er
-            verführen &#8211; ein Mix aus kantigem Design, zeitloser Eleganz und dem unverwechselbaren Charakter, der
-            diesen Klassiker bis heute so begehrenswert macht.
-        </p>
-
-        <div class="gallery">
-            <img id="tl" src="./assets/gallery-full.jpg" alt="">
-            <img id="tr" src="./assets/gallery-front.jpg" alt="">
-            <img id="ml" src="./assets/gallery-interior.webp" alt="">
-            <img id="mm" src="./assets/gallery-side.jpeg" alt="">
-            <img id="mr" src="./assets/gallery-e28-m5-logo.jpg" alt="">
-            <img id="bl" src="./assets/gallery-sharknose.jpg" alt="">
-            <img id="br" src="./assets/gallery-e28-alpina.jpg" alt="">
-        </div>
-    </section>
+        </section>
+    </div>
 
     <section id="quote-section">
         <h1 id="quote">“Live is to short to drive boring cars.”</h1>
@@ -260,15 +279,18 @@
             dass wahre <span class="highlight-span">Freude am Fahren</span> nicht digital simuliert, sondern erlebt
             wird.
         </p>
+        <audio id="audio">
+            <source src="./assets/ding.mp3" type="audio/mp3">
+            <source src="./assets/ding.ogg" type="audio/ogg">
+            <source src="./assets/ding.wav" type="audio/wav">
+            Dieser Browser unterstützt keine Audio-tags!
+        </audio>
     </section>
 
     <footer>
-        <p>
-            &#169; 2026 Jannis Dickel. A DIGITAL TRIBUTE. NOT AFFILIATED WITH BMW AG.
-        </p>
-
+        <canvas id="marquee" width="800" height="30"></canvas>
         <div>
-            <a href="#">
+            <a href="./e28_specs.pdf">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.978 29.978" xml:space="preserve">
                     <g>
@@ -281,7 +303,7 @@
                     </g>
                 </svg>
             </a>
-            <a href="https://github.com/SirDaywalker/E28">
+            <a target="_blank" href="https://github.com/SirDaywalker/E28">
                 <svg viewBox="0 -0.5 25 25" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="m12.301 0h.093c2.242 0 4.34.613 6.137 1.68l-.055-.031c1.871 1.094 3.386 2.609 4.449 4.422l.031.058c1.04 1.769 1.654 3.896 1.654 6.166 0 5.406-3.483 10-8.327 11.658l-.087.026c-.063.02-.135.031-.209.031-.162 0-.312-.054-.433-.144l.002.001c-.128-.115-.208-.281-.208-.466 0-.005 0-.01 0-.014v.001q0-.048.008-1.226t.008-2.154c.007-.075.011-.161.011-.249 0-.792-.323-1.508-.844-2.025.618-.061 1.176-.163 1.718-.305l-.076.017c.573-.16 1.073-.373 1.537-.642l-.031.017c.508-.28.938-.636 1.292-1.058l.006-.007c.372-.476.663-1.036.84-1.645l.009-.035c.209-.683.329-1.468.329-2.281 0-.045 0-.091-.001-.136v.007c0-.022.001-.047.001-.072 0-1.248-.482-2.383-1.269-3.23l.003.003c.168-.44.265-.948.265-1.479 0-.649-.145-1.263-.404-1.814l.011.026c-.115-.022-.246-.035-.381-.035-.334 0-.649.078-.929.216l.012-.005c-.568.21-1.054.448-1.512.726l.038-.022-.609.384c-.922-.264-1.981-.416-3.075-.416s-2.153.152-3.157.436l.081-.02q-.256-.176-.681-.433c-.373-.214-.814-.421-1.272-.595l-.066-.022c-.293-.154-.64-.244-1.009-.244-.124 0-.246.01-.364.03l.013-.002c-.248.524-.393 1.139-.393 1.788 0 .531.097 1.04.275 1.509l-.01-.029c-.785.844-1.266 1.979-1.266 3.227 0 .025 0 .051.001.076v-.004c-.001.039-.001.084-.001.13 0 .809.12 1.591.344 2.327l-.015-.057c.189.643.476 1.202.85 1.693l-.009-.013c.354.435.782.793 1.267 1.062l.022.011c.432.252.933.465 1.46.614l.046.011c.466.125 1.024.227 1.595.284l.046.004c-.431.428-.718 1-.784 1.638l-.001.012c-.207.101-.448.183-.699.236l-.021.004c-.256.051-.549.08-.85.08-.022 0-.044 0-.066 0h.003c-.394-.008-.756-.136-1.055-.348l.006.004c-.371-.259-.671-.595-.881-.986l-.007-.015c-.198-.336-.459-.614-.768-.827l-.009-.006c-.225-.169-.49-.301-.776-.38l-.016-.004-.32-.048c-.023-.002-.05-.003-.077-.003-.14 0-.273.028-.394.077l.007-.003q-.128.072-.08.184c.039.086.087.16.145.225l-.001-.001c.061.072.13.135.205.19l.003.002.112.08c.283.148.516.354.693.603l.004.006c.191.237.359.505.494.792l.01.024.16.368c.135.402.38.738.7.981l.005.004c.3.234.662.402 1.057.478l.016.002c.33.064.714.104 1.106.112h.007c.045.002.097.002.15.002.261 0 .517-.021.767-.062l-.027.004.368-.064q0 .609.008 1.418t.008.873v.014c0 .185-.08.351-.208.466h-.001c-.119.089-.268.143-.431.143-.075 0-.147-.011-.214-.032l.005.001c-4.929-1.689-8.409-6.283-8.409-11.69 0-2.268.612-4.393 1.681-6.219l-.032.058c1.094-1.871 2.609-3.386 4.422-4.449l.058-.031c1.739-1.034 3.835-1.645 6.073-1.645h.098-.005zm-7.64 17.666q.048-.112-.112-.192-.16-.048-.208.032-.048.112.112.192.144.096.208-.032zm.497.545q.112-.08-.032-.256-.16-.144-.256-.048-.112.08.032.256.159.157.256.047zm.48.72q.144-.112 0-.304-.128-.208-.272-.096-.144.08 0 .288t.272.112zm.672.673q.128-.128-.064-.304-.192-.192-.32-.048-.144.128.064.304.192.192.32.044zm.913.4q.048-.176-.208-.256-.24-.064-.304.112t.208.24q.24.097.304-.096zm1.009.08q0-.208-.272-.176-.256 0-.256.176 0 .208.272.176.256.001.256-.175zm.929-.16q-.032-.176-.288-.144-.256.048-.224.24t.288.128.225-.224z">
@@ -290,7 +312,9 @@
             </a>
         </div>
     </footer>
+    <script src="./playAudio.js"></script>
     <script src="./counters.js"></script>
+    <script src="./marquee.js"></script>
 </body>
 
 </html>
