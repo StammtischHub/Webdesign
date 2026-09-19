@@ -20,7 +20,8 @@ header {
 }
 
 .logo{
-  color: #f2f2f2;
+  color: #fff;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
   padding: 16px 18px;
@@ -32,12 +33,12 @@ nav ul{
 }
 
 nav a {
-  color: #f2f2f2;
+  color: #fff;
   text-align: center;
   margin: 10px;
   padding: 16px 18px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 nav a:hover {
@@ -45,17 +46,18 @@ nav a:hover {
 }
 
 /* main body*/
+/*Home*/
 
 section {
-  min-height: 100px;
+  min-height: 100px; /*brauche ich das noch?*/
   display: flex;
   padding: 0px 15%;
   scroll-margin-top: 70px;
-  border-top: 2px solid #ff2929;
+  border-top: 4px solid #ff2929;
 }
 
 .home{
-  min-height: 95vh;
+  min-height: 95vh; /*brauche ich das noch?*/
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -66,8 +68,8 @@ section {
 }
 
 .home-inner{
-  background-color: rgb(24, 24, 24, 0.9);
-  padding: 10px;
+  background-color: rgb(24, 24, 24, 0.8);
+  padding: 20px;
   border-radius: 10px;
 }
 
@@ -85,23 +87,26 @@ section {
 }
 
 .home-text{
-  color: #999999;
+  color: #D4D4D4;
   font-size: 20px;
 }
 
+/*generally*/
+
 .subtitle{
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
-  margin-top: 5%;
+  letter-spacing: 1px;
+  margin-top: 25px;
   margin-bottom: 0;
   color: #ff2929;
 }
 
 .line{
   height: 2px;
-  width: 30px;
+  width: 41px;
   background-color: #ff2929;
-  flex-shrink: 0;
+  flex-shrink: 0; /*brauche ich das?*/
 }
 
 .section-head{
@@ -111,13 +116,13 @@ section {
 }
 
 .section-head h1{
-  font-size: 50px;
+  font-size: 50px; /*kann man die Variabel machen wegen responsiv*/
   margin-top: 10px;
 }
 
 /*Specifications*/
 .specs{
-  min-height: auto;
+  min-height: auto; /*brauche ich das noch?*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -134,7 +139,7 @@ section {
 .list dl{
   display: flex;
   flex-direction: column;
-  margin-left: 0;
+  margin: 0;
 }
 
 .item{
@@ -149,7 +154,7 @@ section {
 .item dt{
   color: #D4D4D4;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 1px;
   margin: 0;
@@ -168,7 +173,7 @@ section {
   justify-content: space-between;
   width: 40%;
   margin-top: 10%;
-  min-height: 480px;
+  min-height: 480px; 
   border-radius: 16px;
 }
 
@@ -195,7 +200,7 @@ section {
   flex-direction: column;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #0E0E0E/*#080808;*/
+  background-color: #0E0E0E
 }
 
 .pictures-format,
@@ -254,13 +259,13 @@ section {
   justify-content: center;
   width: 800px;
   height: 450px;
-  margin: 0 auto;
+  margin: 0 auto; /*Fester Wert?*/
   padding: 20px;
 }
 
 .video figcaption{
   margin-top: 8px;
-  font-size: 12px;
+  font-size: 14px;
   color: white;
 }
 
@@ -280,8 +285,8 @@ section {
   align-items: center;
   gap: 30px;
   width: 100%;
-  max-width: 1100px;
-  margin: 30px auto 0 auto;
+  max-width: 1100px; /*brauche ich das?*/
+  margin: 30px auto 0 auto; /*Feste Werte?*/
 }
 
 .content,
@@ -290,7 +295,7 @@ section {
   grid-template-columns: 300px 1fr;
   width: 90%;
   min-height: 350px;
-  border: solid 1px #888888;
+  border: solid 1px #5b5b5b; /*oder rot?*/
   background-color: black;
 }
 
@@ -300,7 +305,7 @@ section {
 
 .content-img{
   position: relative;
-  margin: 0;
+  margin: 0; 
 }
 
 .tour-img{
@@ -308,8 +313,7 @@ section {
   max-height: 400px;
   width: 100%;
   object-fit: cover;
-  object-position: center 40%;
-  background-color: #ff2929;
+  object-position: center 40%; 
 }
 
 .img-cap{
@@ -318,9 +322,10 @@ section {
   left: 0;
   right: 0;
   padding: 10px 20px;
-  background-color: rgba(13, 13, 13, 0.8);
+  background-color: rgba(13, 13, 13, 0.9);
   color: white;
-  font-size: 12px;
+  font-size: 14px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -346,26 +351,19 @@ section {
 
 /*PDF*/
 .pdf{
-  position: relative;
   display: flex;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  gap: 100px;
+  padding-top: 40px 5%;
   background-color: #1C1C1C;  
 }
 
 .section-head{
-  width: 50%;
+  max-width: 420px;
 }
 
 .pdf-download{
-  position: absolute;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-shrink: 0;
   cursor: pointer;
 }
 
@@ -443,23 +441,6 @@ footer{
     margin-top: 4px;
   }
 
-  .pdf{
-    flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 220px;
-  }
-
-  .pdf-download{
-    top: auto;
-    bottom: 40px;
-    left: 50%;
-    transform: translate(-50px);
-  }
-
-  .section-head{
-    width: 100%;
-  }
-
   /*Experiences*/
   .content,
   .content-reverse{
@@ -475,6 +456,26 @@ footer{
 
   .content-text{
     grid-row: 2;
+  }
+
+  .content-img{
+    grid-row: 1;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .pdf{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .section-head{
+    max-width: 100%;
+  }
+
+  .pdf-download{
+    align-self: center;
   }
 
 }
