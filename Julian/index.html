@@ -25,7 +25,7 @@
 
         <nav aria-label="Hauptnavigation" id="navbar">
             <ul>
-                <li><a href="#game">Spiel & Physik</a></li>
+                <li><a href="#playground">Spiel & Physik</a></li>
                 <li><a href="#concepts">Konzepte</a></li>
                 <li><a href="#audio">Audio</a></li>
                 <li><a href="#video">Video</a></li>
@@ -45,19 +45,22 @@
                 incidunt ipsum nam omnis sed sequi tempora ullam? A iusto minus nesciunt!
             </p>
         </section>
+        <article id="playground">
+            <section class="box" id="game">
+                <h2 class="box-title">Canvas 2D</h2>
+                <canvas id="canvas" aria-label="Spielfeld des Spiels">
+                    Dein Browser unterstützt Canvas nicht.
+                </canvas>
+            </section>
+            <section class="box" id="settings">
+                <h2 class="box-title">Physik-Einstellungen</h2>
+            </section>
+            <section class="box" id="vector-data">
+                <h2 class="box-title">Live Vektordaten</h2>
+            </section>
+        </article>
     </div>
 </main>
-
-<div id="game">
-    <canvas id="canvas" aria-label="Spielfeld des Spiels">
-        Dein Browser unterstützt Canvas nicht.
-    </canvas>
-    <div id="overlay">
-        <button id="play">Spielen</button>
-    </div>
-</div>
-
-
 
 </body>
 </html>

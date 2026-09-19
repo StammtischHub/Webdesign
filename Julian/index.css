@@ -71,9 +71,47 @@ body {
     margin: 0;
 }
 
+.box {
+    border: 1px solid rgba(38, 50, 72, 0.8);
+    background: #131822;
+    padding: 1.25rem;
+    border-radius: 12px;
+}
+
+.box .box-title {
+    margin: 0;
+}
+
+#playground {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
 #game {
+    grid-column: span 7;
+    grid-row: span 6;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+#game canvas {
+    display: block;
     width: 100%;
-    height: 100vh;
+    height: 650px;
+    margin: 0.75rem 0;
+}
+
+#settings {
+    grid-column: span 5;
+    grid-row: span 3;
+}
+
+#vector-data {
+    grid-column: span 5;
+    grid-row: span 2;
 }
 
 /*#overlay {*/
