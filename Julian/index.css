@@ -9,7 +9,7 @@
 body {
     background: #0D1117;
     font-family: "Space Grotesk", sans-serif;
-    color: #8f9cae;
+    color: #8F9CAE;
     margin: 0;
 }
 
@@ -54,7 +54,22 @@ body {
     color: #CCFF00;
 }
 
+.hero {
+    width: 768px;
+}
 
+.hero #title {
+    color: #FFFFFF;
+    font-size: 3rem;
+    line-height: 3rem;
+    margin: 0.75rem 0;
+}
+
+.hero #description {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin: 0;
+}
 
 #game {
     width: 100%;
