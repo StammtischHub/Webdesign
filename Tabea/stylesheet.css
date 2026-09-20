@@ -356,6 +356,12 @@ footer{
   background-color: #000;
 }
 
+.divFooter{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
 /*Media Queries*/
 
 @media (max-width: 767px){
