@@ -163,6 +163,10 @@ body {
     color: #CCFF00;
 }
 
+.white {
+    color: #FFFFFF;
+}
+
 .control-header {
     display: flex;
     justify-content: space-between;
@@ -214,7 +218,7 @@ body {
     font-weight: bold;
 }
 
-#concept-section {
+.theme-section {
     margin-top: 3rem;
 }
 
@@ -222,15 +226,10 @@ body {
     margin: 0;
 }
 
-#concept-section header {
+.theme-section header {
     display: flex;
     gap: 0.5rem;
     flex-direction: column;
-}
-
-.concept-title {
-    color: #FFFFFF;
-    font-weight: bold;
 }
 
 .concept-grid {
@@ -278,4 +277,8 @@ body {
 
 #formulas .figure-caption {
     text-align: right;
+}
+
+#audio-section .concept-grid {
+    grid-template-columns: repeat(4, 1fr);
 }
