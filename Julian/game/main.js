@@ -69,8 +69,8 @@ function applyFormSettings() {
     player.jumpSpeed = flapInput.valueAsNumber;
     barriers.gapHeight = gapInput.valueAsNumber;
 
-    gravityOutput.value = player.gravity;
-    flapOutput.value = player.jumpSpeed;
+    gravityOutput.value = `${player.gravity}px/s²`;
+    flapOutput.value = `${player.jumpSpeed}px/s`;
     gapOutput.value = `${barriers.gapHeight}px`;
 }
 
