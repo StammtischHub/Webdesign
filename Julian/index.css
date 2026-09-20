@@ -3,7 +3,23 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("./fonts/space-grotesk-regular.woff2") format("woff2");
+    src: url("./fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./fonts/SpaceGrotesk-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./fonts/SpaceMono-Regular.ttf") format("truetype");
 }
 
 body {
@@ -131,15 +147,19 @@ body {
     height: 0.5rem;
 }
 
-#gravity-output, #velocity-data {
+#gravity-output, #flap-output, #gap-output {
+    font-weight: bold;
+}
+
+.blue {
     color: #00F0FF;
 }
 
-#flap-output, #player-y-data {
+.pink {
     color: #FF007A;
 }
 
-#gap-output, #frame-delta {
+.green {
     color: #CCFF00;
 }
 
@@ -192,4 +212,42 @@ body {
     margin: 0;
     text-align: center;
     font-weight: bold;
+}
+
+#concept-section {
+    margin-top: 3rem;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+#concept-section header {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.concept-title {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.concept-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.concept-grid .box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.numeration {
+    font-family: Space Mono;
+    text-transform: uppercase;
+    font-size: 0.6875rem;
 }

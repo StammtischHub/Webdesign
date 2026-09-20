@@ -59,7 +59,7 @@
                     <div class="control">
                         <div class="control-header">
                             <label for="gap">Rohrabstand</label>
-                            <output for="gap" id="gap-output">220px</output>
+                            <output for="gap" id="gap-output" class="green">220px</output>
                         </div>
                         <input type="range" id="gap" min="148" max="300" value="220">
                         <p>Vertikale Lücke zwischen den Hindernissen.</p>
@@ -67,7 +67,7 @@
                     <div class="control">
                         <div class="control-header">
                             <label for="flap">Sprungstärke</label>
-                            <output for="flap" id="flap-output">360px/s</output>
+                            <output for="flap" id="flap-output" class="pink">360px/s</output>
                         </div>
                         <input type="range" id="flap" min="100" max="800" value="360">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -75,7 +75,7 @@
                     <div class="control">
                         <div class="control-header">
                             <label for="gravity">Schwerkraft</label>
-                            <output for="gravity" id="gravity-output">px/s^2</output>
+                            <output for="gravity" id="gravity-output" class="blue">px/s^2</output>
                         </div>
                         <input type="range" id="gravity" min="400" max="1500" value="800">
                         <p>Wie stark der Spieler nach unten beschleunigt wird.</p>
@@ -87,19 +87,67 @@
                 <dl>
                     <div class="data-cell">
                         <dt>Velocity Y</dt>
-                        <dd id="velocity-data"></dd>
+                        <dd id="velocity-data" class="green"></dd>
                     </div>
                     <div class="data-cell">
                         <dt>Position Y</dt>
-                        <dd id="player-y-data"></dd>
+                        <dd id="player-y-data" class="pink"></dd>
                     </div>
                     <div class="data-cell">
                         <dt>Frame Delta</dt>
-                        <dd id="frame-delta"></dd>
+                        <dd id="frame-delta" class="blue"></dd>
                     </div>
                 </dl>
             </section>
         </article>
+        <section id="concept-section">
+            <header>
+                <p class="no-margin blue">Lorem ipsum.</p>
+                <h2 class="no-margin concept-title">Kernkonzepte</h2>
+                <p class="no-margin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, error.</p>
+            </header>
+            <div class="concept-grid">
+                <section class="box">
+                    <p class="numeration green no-margin">01 // Herzstück</p>
+                    <h3 class="no-margin">Game Loop</h3>
+                    <p class="no-margin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos in ratione reprehenderit!</p>
+                </section>
+                <section class="box">
+                    <p class="numeration pink no-margin">02 // Physik</p>
+                    <h3 class="no-margin">Formeln</h3>
+                    <p class="no-margin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos in ratione reprehenderit!</p>
+                </section>
+                <section class="box">
+                    <p class="numeration blue no-margin">03 // Hitbox</p>
+                    <h3 class="no-margin">Axis-Aligned Bounding Box</h3>
+                    <p class="no-margin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos in ratione reprehenderit!</p>
+                </section>
+            </div>
+        </section>
+        <section>
+            <header>
+                <p>Lorem ipsum.</p>
+                <h2>Kernkonzepte</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, error.</p>
+            </header>
+            <div class="concept-grid">
+                <section>
+                    <p>01 // Lorem ipsum.</p>
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos in ratione reprehenderit!</p>
+                </section>
+                <section>
+                    <p>02 // Physik</p>
+                    <h3>Formel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos in ratione reprehenderit!</p>
+                </section>
+                <section>
+                    <p>03 // Lorem ipsum.</p>
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos in ratione reprehenderit!</p>
+                </section>
+            </div>
+        </section>
     </div>
 </main>
 
