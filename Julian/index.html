@@ -110,12 +110,35 @@
                 <section class="box">
                     <p class="numeration green no-margin">01 // Herzstück</p>
                     <h3 class="no-margin">Game Loop</h3>
-                    <p class="no-margin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos in ratione reprehenderit!</p>
+                    <p class="no-margin">
+                        Der Game Loop hält das Spiel kontinuierlich am Laufen. In jedem Frame werden
+                        Eingaben verarbeitet, Physik und Kollisionen berechnet und anschließend die Szene neu
+                        gezeichnet.
+                    </p>
+                    <p>
+                        Dabei sorgt Delta Time dafür, dass Bewegungen unabhängig von der Bildrate
+                        berechnet werden. Statt eine feste Strecke pro Frame zu bewegen, wird die Geschwindigkeit mit
+                        der seit dem letzten Frame vergangenen Zeit verrechnet.
+                    </p>
                 </section>
                 <section class="box">
                     <p class="numeration pink no-margin">02 // Physik</p>
                     <h3 class="no-margin">Formeln</h3>
                     <p class="no-margin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos in ratione reprehenderit!</p>
+                    <div id="formulas">
+                        <figure>
+                            <img class="figure-img" src="assets/fallbewegung_farbig.svg" alt="y neu = y alt + v y · Δt + ½ · g · Δt²">
+                            <figcaption class="figure-caption">Fallbewegung</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="figure-img" src="assets/fallgeschwindigkeit_farbig.svg" alt="v y neu = v y alt + g · Δt">
+                            <figcaption class="figure-caption">Fallgeschwindigkeit</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="figure-img" src="assets/sprunggeschwindigkeit_farbig.svg" alt="v y = −v Sprung">
+                            <figcaption class="figure-caption">Sprunggeschwindigkeit</figcaption>
+                        </figure>
+                    </div>
                 </section>
                 <section class="box">
                     <p class="numeration blue no-margin">03 // Hitbox</p>

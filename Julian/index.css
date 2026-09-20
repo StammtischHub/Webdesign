@@ -251,3 +251,31 @@ body {
     text-transform: uppercase;
     font-size: 0.6875rem;
 }
+
+#formulas {
+    padding: 0.875rem;
+    border: 1px solid #263248;
+    border-radius: 8px;
+    background: #1B2232;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#formulas figure {
+    margin: 0;
+}
+
+#formulas figure:not(:last-child) {
+    border-bottom: 1px solid #263248;
+    padding-bottom: 0.5rem;
+}
+
+#formulas .figure-img {
+    display: block;
+    margin-inline: auto;
+}
+
+#formulas .figure-caption {
+    text-align: right;
+}
