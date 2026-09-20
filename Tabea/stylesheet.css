@@ -1,16 +1,14 @@
+*{
+  box-sizing: border-box;
+}
+
 html{
   scroll-behavior: smooth;
 }
 
-.electrolize-regular {
-  font-family: "Electrolize", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 body {
   margin: 0;
-  font-family: electrolize, Arial, sans-serif;
+  font-family: "Electrolize", Arial, sans-serif;
 }
 
 
@@ -35,8 +33,8 @@ header {
 
 nav ul{
   display: flex;
-  margin: 0; /*warum bei beidem 0?*/
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -83,7 +81,7 @@ section {
 .home-inner{
   padding: 20px;
   border-radius: 10px;
-  background-color: rgb(24, 24, 24, 0.8);
+  background-color: rgba(24, 24, 24, 0.8);
 }
 
 .home h1{
@@ -106,10 +104,11 @@ section {
   color: #ff2929;
 }
 
-.line{
+.subtitle::after{
+  content: ""; /*Was besagt das?*/
+  display: block;
   height: 2px;
   width: 41px;
-  flex-shrink: 0; 
   background-color: #ff2929;
 }
 
@@ -180,14 +179,34 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
   border-radius: 16px;
   background-color: black;
   color: #D4D4D4;
 }
 
+canvas{
+  max-width: 100%;
+  height: auto;
+}
+
 .audio{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.audio audio{
+  width: 100%;
+  max-width: 320px;
+}
+
+.caption{
+  margin-top: 16px;
+  font-size: 14px;
+  text-align: center;
+  color: #D4D4D4;
 }
 
 /*Pictures*/
@@ -196,7 +215,7 @@ section {
   flex-direction: column;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #0E0E0E
+  background-color: #0E0E0E;
 }
 
 .pictures-format,
@@ -246,6 +265,12 @@ section {
   padding: 20px;
 }
 
+.video-format video{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .video figcaption{
   margin-top: 8px;
   font-size: 14px;
@@ -276,7 +301,7 @@ section {
   width: 90%;
   display: grid;
   background-color: black;
-  border: solid 1px #5b5b5b; /*oder rot?*/
+  border: solid 1px #5b5b5b;
 }
 
 .content-img{
@@ -317,12 +342,9 @@ section {
   box-sizing: border-box;
 }
 
-.content-text h3{
-  font-size: 20px;
-}
-
 .title{
   margin: 0;
+  font-size: 20px;
   color: white;
 }
 
@@ -340,13 +362,21 @@ section {
 
 .pdf-download{
   flex-shrink: 0;
-  cursor: pointer;
 }
 
 .pdf-download img{
   width: 150px;
   height: 150px;
   display: block;
+}
+
+.pdf-download a:hover img,
+.pdf-download a:focus img{
+  transform: scale(1.08);
+}
+.pdf-download a:hover img,
+.pdf-download a:focus img{
+  transform: scale(1.08);
 }
 
 /* Footer*/
@@ -357,14 +387,14 @@ footer{
 }
 
 .divFooter{
-  width: 50%;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 10px;
 }
 
 /*Media Queries*/
 
-@media (max-width: 767px){
+@media (max-width: 999px){
   header{
     flex-direction: column;
     height: auto;
@@ -474,7 +504,7 @@ footer{
 
 }
 
-@media (min-width: 768px){
+@media (min-width: 1000px){
   header{
     flex-direction: row;
     height: 70px;
@@ -567,5 +597,4 @@ footer{
   .pdf .section-head{
     max-width: 420px;
   }
-
 }

@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Michroma&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -32,6 +32,7 @@
         </nav>   
     </header>
 
+    <main>
         <section id="home" class="home">
             <div class="home-inner">
                 <h1>
@@ -42,11 +43,9 @@
             </div>
         </section>
 
-    <main>
         <section id="specs" class="specs">
             <div class="section-head">
                 <p class="subtitle">Technische Daten</p>
-                <div class="line"></div>
                 <h2>
                     <span class="white">Was steckt in der</span> <br>
                     <span class="red">450SR</span> 
@@ -82,20 +81,21 @@
                 </div>
             </div>
             <div class="canvas-audio">
-                <div class="speedometer">
+                <figure class="speedometer">
                     <canvas id="canvas" width="280" height="280">
                         Dein Browser unterstützt das Canvas-Element nicht.
                     </canvas>
-                    <p class="caption">Drehzahlmesser, Canvas 2D</p>
-                </div>
-                <div class="audio"> 
+                    <figcaption class="caption">Drehzahlmesser, Canvas 2D</figcaption>
+                </figure>
+                <figure class="audio"> 
                     <audio controls>
                         <source src="assets/audio/cfmoto_sound.mp3" type="audio/mpeg">
                         <source src="assets/audio/cfmoto_sound.ogg" type="audio/ogg">
                         <source src="assets/audio/cfmoto_sound.wav" type="audio/wav">
                         Dein Browser unterstützt das Audio-Element nicht.
                     </audio>
-                </div>
+                    <figcaption class="caption">Sound der 450SR</figcaption>
+                </figure>
             </div>
         </section>
         
@@ -113,7 +113,7 @@
                             <img class="pic pic-big" src="assets/img/sideprofile.jpg" alt="CFMOTO 450SR Seitenprofil">
                         <div class="small-pictures"> 
                             <img class="pic pic-small" src="assets/img/face_to_face.jpeg" alt="CFMOTO 450SR und Ducati Supersport 950 gegenüber stehend">
-                            <img class="pic pic-small" src="assets/img/sideprofile_front.jpg" alt="CFMOTO 450SR Seitenprofil">
+                            <img class="pic pic-small" src="assets/img/sideprofile_front.jpg" alt="CFMOTO 450SR schräg von vorne">
                         </div>
                     </div>
                     <img class="pic pic-long pic-top" src="assets/img/SR_back.jpeg" alt="CFMOTO 450SR von Hinten">
@@ -148,7 +148,7 @@
                     <source src="assets/video/450sr_fahrt.webm" type="video/webm">
                     <source src="assets/video/450sr_fahrt.mp4" type="video/mp4">
                     <source src="assets/video/450sr_fahrt.ogv" type="video/ogg">
-                    <p>Dein Browser Unterstützt dieses Videoformat nicht.</p>
+                    <p>Dein Browser unterstützt dieses Videoformat nicht.</p>
                 </video>
                 <figcaption>Meine CFMOTO 450SR in Action.</figcaption>
             </figure>
@@ -176,7 +176,7 @@
                 <div class="content-reverse">
                     <div class="content-text">
                         <h3 class="title">SPRINTer Treffen</h3>
-                        <p class="text">Einmal im Jahr findet das SPRINTer-Treffen statt, seit drei Jahren im schönen Ederbergland. Vier Tage lang kommen rund 50 Motorradbegeisterte zusammen und unternehmen täglich verschiedene Tour. Als ich noch als Sozius mitgefahren bin sind wir täglich um die 300 km gefahren. Dieses Jahr bin ich das erste mal selber mitgefahren auf kleineren Touren. Die erste Runde führte über 90 km die zweite über 230 km durch die schönsten Kurven. Abends sitzen wir alle zusammen, lassen den Tag ausklingen und verbringen eine gesellige und spaßige Zeit miteinander.</p>
+                        <p class="text">Einmal im Jahr findet das SPRINTer-Treffen statt, seit drei Jahren im schönen Ederbergland. Vier Tage lang kommen rund 50 Motorradbegeisterte zusammen und unternehmen täglich verschiedene Touren. Als ich noch als Sozius mitgefahren bin, sind wir täglich um die 300 km gefahren. Dieses Jahr bin ich das erste Mal selber mitgefahren, auf kleineren Touren. Die erste Runde führte über 90 km, die zweite über 230 km durch die schönsten Kurven. Abends sitzen wir alle zusammen, lassen den Tag ausklingen und verbringen eine gesellige und spaßige Zeit miteinander.</p>
                     </div>
                     <figure class="content-img">
                         <img class="tour-img" src="assets/img/Sprinter_treff2.jpeg" alt="Motorräder die bei der Tour dabei waren">
@@ -201,7 +201,7 @@
                     </div>
                     <figure class="content-img">
                         <img class="tour-img" src="assets/img/Drive_Safety_Training.jpeg" alt="Ein Bild der Teilnehmenden Motorräder">
-                        <figcaption class="img-cap">Teilgenomme Motorräder</figcaption>
+                        <figcaption class="img-cap">Teilgenommene Motorräder</figcaption>
                     </figure>
                 </div>
             </div>
@@ -217,8 +217,8 @@
                 </h2>
             </div>
             <div class="pdf-download">
-                <a href="assets/pdf/CFMOTO_450SR_Technische_Daten.pdf" download="CFMOTO_450SR_Technische_Daten.pdf" > 
-                    <img src="assets/img/pdf-download-white150x150.png" alt="Hier Klicken zum PDF Download.">
+                <a href="assets/pdf/CFMOTO_450SR_Technische_Daten.pdf" type="application/pdf" download="CFMOTO_450SR_Technische_Daten.pdf" > 
+                    <img src="assets/img/pdf-download-white150x150.png" alt="Technisches Datenblatt der CFMOTO 450SR als PDF zum herunterladen">
                 </a>
             </div>
         </section>
@@ -228,7 +228,7 @@
         <div class="divFooter">
             <span>Tabea Böhm</span>
             <span>•</span>
-            <span>24.09.2026</span>
+            <span><time datetime="24.09.2026">24.09.2026</time></span>
             <span>•</span>
             <span>Webdesign und Standards</span>
         </div>
