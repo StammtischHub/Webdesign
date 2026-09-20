@@ -100,30 +100,29 @@ body {
 #playground {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: 294px repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 3rem;
+    height: 653px;
 }
 
 #game {
     grid-column: span 7;
-    grid-row: span 6;
-    min-width: 0;
-    box-sizing: border-box;
+    grid-row: span 4;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
 #game canvas {
-    display: block;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    margin: 0.75rem 0;
     border-radius: 8px;
     border: 1px solid #181f2d;
+    flex: 1;
 }
 
 #settings {
     grid-column: span 5;
-    grid-row: span 3;
+    grid-row: span 1;
 }
 
 #vector-data {
@@ -131,9 +130,31 @@ body {
     grid-row: span 2;
 }
 
-/*#overlay {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*}*/
+#gravity, #flap, #gap {
+    width: 100%;
+}
+
+#gravity-output {
+    color: #00F0FF;
+}
+
+#flap-output {
+    color: #FF007A;
+}
+
+#gap-output {
+    color: #CCFF00;
+}
+
+.control-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.875rem;
+    font-size: 0.75rem;
+}
+
+.control p {
+    margin: 0;
+    font-size: 0.6875rem;
+}
+
