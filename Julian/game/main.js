@@ -1,4 +1,5 @@
 let previousTime;
+let lastLiveDataUpdate = 0;
 
 let player;
 let barriers;
@@ -49,7 +50,10 @@ function gameLoop(currentTime) {
 
     update(deltaTime);
     draw();
-    updateLiveData(deltaTime);
+    if (currentTime - lastLiveDataUpdate >= 100) {
+        updateLiveData(deltaTime);
+        lastLiveDataUpdate = currentTime;
+    }
     requestAnimationFrame(gameLoop);
 }
 
