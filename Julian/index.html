@@ -46,7 +46,7 @@
             </p>
         </section>
         <article id="playground">
-            <h3 class="visibility-hidden">Lorem ipsum dolor sit amet.</h3>
+            <h2 class="visibility-hidden">Lorem ipsum dolor sit amet.</h2>
             <section class="box" id="game">
                 <h3 class="box-title">Canvas 2D</h3>
                 <canvas id="canvas" aria-label="Spielfeld des Spiels">
@@ -55,6 +55,32 @@
             </section>
             <section class="box" id="settings">
                 <h3 class="box-title">Physik-Einstellungen</h3>
+                <form id="physics-form">
+                    <div class="control">
+                        <div class="control-header">
+                            <label for="gravity">Schwerkraft</label>
+                            <output for="gravity" id="gravity-output"></output>
+                        </div>
+                        <input type="range" id="gravity" min="400" max="1500" value="800">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="control">
+                        <div class="control-header">
+                            <label for="flap">Sprungstärke</label>
+                            <output for="flap" id="flap-output"></output>
+                        </div>
+                        <input type="range" id="flap" min="100" max="800" value="360">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="control">
+                        <div class="control-header">
+                            <label for="gap">Rohrabstand</label>
+                            <output for="gap" id="gap-output">220px</output>
+                        </div>
+                        <input type="range" id="gap" min="148" max="300" value="220">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </form>
             </section>
             <section class="box" id="vector-data">
                 <h3 class="box-title">Live Vektordaten</h3>

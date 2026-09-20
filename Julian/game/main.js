@@ -13,8 +13,10 @@ function init() {
 }
 
 function resetGame() {
+    player = new Player(35, 0, keyboard);
+    applyFormSettings();
     barriers.reset();
-    player = new Player(35, barriers.getStartingGapY(), keyboard);
+    player.y = barriers.getStartingGapY(player.height);
 }
 
 function update(deltaTime) {
@@ -48,8 +50,32 @@ function gameLoop(currentTime) {
     draw();
     requestAnimationFrame(gameLoop);
 }
-init();
+
 window.addEventListener('resize', () => {
     resizeCanvas();
     resetGame();
 });
+
+const gravityInput = document.querySelector('#gravity');
+const flapInput = document.querySelector('#flap');
+const gapInput = document.querySelector('#gap');
+
+const gravityOutput = document.querySelector('#gravity-output');
+const flapOutput = document.querySelector('#flap-output');
+const gapOutput = document.querySelector('#gap-output');
+
+function applyFormSettings() {
+    player.gravity = gravityInput.valueAsNumber;
+    player.jumpSpeed = flapInput.valueAsNumber;
+    barriers.gapHeight = gapInput.valueAsNumber;
+
+    gravityOutput.value = player.gravity;
+    flapOutput.value = player.jumpSpeed;
+    gapOutput.value = `${barriers.gapHeight}px`;
+}
+
+gravityInput.addEventListener('input', applyFormSettings);
+flapInput.addEventListener('input', applyFormSettings);
+gapInput.addEventListener('input', applyFormSettings);
+
+init();
