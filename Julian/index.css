@@ -184,6 +184,10 @@ body {
     flex-direction: column;
 }
 
+#vector-data .data-cell dt {
+    font-size: 0.75rem;
+}
+
 #vector-data .data-cell dd {
     margin: 0;
     text-align: center;
