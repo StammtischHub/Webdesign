@@ -17,6 +17,7 @@ function resetGame() {
     applyFormSettings();
     barriers.reset();
     player.y = barriers.getStartingGapY(player.height);
+    updateLiveData();
 }
 
 function update(deltaTime) {
@@ -48,6 +49,7 @@ function gameLoop(currentTime) {
 
     update(deltaTime);
     draw();
+    updateLiveData(deltaTime);
     requestAnimationFrame(gameLoop);
 }
 
@@ -63,6 +65,15 @@ const gapInput = document.querySelector('#gap');
 const gravityOutput = document.querySelector('#gravity-output');
 const flapOutput = document.querySelector('#flap-output');
 const gapOutput = document.querySelector('#gap-output');
+const velocityData = document.querySelector('#velocity-data');
+const playerYData = document.querySelector('#player-y-data');
+const frameDeltaData = document.querySelector('#frame-delta');
+
+function updateLiveData(deltaTime = 0) {
+    velocityData.textContent = `${player.velocityY.toFixed(1)}px/s`;
+    playerYData.textContent = `${player.y.toFixed(1)}px`;
+    frameDeltaData.textContent = `${(deltaTime * 1000).toFixed(1)}ms`;
+}
 
 function applyFormSettings() {
     player.gravity = gravityInput.valueAsNumber;

@@ -125,26 +125,21 @@ body {
     grid-row: span 1;
 }
 
-#vector-data {
-    grid-column: span 5;
-    grid-row: span 1;
-}
-
 #gravity, #flap, #gap {
     width: 100%;
     margin: 0;
     height: 0.5rem;
 }
 
-#gravity-output {
+#gravity-output, #velocity-data {
     color: #00F0FF;
 }
 
-#flap-output {
+#flap-output, #player-y-data {
     color: #FF007A;
 }
 
-#gap-output {
+#gap-output, #frame-delta {
     color: #CCFF00;
 }
 
@@ -163,3 +158,34 @@ body {
     font-size: 0.6875rem;
 }
 
+#vector-data {
+    grid-column: span 5;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+#vector-data dl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 0.5rem 0 0;
+    flex: 1;
+    min-height: 0;
+}
+
+#vector-data .data-cell {
+    background: #1B2232;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#vector-data .data-cell dd {
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+}
