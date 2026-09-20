@@ -18,7 +18,6 @@ body {
 header {
   position: fixed;
   width: 100%;
-  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,12 +35,13 @@ header {
 
 nav ul{
   display: flex;
+  margin: 0; /*warum bei beidem 0?*/
+  margin: 0;
   list-style: none;
 }
 
 nav a {
-  margin: 10px;
-  padding: 16px 18px;
+  display: block;  
   font-size: 20px;
   text-align: center;
   text-decoration: none;
@@ -50,21 +50,27 @@ nav a {
 
 nav a:hover {
   color: #ff2929;
-}
+} 
 
 /* main body*/
-/*Home*/
+/*Section allgemein*/
 
 section {
-  min-height: 100px; /*brauche ich das noch?*/
   display: flex;
-  padding: 0px 15%;
-  scroll-margin-top: 70px;
   border-top: 4px solid #ff2929;
 }
 
+.white{
+  color: #fff;
+}
+
+.red{
+  color: #ff2929;
+}
+
+/*Home*/
 .home{
-  min-height: 95vh; /*brauche ich das noch?*/
+  min-height: 95vh; 
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -82,24 +88,14 @@ section {
 
 .home h1{
   margin-bottom: 10px;
-  font-size: 60px;
   font-weight: 800px;
 }
 
-.white{
-  color: #fff;
-}
-
-.red{
-  color: #ff2929;
-}
-
 .home-text{
-  font-size: 20px;
   color: #D4D4D4;
 }
 
-/*sections*/
+/*Section Köpfe*/
 
 .subtitle{
   margin-top: 25px;
@@ -113,27 +109,23 @@ section {
 .line{
   height: 2px;
   width: 41px;
-  flex-shrink: 0; /*brauche ich das?*/
+  flex-shrink: 0; 
   background-color: #ff2929;
 }
 
 .section-head{
-  width: 40%;
   display: flex;
   flex-direction: column;
 }
 
 .section-head h2{
   margin-top: 10px;
-  font-size: 40px; 
   font-weight: 600;
 }
 
-/*Specifications*/
+/*Technische Daten*/
 .specs{
-  min-height: auto; /*brauche ich das noch?*/
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -154,9 +146,7 @@ section {
 .item{
   display: flex;
   justify-content: space-between;  
-  align-items: baseline;
   min-width: 160px;
-  padding: 22px 40px 22px 0px;
   border-bottom: 1px solid #5b5b5b;
 }
 
@@ -177,12 +167,10 @@ section {
 }
 
 .canvas-audio{
-  width: 40%;
   min-height: 480px; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 10%;
   border-radius: 16px;
 }
 
@@ -204,7 +192,6 @@ section {
 
 /*Pictures*/
 .pictures{
-  min-height: auto;
   display: flex;
   flex-direction: column;
   padding-top: 40px;
@@ -236,25 +223,12 @@ section {
   object-fit: cover;
 }
 
-.pic-big{
-  height: 280px;
-}
-
-.pic-small{
-  height: 160px;
-}
-
-.pic-long{
-  height: 400px;
-}
-
 .pic-top{
   object-position: center 10%;
 }
 
 /*Video*/
 .video{
-  min-height: auto;
   display: flex;
   flex-direction: column;
   padding-top: 40px;
@@ -268,7 +242,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto; /*Fester Wert?*/
+  margin: 0 auto; 
   padding: 20px;
 }
 
@@ -280,7 +254,6 @@ section {
 
 /*Experiences*/
 .experiences{
-  min-height: auto;
   display: flex;
   flex-direction: column;
   padding-top: 40px;
@@ -290,26 +263,20 @@ section {
 
 .experiences-content{
   width: 100%;
-  max-width: 1100px; /*brauche ich das?*/
+  max-width: 1100px; 
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  margin: 30px auto 0 auto; /*Feste Werte?*/
+  margin: 30px auto 0 auto; 
 }
 
 .content,
 .content-reverse{
   width: 90%;
-  min-height: 350px;
   display: grid;
-  grid-template-columns: 300px 1fr;
   background-color: black;
   border: solid 1px #5b5b5b; /*oder rot?*/
-}
-
-.content-reverse{
-  grid-template-columns: 1fr 300px;
 }
 
 .content-img{
@@ -318,8 +285,9 @@ section {
 }
 
 .tour-img{
-  max-height: 400px;
   width: 100%;
+  height: 100%;
+  max-height: 400px;
   display: block;
   object-fit: cover;
   object-position: center 40%; 
@@ -365,14 +333,9 @@ section {
 /*PDF*/
 .pdf{
   display: flex;
-  align-items: center;
-  gap: 100px;
-  padding-top: 40px 5%;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #1C1C1C;  
-}
-
-.section-head{
-  max-width: 420px;
 }
 
 .pdf-download{
@@ -395,7 +358,169 @@ footer{
 
 /*Media Queries*/
 
+@media (max-width: 767px){
+  header{
+    flex-direction: column;
+    height: auto;
+  }
+
+  nav ul{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a{
+    margin: 4px;
+    padding: 10px 12;
+    font-size: 15px;
+  }
+
+  /*Sections*/
+  section{
+    padding: 0px 6%;
+    scroll-margin-top: 160px;
+  }
+
+  /*Home*/
+  .home h1{
+    font-size: 40px;
+  }
+
+  .home-text{
+    font-size: 16px;
+  }
+
+  /*Section Köpfe*/
+  .section-head{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section-head h2{
+    font-size: 30px;
+  }
+
+  /**Technische Daten**/
+  .specs{
+    flex-direction: column;
+  }
+
+  .item{
+    flex-direction: column ;
+    align-items: flex-start;
+    padding: 16px 20px 16px 0;
+  }
+
+  .item dd{
+    margin-top: 4px;
+  }
+
+  .canvas-audio{
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /*Bilder*/
+  .pic-column-above,
+  .pic-column-below{
+    grid-template-columns: 1fr;
+  }
+
+  .pic-big{
+    height: 280px;
+  }
+
+  .pic-small{
+    height: 160px;
+  }
+
+  .pic-long{
+    height: 400px;
+  }
+
+  /*Experiences*/
+  .content,
+  .content-reverse{
+    grid-template-columns: 1fr;
+  }
+
+  .content-img{
+    grid-row: 1;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .content-text{
+    grid-row: 2;
+  }
+
+  /*PDF*/
+
+  .pdf{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .pdf-download{
+    align-self: center;
+  }
+
+}
+
 @media (min-width: 768px){
+  header{
+    flex-direction: row;
+    height: 70px;
+  }
+
+  nav a{
+    margin: 10px;
+    padding: 16px 18px;
+    font-size: 20px;
+  }
+
+  /*Section*/
+
+  section{
+    padding: 0px 15%;
+    scroll-margin-top: 70px;
+  }
+
+  /*Home*/
+  .home h1{
+    font-size: 60px;
+  }
+
+  .home-text{
+    font-size: 20px;
+  }
+
+  /*Section Köpfe*/
+  .section-head{
+    width: 40%;
+  }
+
+  .section-head h2{
+    font-size: 40px;
+  }
+
+  /*Technisch Daten*/
+  .specs{
+    flex-direction: row;
+  }
+
+  .item{
+    align-items: baseline;
+    padding: 22px 40px 22px 0;
+  }
+
+  .canvas-audio{
+    width: 40%;
+    margin-top: 10%;
+  }
+
+  /*Bilder*/
   .pic-column-above{
     grid-template-columns: 7fr 6fr;
   }
@@ -416,79 +541,25 @@ footer{
     height: calc(480px + 20px + 220px);
   }
 
-}
-
-@media (max-width: 767px){
-  header{
-    flex-direction: column;
-    height: auto;
-  }
-
-  nav ul{
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav a{
-    margin: 4px;
-    padding: 10px 12;
-    font-size: 15px;
-  }
-
-  .specs{
-    flex-direction: column;
-  }
-
-  .info, 
-  .canvas-audio{
-    width: 100%;
-  }
-
-  .item{
-    flex-direction: column ;
-    align-items: flex-start;
-    padding: 16px 20px;
-  }
-
-  .item dd{
-    margin-top: 4px;
-  }
-
   /*Experiences*/
-  .content,
+  .content{
+    min-height: 350px;
+    grid-template-columns: 300px 1fr;
+  }
+
   .content-reverse{
-    grid-template-columns: 1fr;
-    width: 90%;
-    min-height: 0;
+    min-height: 350px;
+    grid-template-columns: 1fr 300px;
   }
 
-  .content-img{
-    grid-row: 1;
-    height: 250px;
-  }
-
-  .content-text{
-    grid-row: 2;
-  }
-
-  .content-img{
-    grid-row: 1;
-    height: 250px;
-    overflow: hidden;
-  }
-
+  /*PDF*/
   .pdf{
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: center;
+    gap: 100px;
   }
 
-  .section-head{
-    max-width: 100%;
-  }
-
-  .pdf-download{
-    align-self: center;
+  .pdf .section-head{
+    max-width: 420px;
   }
 
 }
