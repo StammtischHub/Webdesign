@@ -4,6 +4,10 @@ let lastLiveDataUpdate = 0;
 let player;
 let barriers;
 const keyboard = new Keyboard();
+const collisionSound = new Audio('assets/slap.flac');
+collisionSound.preload = 'auto';
+const voidSound = new Audio('assets/scream.flac');
+voidSound.preload = 'auto';
 
 function init() {
     resizeCanvas();
@@ -26,7 +30,19 @@ function update(deltaTime) {
     player.update(deltaTime);
     keyboard.endFrame();
 
-    if (barriers.collidesWith(player) || player.y < 0 || player.y >= canvas.height) {
+    if (barriers.collidesWith(player)) {
+        collisionSound.currentTime = 0;
+        collisionSound.play().catch(error => {
+            console.warn('Kollisionssound konnte nicht abgespielt werden:', error);
+        });
+        resetGame();
+    } else if (player.y >= canvas.height) {
+        voidSound.currentTime = 0;
+        voidSound.play().catch(error => {
+            console.warn('Void-Sound konnte nicht abgespielt werden:', error);
+        });
+        resetGame();
+    } else if (player.y < 0) {
         resetGame();
     }
 }
