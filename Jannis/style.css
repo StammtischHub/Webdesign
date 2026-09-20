@@ -422,7 +422,7 @@ h4 {
     background-color: var(--m-light-blue);
     position: absolute;
     top: 50%;
-    left: calc(var(--space-m) * -1 - 6px);
+    left: calc(var(--space-m) * -1 - 7px);
     filter: drop-shadow(0 0 10px var(--m-light-blue));
 }
 
