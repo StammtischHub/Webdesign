@@ -19,6 +19,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1; /*In Chorme schiebt sich das Audio-Element ohne z-Index über den Header, in Firefox benötigt man den z-Index nicht da läuft das Audio-Element normal hinter dem header. Eine andere Lösung habe ich leider nicht gefunden.*/
   background-color: #000;
 }
 
