@@ -277,6 +277,11 @@ body {
     font-weight: bold;
 }
 
+#how-it-works {
+    grid-column: span 5;
+    grid-row: span 1;
+}
+
 .theme-section {
     margin-top: 3rem;
 }
