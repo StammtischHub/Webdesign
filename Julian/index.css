@@ -22,6 +22,14 @@
     src: url("./fonts/SpaceMono-Regular.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./fonts/SpaceMono-Bold.ttf") format("truetype");
+}
+
 body {
     background: #0D1117;
     font-family: "Space Grotesk", sans-serif;
@@ -136,6 +144,26 @@ body {
     flex: 1;
 }
 
+.scores {
+    display: flex;
+    margin: 0;
+    gap: 0.75rem;
+    font-family: "Space Mono", monospace;
+}
+
+.scores .score {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    border: 1px solid #263248;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+}
+
+.scores dd {
+    margin: 0;
+}
+
 #settings {
     grid-column: span 5;
     grid-row: span 1;
@@ -145,10 +173,6 @@ body {
     width: 100%;
     margin: 0;
     height: 0.5rem;
-}
-
-#gravity-output, #flap-output, #gap-output {
-    font-weight: bold;
 }
 
 .blue {
@@ -165,6 +189,10 @@ body {
 
 .white {
     color: #FFFFFF;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .control-header {
@@ -246,7 +274,7 @@ body {
 }
 
 .numeration {
-    font-family: Space Mono, monospace;
+    font-family: "Space Mono", monospace;
     text-transform: uppercase;
     font-size: 0.6875rem;
 }

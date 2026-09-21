@@ -1,5 +1,6 @@
 let previousTime;
 let lastLiveDataUpdate = 0;
+let score = 0;
 
 let player;
 let barriers;
@@ -18,6 +19,7 @@ function init() {
 }
 
 function resetGame() {
+    score = 0;
     player = new Player(35, 0, keyboard);
     applyFormSettings();
     barriers.reset();
@@ -26,6 +28,7 @@ function resetGame() {
 }
 
 function update(deltaTime) {
+    score += deltaTime * barriers.speed;
     barriers.update(deltaTime);
     player.update(deltaTime);
     keyboard.endFrame();
@@ -88,8 +91,10 @@ const gapOutput = document.querySelector('#gap-output');
 const velocityData = document.querySelector('#velocity-data');
 const playerYData = document.querySelector('#player-y-data');
 const frameDeltaData = document.querySelector('#frame-delta');
+const scoreDisplay = document.querySelector('#score');
 
 function updateLiveData(deltaTime = 0) {
+    scoreDisplay.textContent = String(Math.floor(score));
     velocityData.textContent = `${player.velocityY.toFixed(1)}px/s`;
     playerYData.textContent = `${player.y.toFixed(1)}px`;
     frameDeltaData.textContent = `${(deltaTime * 1000).toFixed(1)}ms`;
