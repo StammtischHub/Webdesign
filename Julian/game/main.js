@@ -176,8 +176,10 @@ function applyFormSettings() {
     gapOutput.value = `${barriers.gapHeight}px`;
 }
 
-gravityInput.addEventListener('input', applyFormSettings);
-flapInput.addEventListener('input', applyFormSettings);
-gapInput.addEventListener('input', applyFormSettings);
+const physicsForm = document.querySelector('#physics-form');
+physicsForm.addEventListener('input', applyFormSettings);
+physicsForm.addEventListener('reset', () => {
+    setTimeout(applyFormSettings, 0);
+});
 
 init();
