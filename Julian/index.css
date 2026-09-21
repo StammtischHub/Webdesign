@@ -124,10 +124,15 @@ body {
 #playground {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-rows: repeat(3, min-content);
     gap: 1.5rem;
     margin-top: 3rem;
-    height: 653px;
+}
+
+#playground .box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
 #game {
@@ -243,7 +248,7 @@ body {
 }
 
 .control {
-    margin-top: 0.875rem;
+    margin-bottom: 0.875rem;
 }
 
 .control p {
@@ -406,6 +411,11 @@ body {
     cursor: pointer;
     transition: box-shadow 0.1s ease-in;
     margin-top: 0.625rem;
+}
+
+.fancy-button.pink {
+    background: #FF007A;
+    box-shadow: 0 0 20px #FF007A66;
 }
 
 .fancy-button.pink:hover {
