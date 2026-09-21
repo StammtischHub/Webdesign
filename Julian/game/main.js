@@ -1,6 +1,9 @@
 let previousTime;
 let lastLiveDataUpdate = 0;
 let score = 0;
+const highscoreStorageKey = 'julian-game-highscore';
+let highscore = loadHighscore();
+let highscoreSoundPlayed = false;
 
 let player;
 let barriers;
@@ -9,6 +12,35 @@ const collisionSound = new Audio('assets/slap.flac');
 collisionSound.preload = 'auto';
 const voidSound = new Audio('assets/scream.flac');
 voidSound.preload = 'auto';
+const highscoreSound = new Audio('assets/highscore.flac');
+highscoreSound.preload = 'auto';
+
+function loadHighscore() {
+    try {
+        const storedScore = Number(localStorage.getItem(highscoreStorageKey));
+        return Number.isSafeInteger(storedScore) && storedScore >= 0 ? storedScore : 0;
+    } catch {
+        return 0;
+    }
+}
+
+function updateHighscore() {
+    const currentScore = Math.floor(score);
+    if (currentScore <= highscore) return;
+
+    highscore = currentScore;
+    try {
+        localStorage.setItem(highscoreStorageKey, String(highscore));
+    } catch {}
+
+    if (!highscoreSoundPlayed) {
+        highscoreSoundPlayed = true;
+        highscoreSound.currentTime = 0;
+        highscoreSound.play().catch(error => {
+            console.warn('Highscore-Sound konnte nicht abgespielt werden:', error);
+        });
+    }
+}
 
 function init() {
     resizeCanvas();
@@ -20,6 +52,7 @@ function init() {
 
 function resetGame() {
     score = 0;
+    highscoreSoundPlayed = false;
     player = new Player(35, 0, keyboard);
     applyFormSettings();
     barriers.reset();
@@ -29,6 +62,7 @@ function resetGame() {
 
 function update(deltaTime) {
     score += deltaTime * barriers.speed;
+    updateHighscore();
     barriers.update(deltaTime);
     player.update(deltaTime);
     keyboard.endFrame();
@@ -92,9 +126,11 @@ const velocityData = document.querySelector('#velocity-data');
 const playerYData = document.querySelector('#player-y-data');
 const frameDeltaData = document.querySelector('#frame-delta');
 const scoreDisplay = document.querySelector('#score');
+const highscoreDisplay = document.querySelector('#highscore');
 
 function updateLiveData(deltaTime = 0) {
     scoreDisplay.textContent = String(Math.floor(score));
+    highscoreDisplay.textContent = String(highscore);
     velocityData.textContent = `${player.velocityY.toFixed(1)}px/s`;
     playerYData.textContent = `${player.y.toFixed(1)}px`;
     frameDeltaData.textContent = `${(deltaTime * 1000).toFixed(1)}ms`;
