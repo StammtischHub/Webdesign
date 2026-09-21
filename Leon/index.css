@@ -4,7 +4,7 @@
   --color-white: #ffffff;
   --color-black: #000000;
   --color-orange: #c3531b;
-  --color-ba-blue: #093A90;
+  --color-blue: #1e71ff;
 }
 
 * {
@@ -77,7 +77,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-blue);
 }
 
 nav ul li a:hover {
@@ -87,7 +87,7 @@ nav ul li a:hover {
 
 nav ul li a:active {
   text-decoration: underline;
-  color: var(--color-ba-blue);
+  color: var(--color-blue);
 }
 
 /* HERO */
@@ -257,7 +257,7 @@ nav ul li a:active {
 }
 
 .download-btn:active {
-  background-color: var(--color-ba-blue);
+  background-color: var(--color-blue);
   color: var(--color-white);
   opacity: 0.85;
 }
