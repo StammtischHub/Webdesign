@@ -380,12 +380,20 @@ body {
 
 #making .concept-grid {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: min-content 1fr;
+    grid-template-rows: auto auto;
 }
 
 #video {
     grid-column: span 3;
     grid-row: span 2;
+    min-width: 0;
+    min-height: 0;
+}
+
+.making-video-stage {
+    flex: 1;
+    contain: size;
+    margin-top: 0.625rem;
 }
 
 #pdf, #audacity {
@@ -394,9 +402,15 @@ body {
 }
 
 #video-element {
+    display: block;
+    margin-inline: auto;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    box-sizing: border-box;
     border-radius: 8px;
     border: 1px solid #181f2d;
-    margin-top: 0.625rem;
 }
 
 .fancy-button {
