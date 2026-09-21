@@ -8,7 +8,7 @@ html{
 
 body {
   margin: 0;
-  font-family: "Electrolize", Arial, sans-serif;
+  font-family: "Electrolize", Helvetica, Arial, sans-serif;
 }
 
 
@@ -182,7 +182,7 @@ section {
   align-items: center;
   margin: 25px 0 0;
   border-radius: 16px;
-  background-color: black;
+  background-color: #000;
   color: #D4D4D4;
 }
 
@@ -302,7 +302,7 @@ canvas{
 .content-reverse{
   width: 90%;
   display: grid;
-  background-color: black;
+  background-color: #000;
   border: solid 1px #5b5b5b;
 }
 
@@ -330,7 +330,7 @@ canvas{
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  color: white;
+  color: #fff;
   background-color: rgba(13, 13, 13, 0.9);
 }
 
@@ -346,7 +346,7 @@ canvas{
 .title{
   margin: 0;
   font-size: 20px;
-  color: white;
+  color: #fff;
 }
 
 .text{
@@ -380,7 +380,7 @@ canvas{
 /* Footer*/
 footer{
   padding: 20px;
-  color: white;
+  color: #fff;
   background-color: #000;
 }
 
