@@ -21,7 +21,7 @@
 <body>
 <header class="site-header">
     <div class="container">
-        <a href="/" class="logo">HOME</a>
+        <a href="../index.html" class="logo">HOME</a>
 
         <nav aria-label="Hauptnavigation" id="navbar">
             <ul>
@@ -45,7 +45,7 @@
             </p>
         </section>
         <article id="playground">
-            <h2 class="visibility-hidden">Lorem ipsum dolor sit amet.</h2>
+            <h2 class="visibility-hidden">Spiel & Physik</h2>
             <section class="box" id="game">
                 <h3 class="box-title">Canvas 2D</h3>
                 <div class="game-stage">
@@ -54,7 +54,8 @@
                     </canvas>
                     <div id="game-overlay">
                         <p id="game-status" role="status">Bereit?</p>
-                        <button class="fancy-button green uppercase" id="game-start" type="button">Spiel starten</button>
+                        <button class="fancy-button green uppercase" id="game-start" type="button">Spiel starten
+                        </button>
                     </div>
                 </div>
                 <dl class="scores uppercase">
@@ -143,7 +144,8 @@
                     <h3 class="no-margin white">Game Loop</h3>
                     <p class="no-margin longtext">
                         Der Game Loop hält das Spiel kontinuierlich am Laufen. Über
-                        <span class="green bold mono">requestAnimationFrame</span><span class="white bold mono">()</span>
+                        <span class="green bold mono">requestAnimationFrame</span><span
+                            class="white bold mono">()</span>
                         wird für jedes neue Browser-Frame ein weiterer Durchlauf gestartet.
                         <br><br>
                         Dabei werden Eingaben verarbeitet, Positionen und Geschwindigkeiten
@@ -158,7 +160,8 @@
                 <section class="box">
                     <p class="numeration pink no-margin uppercase">02 // Physik</p>
                     <h3 class="no-margin white">Formeln</h3>
-                    <p class="no-margin">Position und Fallgeschwindigkeit werden in jedem Frame mithilfe von Delta Time aktualisiert.</p>
+                    <p class="no-margin">Position und Fallgeschwindigkeit werden in jedem Frame mithilfe von Delta Time
+                        aktualisiert.</p>
                     <div id="formulas">
                         <figure>
                             <object class="figure-img" data="assets/fallbewegung_farbig.svg" type="image/svg+xml">
@@ -167,13 +170,15 @@
                             <figcaption class="figure-caption">Fallbewegung</figcaption>
                         </figure>
                         <figure>
-                            <object class="figure-img" data="assets/fallgeschwindigkeit_farbig.svg" type="image/svg+xml">
+                            <object class="figure-img" data="assets/fallgeschwindigkeit_farbig.svg"
+                                    type="image/svg+xml">
                                 v y neu = v y alt + g · Δt
                             </object>
                             <figcaption class="figure-caption">Fallgeschwindigkeit</figcaption>
                         </figure>
                         <figure>
-                            <object class="figure-img" data="assets/sprunggeschwindigkeit_farbig.svg" type="image/svg+xml">
+                            <object class="figure-img" data="assets/sprunggeschwindigkeit_farbig.svg"
+                                    type="image/svg+xml">
                                 v y = −v Sprung
                             </object>
                             <figcaption class="figure-caption">Sprunggeschwindigkeit</figcaption>
@@ -299,7 +304,8 @@
                         verwendete Codecs und die Einbindung der Soundeffekte in das Spiel. Oder befindet sich dahinter
                         doch nur ein Lorem ipsum?
                     </p>
-                    <a href="./assets/Dokumentation.pdf" target="_blank" rel="noopener" class="fancy-button pink uppercase">Dokumentation öffnen</a>
+                    <a href="./assets/Dokumentation.pdf" target="_blank" rel="noopener"
+                       class="fancy-button pink uppercase">Dokumentation öffnen</a>
                 </section>
                 <section class="box" id="audacity">
                     <p class="numeration blue no-margin uppercase">03 // Audacity</p>
