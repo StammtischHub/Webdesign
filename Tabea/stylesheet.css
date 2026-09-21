@@ -19,7 +19,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000;
   background-color: #000;
 }
 
@@ -302,29 +301,31 @@ canvas{
 .content-reverse{
   width: 90%;
   display: grid;
+  grid-template-columns: 1fr;
   background-color: #000;
   border: solid 1px #5b5b5b;
 }
 
 .content-img{
-  position: relative;
+  display: grid;
+  grid-row: 1;
   margin: 0; 
 }
 
 .tour-img{
+  grid-column: 1;
+  grid-row: 1;
   width: 100%;
-  height: 100%;
-  max-height: 400px;
+  height: 250px;
   display: block;
   object-fit: cover;
-  object-position: center 40%; 
+  object-position: center 40%;
 }
 
 .img-cap{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
   padding: 10px 20px;
   font-size: 14px;
   letter-spacing: 1px;
@@ -335,6 +336,7 @@ canvas{
 }
 
 .content-text{
+  grid-row: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -472,22 +474,6 @@ footer{
     height: 400px;
   }
 
-  /*Experiences*/
-  .content,
-  .content-reverse{
-    grid-template-columns: 1fr;
-  }
-
-  .content-img{
-    grid-row: 1;
-    height: 250px;
-    overflow: hidden;
-  }
-
-  .content-text{
-    grid-row: 2;
-  }
-
   /*PDF*/
 
   .pdf{
@@ -593,6 +579,19 @@ footer{
   .content-reverse{
     min-height: 350px;
     grid-template-columns: 1fr 300px;
+  }
+
+  .content-img{
+    grid-row: auto;
+  }
+
+  .content-text{
+    grid-row: auto;
+  }
+
+  .tour-img{
+    height: 100%;
+    max-height: 400px;
   }
 
   /*PDF*/
