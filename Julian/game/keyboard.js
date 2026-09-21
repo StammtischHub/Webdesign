@@ -4,6 +4,10 @@ class Keyboard {
         this.justPressedKeys = new Set();
 
         target.addEventListener('keydown', event => {
+            if (event.code === 'Space') {
+                event.preventDefault();
+            }
+
             if (!event.repeat) {
                 this.justPressedKeys.add(event.code);
             }

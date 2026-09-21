@@ -2,9 +2,9 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Browser Game similar to Flappy Bird"/>
-    <meta name="keywords" content="HTML5, CSS, AI_WS24-IV"/>
-    <meta name="author" content="julian-benedikt.kirchner"/>
+    <meta name="description" content="Browser Game similar to Flappy Bird">
+    <meta name="keywords" content="HTML5, CSS, AI_WS24-IV">
+    <meta name="author" content="julian-benedikt.kirchner">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="index.css">
@@ -21,15 +21,14 @@
 <body>
 <header class="site-header">
     <div class="container">
-        <a href="/" class="logo">HOME</a>
+        <a href="../index.html" class="logo">HOME</a>
 
         <nav aria-label="Hauptnavigation" id="navbar">
             <ul>
-                <li><a href="#game">Spiel & Physik</a></li>
+                <li><a href="#playground">Spiel & Physik</a></li>
                 <li><a href="#concepts">Konzepte</a></li>
                 <li><a href="#audio">Audio</a></li>
-                <li><a href="#video">Video</a></li>
-                <li><a href="#report">PDF Bericht</a></li>
+                <li><a href="#making">Produktion & Dokumentation</a></li>
             </ul>
         </nav>
     </div>
@@ -38,26 +37,313 @@
 <main>
     <div class="container">
         <section class="hero">
-            <p class="eyebrow">Lorem ipsum dolor sit amet.</p>
-            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores at atque deserunt est,
-                incidunt ipsum nam omnis sed sequi tempora ullam? A iusto minus nesciunt!
+            <p id="eyebrow" class="uppercase mono green">Flappy Bird.</p>
+            <h1 id="title">Einstieg in die Spielentwicklung</h1>
+            <p id="description" class="no-margin">
+                Ein eigener Flappy-Bird-Clone mit HTML, CSS und JavaScript. Von Canvas-Rendering und Spielphysik über
+                Game Loop und Kollisionen bis hin zu selbst aufgenommenen Sounds.
             </p>
+        </section>
+        <article id="playground">
+            <h2 class="visibility-hidden">Spiel & Physik</h2>
+            <section class="box" id="game">
+                <h3 class="box-title">Canvas 2D</h3>
+                <div class="game-stage">
+                    <canvas id="canvas" tabindex="0">
+                        Dein Browser unterstützt Canvas nicht.
+                    </canvas>
+                    <div id="game-overlay">
+                        <p id="game-status" role="status">Bereit?</p>
+                        <button class="fancy-button green uppercase" id="game-start" type="button">Spiel starten
+                        </button>
+                    </div>
+                </div>
+                <dl class="scores uppercase">
+                    <div class="score">
+                        <dt>Score</dt>
+                        <dd>
+                            <output class="blue bold" id="score">0</output>
+                        </dd>
+                    </div>
+
+                    <div class="score">
+                        <dt>Highscore</dt>
+                        <dd>
+                            <output class="green bold" id="highscore">0</output>
+                        </dd>
+                    </div>
+                </dl>
+            </section>
+            <section class="box" id="settings">
+                <h3 class="box-title">Physik-Einstellungen</h3>
+                <form id="physics-form">
+                    <div class="control">
+                        <div class="control-header">
+                            <label for="gap">Rohrabstand</label>
+                            <output for="gap" id="gap-output" class="mono green bold">220px</output>
+                        </div>
+                        <input type="range" id="gap" min="148" max="300" value="220">
+                        <p>Vertikale Lücke zwischen den Hindernissen.</p>
+                    </div>
+                    <div class="control">
+                        <div class="control-header">
+                            <label for="flap">Sprungstärke</label>
+                            <output for="flap" id="flap-output" class="mono pink bold">360px/s</output>
+                        </div>
+                        <input type="range" id="flap" min="100" max="800" value="360">
+                        <p>Legt die vertikale Geschwindigkeit beim Sprung fest.</p>
+                    </div>
+                    <div class="control">
+                        <div class="control-header">
+                            <label for="gravity">Schwerkraft</label>
+                            <output for="gravity" id="gravity-output" class="mono blue bold">800px/s^2</output>
+                        </div>
+                        <input type="range" id="gravity" min="400" max="1500" value="800">
+                        <p>Wie stark der Spieler nach unten beschleunigt wird.</p>
+                    </div>
+                    <button type="reset" id="physics-reset">Reset</button>
+                </form>
+            </section>
+            <section class="box" id="vector-data">
+                <h3 class="box-title">Live Daten</h3>
+                <dl>
+                    <div class="data-cell">
+                        <dt>Velocity Y</dt>
+                        <dd id="velocity-data" class="mono green bold">0.0px/s</dd>
+                    </div>
+                    <div class="data-cell">
+                        <dt>Position Y</dt>
+                        <dd id="player-y-data" class="mono pink bold">0.0px</dd>
+                    </div>
+                    <div class="data-cell">
+                        <dt>Frame Delta</dt>
+                        <dd id="frame-delta" class="mono blue bold">0.0ms</dd>
+                    </div>
+                </dl>
+            </section>
+            <section class="box" id="how-it-works">
+                <h3 class="box-title">So funktioniert es</h3>
+                <p class="no-margin">
+                    Die Spielfigur besitzt eine vertikale Geschwindigkeit, die sich durch Schwerkraft kontinuierlich
+                    verändert. Mit jedem Sprung wird diese Geschwindigkeit kurz nach oben gesetzt. Rohrabstand und
+                    Schwerkraft beeinflussen dabei direkt den Schwierigkeitsgrad.
+                </p>
+                <p class="no-margin">
+                    <kbd class="green mono bold uppercase">Leertaste</kbd> -- Springen
+                </p>
+            </section>
+        </article>
+        <section class="theme-section" id="concepts">
+            <header>
+                <p class="no-margin green uppercase uppercase">Unter der Haube.</p>
+                <h2 class="no-margin white">Kernkonzepte</h2>
+                <p class="no-margin">Drei Bausteine bestimmen den technischen Aufbau des Spiels.</p>
+            </header>
+            <div class="concept-grid">
+                <section class="box">
+                    <p class="numeration green no-margin uppercase">01 // Herzstück</p>
+                    <h3 class="no-margin white">Game Loop</h3>
+                    <p class="no-margin longtext">
+                        Der Game Loop hält das Spiel kontinuierlich am Laufen. Über
+                        <code class="green bold mono">requestAnimationFrame<span class="white">()</span></code>
+                        wird für jedes neue Browser-Frame ein weiterer Durchlauf gestartet.
+                    </p>
+                    <p class="no-margin longtext">
+                        Dabei werden Eingaben verarbeitet, Positionen und Geschwindigkeiten
+                        aktualisiert, Kollisionen geprüft und anschließend die aktuelle Szene
+                        auf das Canvas gezeichnet.
+                    </p>
+                    <p class="no-margin longtext">
+                        Delta Time beschreibt die vergangene Zeit seit dem letzten Frame.
+                        Bewegungen werden damit zeit- statt frameabhängig berechnet und bleiben
+                        auch bei unterschiedlichen Bildraten möglichst konstant. So bleibt die Bewegung
+                        bildratenunabhängig.
+                    </p>
+                </section>
+                <section class="box">
+                    <p class="numeration pink no-margin uppercase">02 // Physik</p>
+                    <h3 class="no-margin white">Formeln</h3>
+                    <p class="no-margin">Position und Fallgeschwindigkeit werden in jedem Frame mithilfe von Delta Time
+                        aktualisiert.</p>
+                    <div id="formulas">
+                        <figure>
+                            <object class="figure-img" data="assets/fallbewegung_farbig.svg" type="image/svg+xml">
+                                y neu = y alt + v y · Δt + ½ · g · Δt²
+                            </object>
+                            <figcaption class="figure-caption">Fallbewegung</figcaption>
+                        </figure>
+                        <figure>
+                            <object class="figure-img" data="assets/fallgeschwindigkeit_farbig.svg"
+                                    type="image/svg+xml">
+                                v y neu = v y alt + g · Δt
+                            </object>
+                            <figcaption class="figure-caption">Fallgeschwindigkeit</figcaption>
+                        </figure>
+                        <figure>
+                            <object class="figure-img" data="assets/sprunggeschwindigkeit_farbig.svg"
+                                    type="image/svg+xml">
+                                v y = −v Sprung
+                            </object>
+                            <figcaption class="figure-caption">Sprunggeschwindigkeit</figcaption>
+                        </figure>
+                    </div>
+                </section>
+                <section class="box">
+                    <p class="numeration blue no-margin uppercase">03 // Canvas</p>
+                    <h3 class="no-margin white">Rendering</h3>
+                    <p class="no-margin longtext">
+                        Die gesamte Spielszene wird auf den Canvas direkt im Browser gezeichnet. Anders als bei
+                        klassischen HTML-Elementen existieren Spieler, Barrieren und Spielfeld dabei nicht als einzelne
+                        DOM-Elemente.
+                    </p>
+                    <p class="no-margin longtext">
+                        Stattdessen zeichnet jeder Frame den aktuellen Spielzustand neu auf das Canvas. Positionen und
+                        Größen stammen aus zuvor berechneten Spieldaten und werden über den 2D-Kontext dargestellt.
+                    </p>
+                    <p class="no-margin longtext">
+                        Die Zeichenreihenfolge bestimmt, welche Elemente vor oder hinter anderen erscheinen. Das Canvas
+                        wird daher in jedem Frame geleert und anschließend Schicht für Schicht neu aufgebaut. So wird
+                        aus Spieldaten das sichtbare Spiel.
+                    </p>
+                </section>
+            </div>
+        </section>
+        <section class="theme-section" id="audio">
+            <header class="hero">
+                <p class="no-margin green uppercase">Audio Design.</p>
+                <h2 class="no-margin white">Sounds</h2>
+                <p class="no-margin longtext">
+                    Alle Soundeffekte wurden selbst aufgenommen und anschließend zugeschnitten und bearbeitet.
+                    Sie liegen als Mono-Dateien in FLAC, Opus und OGG vor.
+                </p>
+            </header>
+            <div class="concept-grid">
+                <section class="box">
+                    <p class="numeration green no-margin uppercase">01 // SPRUNG</p>
+                    <h3 class="no-margin white">Jump</h3>
+                    <p class="no-margin longtext">
+                        Ein kurzer Luftstoß mit den Lippen erzeugt ein weiches „Plopp“.
+                        Der Sound wird bei jedem Sprung des Vogels abgespielt und gibt direktes akustisches Feedback.
+                    </p>
+                    <audio class="audio" controls>
+                        <source src="./assets/jump.webm" type="audio/opus">
+                        <source src="./assets/jump.ogg" type="audio/ogg">
+                        <source src="./assets/jump.flac" type="audio/flac">
+                        Dein Browser unterstützt Audio nicht.
+                    </audio>
+                </section>
+                <section class="box">
+                    <p class="numeration pink no-margin uppercase">02 // KOLLISION</p>
+                    <h3 class="no-margin white">Slap</h3>
+                    <p class="no-margin longtext">
+                        Ein Schlag mit der flachen Hand auf den nackten Oberschenkel erzeugt den kräftigen Aufprall.
+                        Er erklingt, sobald der Vogel mit einer Barriere kollidiert.
+                    </p>
+                    <audio class="audio" controls>
+                        <source src="./assets/slap.webm" type="audio/opus">
+                        <source src="./assets/slap.ogg" type="audio/ogg">
+                        <source src="./assets/slap.flac" type="audio/flac">
+                        Dein Browser unterstützt Audio nicht.
+                    </audio>
+                </section>
+                <section class="box">
+                    <p class="numeration blue no-margin uppercase">03 // VOID</p>
+                    <h3 class="no-margin white">Scream</h3>
+                    <p class="no-margin longtext">
+                        Ein aufgenommener Schrei begleitet den Absturz des Vogels.
+                        Durch ein Fade-out wird der Sound zunehmend leiser und vermittelt akustisch das Fallen in die
+                        Tiefe.
+                    </p>
+                    <audio class="audio" controls>
+                        <source src="./assets/scream.webm" type="audio/opus">
+                        <source src="./assets/scream.ogg" type="audio/ogg">
+                        <source src="./assets/scream.flac" type="audio/flac">
+                        Dein Browser unterstützt Audio nicht.
+                    </audio>
+                </section>
+                <section class="box">
+                    <p class="numeration no-margin uppercase">04 // HIGHSCORE</p>
+                    <h3 class="no-margin white">Highscore</h3>
+                    <p class="no-margin longtext">
+                        Das helle Klingeln eines Lindt-Goldhasen dient als positives Feedback.
+                        Der Sound wird abgespielt, sobald ein neuer Highscore erreicht wurde.
+                    </p>
+                    <audio class="audio" controls>
+                        <source src="assets/highscore.webm" type="audio/webm">
+                        <source src="./assets/highscore.ogg" type="audio/ogg">
+                        <source src="./assets/highscore.flac" type="audio/flac">
+                        Dein Browser unterstützt Audio nicht.
+                    </audio>
+                </section>
+            </div>
+        </section>
+        <section class="theme-section" id="making">
+            <header class="hero">
+                <p class="no-margin green uppercase">Hinter den Kulissen.</p>
+                <h2 class="no-margin white">Produktion & Dokumentation</h2>
+                <p class="no-margin longtext">
+                    Von der Aufnahme mit einfachen Alltagsgegenständen bis zur Nachbearbeitung und Bereitstellung im
+                    Browser.
+                </p>
+            </header>
+            <div class="concept-grid">
+                <section class="box" id="video">
+                    <p class="numeration green no-margin uppercase">01 // VIDEO</p>
+                    <h3 class="no-margin white">Making-of</h3>
+                    <p class="no-margin longtext">
+                        Das Video zeigt, wie die vier Soundeffekte entstanden sind. Zu sehen sind die ursprünglichen
+                        Aufnahmen mit Mikrofon und Alltagsgegenständen sowie der Weg vom Rohmaterial zum fertigen
+                        Spielsound.
+                    </p>
+                    <div class="making-video-stage">
+                        <video id="video-element" controls>
+                            <source src="./assets/video.webm">
+                            <source src="./assets/video.mp4">
+                            <source src="./assets/video.ogv">
+                            Dein Browser unterstützt Video nicht.
+                        </video>
+                    </div>
+                </section>
+                <section class="box" id="pdf">
+                    <p class="numeration pink no-margin uppercase">02 // PDF</p>
+                    <h3 class="no-margin white">Dokumentation</h3>
+                    <p class="no-margin longtext">
+                        Die PDF fasst die Audioumsetzung kompakt zusammen. Sie dokumentiert Aufnahme, Bearbeitung,
+                        verwendete Codecs und die Einbindung der Soundeffekte in das Spiel. Oder befindet sich dahinter
+                        doch nur ein Lorem ipsum?
+                    </p>
+                    <a href="./assets/Dokumentation.pdf" target="_blank" rel="noopener"
+                       class="fancy-button pink uppercase">Dokumentation öffnen</a>
+                </section>
+                <section class="box" id="audacity">
+                    <p class="numeration blue no-margin uppercase">03 // Audacity</p>
+                    <h3 class="no-margin white">Honorable Mention</h3>
+                    <p class="no-margin longtext">
+                        Die aufgenommenen Rohdateien wurden in Audacity zugeschnitten und nachbearbeitet. Dabei wurden
+                        unter anderem Hintergrundrauschen entfernt, Lautstärken angepasst und gegebenenfalls ein
+                        Fade-out erzeugt.
+                    </p>
+                    <p class="no-margin longtext">
+                        Wichtig war, die Sounds kurz und klar unterscheidbar zu halten. Anschließend wurden sie als
+                        Mono-Audio in FLAC, Opus und Ogg Vorbis exportiert.
+                    </p>
+                </section>
+            </div>
         </section>
     </div>
 </main>
-
-<div id="game">
-    <canvas id="canvas" aria-label="Spielfeld des Spiels">
-        Dein Browser unterstützt Canvas nicht.
-    </canvas>
-    <div id="overlay">
-        <button id="play">Spielen</button>
+<footer class="site-footer">
+    <div class="container">
+        <p>
+            Webdesign und Standards II
+            <span>•</span>
+            Berufsakademie Rhein-Main
+            <span>•</span>
+            <span>Julian Benedikt Kirchner</span>
+            <span>•</span>
+            <time datetime="2026">2026</time>
+        </p>
     </div>
-</div>
-
-
-
+</footer>
 </body>
 </html>

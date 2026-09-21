@@ -3,18 +3,54 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("./fonts/space-grotesk-regular.woff2") format("woff2");
+    src: url("./fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./fonts/SpaceGrotesk-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./fonts/SpaceMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./fonts/SpaceMono-Bold.ttf") format("truetype");
 }
 
 body {
     background: #0D1117;
     font-family: "Space Grotesk", sans-serif;
-    color: #8f9cae;
+    color: #8F9CAE;
     margin: 0;
 }
 
+.visibility-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
 .container {
-    width: 1360px;
+    width: 1428px;
     margin-inline: auto;
 }
 
@@ -23,6 +59,7 @@ body {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #1b2333;
+    margin-bottom: 2rem;
 }
 
 .site-header .container {
@@ -44,26 +81,378 @@ body {
     padding: 0;
 }
 
-#navbar a {
+#navbar a, #physics-reset {
     padding: 4px 10px;
     border-radius: 4px;
+    transition: all 0.2s ease-out;
 }
 
-#navbar a:hover {
+#navbar a:hover, #physics-reset:hover {
     background: #1b2232;
     color: #CCFF00;
 }
 
-
-
-#game {
-    width: 100%;
-    height: 100vh;
+.hero {
+    width: 768px;
 }
 
-/*#overlay {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*}*/
+.hero #title {
+    color: #FFFFFF;
+    font-size: 3rem;
+    line-height: 3rem;
+    margin: 0.75rem 0;
+}
+
+.hero #description {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.box {
+    border: 1px solid rgba(38, 50, 72, 0.8);
+    background: #131822;
+    padding: 1.25rem;
+    border-radius: 12px;
+}
+
+.box .box-title {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #FFFFFF;
+}
+
+#playground {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+#playground .box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#game {
+    grid-column: span 7;
+    grid-row: span 3;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.game-stage {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+}
+
+#game canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #181f2d;
+}
+
+#game-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(13, 17, 23, 0.85);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#game-overlay[hidden] {
+    display: none;
+}
+
+.scores {
+    display: flex;
+    margin: 0;
+    gap: 0.75rem;
+    font-family: "Space Mono", monospace;
+    font-size: 0.6875rem;
+}
+
+.scores .score {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    border: 1px solid #263248;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    align-items: center;
+}
+
+.scores dd {
+    margin: 0;
+    font-size: 1rem;
+}
+
+#settings {
+    grid-column: span 5;
+    grid-row: span 1;
+}
+
+#gravity, #flap, #gap {
+    width: 100%;
+    margin: 0;
+    height: 0.5rem;
+}
+
+#physics-reset {
+    display: block;
+    margin-left: auto;
+    margin-top: 1.25rem;
+    color: #8F9CAE;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.blue {
+    color: #00F0FF;
+}
+
+.pink {
+    color: #FF007A;
+}
+
+.green {
+    color: #CCFF00;
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.control-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control {
+    margin-bottom: 0.875rem;
+}
+
+.control p {
+    margin: 0;
+    font-size: 0.6875rem;
+}
+
+#vector-data {
+    grid-column: span 5;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+#vector-data dl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 0.5rem 0 0;
+    flex: 1;
+    min-height: 0;
+}
+
+#vector-data .data-cell {
+    background: #1B2232;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#vector-data .data-cell dt {
+    font-size: 0.75rem;
+}
+
+#vector-data .data-cell dd {
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+#how-it-works {
+    grid-column: span 5;
+    grid-row: span 1;
+}
+
+.theme-section {
+    margin-top: 3rem;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.theme-section header {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.concept-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.concept-grid .box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.numeration {
+    font-family: "Space Mono", monospace;
+    font-size: 0.6875rem;
+}
+
+.mono {
+    font-family: "Space Mono", monospace;
+}
+
+.longtext {
+    line-height: 1.5em;
+}
+
+#formulas {
+    padding: 0.875rem;
+    border: 1px solid #263248;
+    border-radius: 8px;
+    background: #1B2232;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.625rem;
+}
+
+#formulas figure {
+    margin: 0;
+}
+
+#formulas figure:not(:last-child) {
+    border-bottom: 1px solid #263248;
+    padding-bottom: 0.5rem;
+}
+
+#formulas .figure-img {
+    display: block;
+    margin-inline: auto;
+}
+
+#formulas .figure-caption {
+    text-align: right;
+}
+
+#audio .concept-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#audio .audio {
+    margin-top: 0.625rem;
+}
+
+#making .concept-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+}
+
+#video {
+    grid-column: span 3;
+    grid-row: span 2;
+    min-width: 0;
+    min-height: 0;
+}
+
+.making-video-stage {
+    flex: 1;
+    contain: size;
+    margin-top: 0.625rem;
+}
+
+#pdf, #audacity {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+#video-element {
+    display: block;
+    margin-inline: auto;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #181f2d;
+}
+
+.fancy-button {
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    color: #000000;
+    border: none;
+    font-weight: bold;
+    font-family: "Space Grotesk", sans-serif;
+    padding: 0.875rem 1.5rem;
+    cursor: pointer;
+    transition: box-shadow 0.1s ease-in;
+    margin-top: 0.625rem;
+}
+
+.fancy-button.pink {
+    background: #FF007A;
+    box-shadow: 0 0 20px #FF007A66;
+}
+
+.fancy-button.pink:hover {
+    box-shadow: 0 0 30px #FF007A77;
+}
+
+.fancy-button.green:hover {
+    box-shadow: 0 0 30px #CCFF0077;
+}
+
+.fancy-button.green {
+    background: #CCFF00;
+    box-shadow: 0 0 20px #CCFF0066;
+}
+
+.site-footer {
+    margin-top: 3rem;
+    border-top: 1px solid #1b2333;
+}
+
+.site-footer .container {
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

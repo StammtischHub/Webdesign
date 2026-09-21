@@ -8,6 +8,8 @@ class Player {
         this.velocityY = 0;
         this.gravity = 800;
         this.jumpSpeed = 360;
+        this.jumpSound = new Audio('assets/jump.flac');
+        this.jumpSound.preload = 'auto';
     }
 
     update(deltaTime) {
@@ -19,6 +21,10 @@ class Player {
 
     jump() {
         this.velocityY = -this.jumpSpeed;
+        this.jumpSound.currentTime = 0;
+        this.jumpSound.play().catch(error => {
+            console.warn('Sprungsound konnte nicht abgespielt werden:', error);
+        });
     }
 
     fall(deltaTime) {

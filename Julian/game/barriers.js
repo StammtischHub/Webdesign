@@ -2,11 +2,11 @@ class Barriers {
     constructor(canvas, ctx, options = {}) {
         this.canvas = canvas;
         this.ctx = ctx;
-        this.width = options.width ?? 80;
-        this.distance = options.distance ?? 350;
-        this.speed = options.speed ?? 120;
+        this.width = 80;
+        this.distance = 350;
+        this.speed = 120;
         this.gapHeight = options.gapHeight ?? 220;
-        this.count = options.count ?? 10;
+        this.count = 10;
         this.barriers = [];
     }
 
