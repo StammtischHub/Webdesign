@@ -59,6 +59,7 @@ body {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #1b2333;
+    margin-bottom: 2rem;
 }
 
 .site-header .container {
@@ -289,6 +290,10 @@ body {
     font-family: "Space Mono", monospace;
 }
 
+.longtext {
+    line-height: 1.5em;
+}
+
 #formulas {
     padding: 0.875rem;
     border: 1px solid #263248;
@@ -363,4 +368,16 @@ body {
 
 #fancy-button:hover {
     box-shadow: 0 0 30px #FF007A77;
+}
+
+.site-footer {
+    margin-top: 3rem;
+    border-top: 1px solid #1b2333;
+}
+
+.site-footer .container {
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

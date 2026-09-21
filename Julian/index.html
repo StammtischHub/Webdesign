@@ -101,15 +101,15 @@
                 <dl>
                     <div class="data-cell">
                         <dt>Velocity Y</dt>
-                        <dd id="velocity-data" class="green bold"></dd>
+                        <dd id="velocity-data" class="green bold">0.0px/s</dd>
                     </div>
                     <div class="data-cell">
                         <dt>Position Y</dt>
-                        <dd id="player-y-data" class="pink bold"></dd>
+                        <dd id="player-y-data" class="pink bold">0.0px</dd>
                     </div>
                     <div class="data-cell">
                         <dt>Frame Delta</dt>
-                        <dd id="frame-delta" class="blue bold"></dd>
+                        <dd id="frame-delta" class="blue bold">0.0ms</dd>
                     </div>
                 </dl>
             </section>
@@ -124,7 +124,7 @@
                 <section class="box">
                     <p class="numeration green no-margin uppercase">01 // Herzstück</p>
                     <h3 class="no-margin white">Game Loop</h3>
-                    <p class="no-margin">
+                    <p class="no-margin longtext">
                         Der Game Loop hält das Spiel kontinuierlich am Laufen. Über
                         <span class="green bold mono">requestAnimationFrame</span><span class="white bold mono">()</span>
                         wird für jedes neue Browser-Frame ein weiterer Durchlauf gestartet.
@@ -144,15 +144,21 @@
                     <p class="no-margin">Position und Fallgeschwindigkeit werden in jedem Frame mithilfe von Delta Time aktualisiert.</p>
                     <div id="formulas">
                         <figure>
-                            <img class="figure-img" src="assets/fallbewegung_farbig.svg" alt="y neu = y alt + v y · Δt + ½ · g · Δt²">
+                            <object class="figure-img" data="assets/fallbewegung_farbig.svg" type="image/svg+xml">
+                                y neu = y alt + v y · Δt + ½ · g · Δt²
+                            </object>
                             <figcaption class="figure-caption">Fallbewegung</figcaption>
                         </figure>
                         <figure>
-                            <img class="figure-img" src="assets/fallgeschwindigkeit_farbig.svg" alt="v y neu = v y alt + g · Δt">
+                            <object class="figure-img" data="assets/fallgeschwindigkeit_farbig.svg" type="image/svg+xml">
+                                v y neu = v y alt + g · Δt
+                            </object>
                             <figcaption class="figure-caption">Fallgeschwindigkeit</figcaption>
                         </figure>
                         <figure>
-                            <img class="figure-img" src="assets/sprunggeschwindigkeit_farbig.svg" alt="v y = −v Sprung">
+                            <object class="figure-img" data="assets/sprunggeschwindigkeit_farbig.svg" type="image/svg+xml">
+                                v y = −v Sprung
+                            </object>
                             <figcaption class="figure-caption">Sprunggeschwindigkeit</figcaption>
                         </figure>
                     </div>
@@ -160,18 +166,16 @@
                 <section class="box">
                     <p class="numeration blue no-margin uppercase">03 // Canvas</p>
                     <h3 class="no-margin white">Rendering</h3>
-                    <p class="no-margin">
-                        Die gesamte Spielszene wird auf den Canvas direkt im Browser
-                        gezeichnet. Anders als bei klassischen HTML-Elementen existieren Spieler,
-                        Barrieren und Spielfeld dabei nicht als einzelne DOM-Elemente.
+                    <p class="no-margin longtext">
+                        Die gesamte Spielszene wird auf den Canvas direkt im Browser gezeichnet. Anders als bei
+                        klassischen HTML-Elementen existieren Spieler, Barrieren und Spielfeld dabei nicht als einzelne
+                        DOM-Elemente.
                         <br><br>
-                        Stattdessen zeichnet jeder Frame den aktuellen Spielzustand neu auf das
-                        Canvas. Positionen und Größen stammen aus den zuvor berechneten
-                        Spieldaten und werden anschließend über den 2D-Kontext dargestellt.
+                        Stattdessen zeichnet jeder Frame den aktuellen Spielzustand neu auf das Canvas. Positionen und
+                        Größen stammen aus zuvor berechneten Spieldaten und werden über den 2D-Kontext dargestellt.
                         <br><br>
-                        Die Zeichenreihenfolge bestimmt dabei, welche Elemente vor oder hinter anderen erscheinen.
-                        Das Canvas wird deshalb in jedem Frame zunächst geleert und anschließend Schicht für Schicht neu
-                        aufgebaut.
+                        Die Zeichenreihenfolge bestimmt, welche Elemente vor oder hinter anderen erscheinen. Das Canvas
+                        wird daher in jedem Frame geleert und anschließend Schicht für Schicht neu aufgebaut.
                     </p>
                 </section>
             </div>
@@ -180,7 +184,7 @@
             <header class="hero">
                 <p class="no-margin pink uppercase">Audio Design.</p>
                 <h2 class="no-margin white">Sounds</h2>
-                <p class="no-margin">
+                <p class="no-margin longtext">
                     Alle Soundeffekte wurden selbst aufgenommen und anschließend zugeschnitten und bearbeitet.
                     Sie liegen als Mono-Dateien in FLAC, Opus und OGG vor.
                 </p>
@@ -189,7 +193,7 @@
                 <section class="box">
                     <p class="numeration green no-margin uppercase">01 // SPRUNG</p>
                     <h3 class="no-margin white">Jump</h3>
-                    <p class="no-margin">
+                    <p class="no-margin longtext">
                         Ein kurzer Luftstoß mit den Lippen erzeugt ein weiches „Plopp“.
                         Der Sound wird bei jedem Sprung des Vogels abgespielt und gibt direktes akustisches Feedback.
                     </p>
@@ -203,7 +207,7 @@
                 <section class="box">
                     <p class="numeration pink no-margin uppercase">02 // KOLLISION</p>
                     <h3 class="no-margin white">Slap</h3>
-                    <p class="no-margin">
+                    <p class="no-margin longtext">
                         Ein Schlag mit der flachen Hand auf den nackten Oberschenkel erzeugt den kräftigen Aufprall.
                         Er erklingt, sobald der Vogel mit einer Barriere kollidiert.
                     </p>
@@ -217,7 +221,7 @@
                 <section class="box">
                     <p class="numeration blue no-margin uppercase">03 // VOID</p>
                     <h3 class="no-margin white">Scream</h3>
-                    <p class="no-margin">
+                    <p class="no-margin longtext">
                         Ein aufgenommener Schrei begleitet den Absturz des Vogels.
                         Durch ein Fade-out wird der Sound zunehmend leiser und vermittelt akustisch das Fallen in die
                         Tiefe.
@@ -232,7 +236,7 @@
                 <section class="box">
                     <p class="numeration no-margin uppercase">04 // HIGHSCORE</p>
                     <h3 class="no-margin white">Highscore</h3>
-                    <p class="no-margin">
+                    <p class="no-margin longtext">
                         Das helle Klingeln eines Lindt-Goldhasen dient als positives Feedback.
                         Der Sound wird abgespielt, sobald ein neuer Highscore erreicht wurde.
                     </p>
@@ -249,7 +253,7 @@
             <header class="hero">
                 <p class="no-margin blue uppercase">Hinter den Kulissen.</p>
                 <h2 class="no-margin white">Produktion & Dokumentation</h2>
-                <p class="no-margin">
+                <p class="no-margin longtext">
                     Von der Aufnahme mit einfachen Alltagsgegenständen bis zur Nachbearbeitung und Bereitstellung im
                     Browser.
                 </p>
@@ -258,7 +262,7 @@
                 <section class="box" id="video">
                     <p class="numeration green no-margin uppercase">01 // VIDEO</p>
                     <h3 class="no-margin white">Making-of</h3>
-                    <p class="no-margin">
+                    <p class="no-margin longtext">
                         Das Video zeigt, wie die vier Soundeffekte entstanden sind. Zu sehen sind die ursprünglichen
                         Aufnahmen mit Mikrofon und Alltagsgegenständen sowie der Weg vom Rohmaterial zum fertigen
                         Spielsound.
@@ -271,7 +275,7 @@
                 <section class="box" id="pdf">
                     <p class="numeration pink no-margin uppercase">02 // PDF</p>
                     <h3 class="no-margin white">Dokumentation</h3>
-                    <p class="no-margin">
+                    <p class="no-margin longtext">
                         Die PDF fasst die Audioumsetzung kompakt zusammen. Sie dokumentiert Aufnahme, Bearbeitung,
                         verwendete Codecs und die Einbindung der Soundeffekte in das Spiel. Oder befindet sich dahinter
                         doch nur ein Lorem ipsum?
@@ -281,20 +285,31 @@
                 <section class="box" id="audacity">
                     <p class="numeration blue no-margin uppercase">03 // Audacity</p>
                     <h3 class="no-margin white">Honorable Mention</h3>
-                    <p class="no-margin">
+                    <p class="no-margin longtext">
                         Die aufgenommenen Rohdateien wurden in Audacity zugeschnitten und nachbearbeitet. Dabei wurden
                         unter anderem Hintergrundrauschen entfernt, Lautstärken angepasst und gegebenenfalls ein
                         Fade-out erzeugt.
                         <br><br>
-                        Besonders wichtig war dabei, die Sounds kurz, prägnant und klar voneinander unterscheidbar zu halten.
-                        <br><br>
-                        Anschließend wurden die Sounds als Mono-Audio in FLAC, Opus und Ogg Vorbis exportiert.
+                        Wichtig war, die Sounds kurz und klar unterscheidbar zu halten. Anschließend wurden sie als
+                        Mono-Audio in FLAC, Opus und Ogg Vorbis exportiert.
                     </p>
                 </section>
             </div>
         </section>
     </div>
 </main>
-
+<footer class="site-footer">
+    <div class="container">
+        <p>
+            Webdesign und Standards II
+            <span>•</span>
+            Berufsakademie Rhein-Main
+            <span>•</span>
+            <span>Julian Benedikt Kirchner</span>
+            <span>•</span>
+            <time datetime="2026">2026</time>
+        </p>
+    </div>
+</footer>
 </body>
 </html>
