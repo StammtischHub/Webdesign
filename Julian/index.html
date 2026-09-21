@@ -28,8 +28,7 @@
                 <li><a href="#playground">Spiel & Physik</a></li>
                 <li><a href="#concepts">Konzepte</a></li>
                 <li><a href="#audio">Audio</a></li>
-                <li><a href="#video">Video</a></li>
-                <li><a href="#report">PDF Bericht</a></li>
+                <li><a href="#making">Making-of</a></li>
             </ul>
         </nav>
     </div>
@@ -117,7 +116,7 @@
         </article>
         <section class="theme-section" id="concepts">
             <header>
-                <p class="no-margin blue">Lorem ipsum.</p>
+                <p class="no-margin green">Lorem ipsum.</p>
                 <h2 class="no-margin white">Kernkonzepte</h2>
                 <p class="no-margin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, error.</p>
             </header>
@@ -163,8 +162,8 @@
             </div>
         </section>
         <section class="theme-section" id="audio">
-            <header>
-                <p class="no-margin blue">AUDIO DESIGN.</p>
+            <header class="hero">
+                <p class="no-margin pink">AUDIO DESIGN.</p>
                 <h2 class="no-margin white">Sounds</h2>
                 <p class="no-margin">
                     Alle Soundeffekte wurden selbst aufgenommen und anschließend zugeschnitten und bearbeitet.
@@ -201,7 +200,7 @@
                     </audio>
                 </section>
                 <section class="box">
-                    <p class="numeration blue no-margin">03 // GAME OVER</p>
+                    <p class="numeration blue no-margin">03 // VOID</p>
                     <h3 class="no-margin white">Scream</h3>
                     <p class="no-margin">
                         Ein aufgenommener Schrei begleitet den Absturz des Vogels.
@@ -228,6 +227,54 @@
                         <source src="./assets/highscore.flac" type="audio/flac">
                         Dein Browser unterstützt Audio nicht.
                     </audio>
+                </section>
+            </div>
+        </section>
+        <section class="theme-section" id="making">
+            <header class="hero">
+                <p class="no-margin blue">HINTER DEN KULISSEN.</p>
+                <h2 class="no-margin white">Produktion & Dokumentation</h2>
+                <p class="no-margin">
+                    Von der Aufnahme mit einfachen Alltagsgegenständen bis zur Nachbearbeitung und Bereitstellung im
+                    Browser.
+                </p>
+            </header>
+            <div class="concept-grid">
+                <section class="box" id="video">
+                    <p class="numeration green no-margin">01 // VIDEO</p>
+                    <h3 class="no-margin white">Making-of</h3>
+                    <p class="no-margin">
+                        Das Video zeigt, wie die vier Soundeffekte entstanden sind. Zu sehen sind die ursprünglichen
+                        Aufnahmen mit Mikrofon und Alltagsgegenständen sowie der Weg vom Rohmaterial zum fertigen
+                        Spielsound.
+                    </p>
+                    <video id="video-element" controls>
+                        <source src="./assets/sample-1mb.mp4">
+                        Dein Browser unterstützt Video nicht.
+                    </video>
+                </section>
+                <section class="box" id="pdf">
+                    <p class="numeration pink no-margin">02 // PDF</p>
+                    <h3 class="no-margin white">Lorem ipsum.</h3>
+                    <p class="no-margin">
+                        Die PDF fasst die Audioumsetzung kompakt zusammen. Sie dokumentiert Aufnahme, Bearbeitung,
+                        verwendete Codecs und die Einbindung der Soundeffekte in das Spiel.
+                    </p>
+                    <button id="fancy-button">Dokumentation öffnen</button>
+                </section>
+                <section class="box" id="audacity">
+                    <p class="numeration blue no-margin">03 // Audacity</p>
+                    <h3 class="no-margin white">Lorem ipsum.</h3>
+                    <p class="no-margin">
+                        Die aufgenommenen Rohdateien wurden in Audacity zugeschnitten und nachbearbeitet. Dabei wurden
+                        unter anderem Hintergrundrauschen entfernt, Lautstärken angepasst und beim Scream ein Fade-out
+                        erzeugt.
+                    </p>
+                    <p>
+                        Anschließend wurden die Sounds als Mono-Audio in FLAC, Opus und Ogg Vorbis exportiert und für
+                        die Wiedergabe im Browser vorbereitet.
+                    </p>
+                    <button>PDF herunterladen</button>
                 </section>
             </div>
         </section>

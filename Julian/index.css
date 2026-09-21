@@ -318,3 +318,41 @@ body {
 #audio .audio {
     margin-top: 0.625rem;
 }
+
+#making .concept-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+}
+
+#video {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+#pdf, #audacity {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+#video-element {
+    border-radius: 8px;
+    border: 1px solid #181f2d;
+}
+
+#fancy-button {
+    border-radius: 8px;
+    background: #CCFF00;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    font-weight: bold;
+    font-family: "Space Grotesk", sans-serif;
+    padding: 0.875rem 1.5rem;
+    box-shadow: 0 0 20px #CCFF0066;
+    cursor: pointer;
+    transition: box-shadow 0.1s ease-in;
+}
+
+#fancy-button:hover {
+    box-shadow: 0 0 30px #CCFF0077;
+}
