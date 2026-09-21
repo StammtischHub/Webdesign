@@ -51,6 +51,7 @@ a {
 header {
   width: 100vw;
   position: fixed;
+  
   /* In Firefox benötigt man diesen Wert nicht, da das Audio-Element automatisch hinter dem Header ist. In Chrome jedoch verläuft das Audi-Element über den Header hinweg. Ich habe keinen anderen Weg gefunden, das Element hinter den Header zu bekommen, als den z-Index des Header zu setzen/erhöhen. */  
   z-index: 1; 
   top: 0;
