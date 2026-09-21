@@ -51,7 +51,7 @@
                 <canvas id="canvas" aria-label="Spielfeld des Spiels">
                     Dein Browser unterstützt Canvas nicht.
                 </canvas>
-                <dl class="scores">
+                <dl class="scores uppercase">
                     <div class="score">
                         <dt>Score</dt>
                         <dd>
@@ -116,29 +116,32 @@
         </article>
         <section class="theme-section" id="concepts">
             <header>
-                <p class="no-margin green">Lorem ipsum.</p>
+                <p class="no-margin green uppercase uppercase">Unter der Haube.</p>
                 <h2 class="no-margin white">Kernkonzepte</h2>
-                <p class="no-margin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, error.</p>
+                <p class="no-margin">Drei Bausteine bestimmen den technischen Aufbau des Spiels.</p>
             </header>
             <div class="concept-grid">
                 <section class="box">
-                    <p class="numeration green no-margin">01 // Herzstück</p>
+                    <p class="numeration green no-margin uppercase">01 // Herzstück</p>
                     <h3 class="no-margin white">Game Loop</h3>
                     <p class="no-margin">
-                        Der Game Loop hält das Spiel kontinuierlich am Laufen. In jedem Frame werden
-                        Eingaben verarbeitet, Physik und Kollisionen berechnet und anschließend die Szene neu
-                        gezeichnet.
-                    </p>
-                    <p>
-                        Dabei sorgt Delta Time dafür, dass Bewegungen unabhängig von der Bildrate
-                        berechnet werden. Statt eine feste Strecke pro Frame zu bewegen, wird die Geschwindigkeit mit
-                        der seit dem letzten Frame vergangenen Zeit verrechnet.
+                        Der Game Loop hält das Spiel kontinuierlich am Laufen. Über
+                        <span class="green bold mono">requestAnimationFrame</span><span class="white bold mono">()</span>
+                        wird für jedes neue Browser-Frame ein weiterer Durchlauf gestartet.
+                        <br><br>
+                        Dabei werden Eingaben verarbeitet, Positionen und Geschwindigkeiten
+                        aktualisiert, Kollisionen geprüft und anschließend die aktuelle Szene
+                        auf das Canvas gezeichnet.
+                        <br><br>
+                        Delta Time beschreibt die vergangene Zeit seit dem letzten Frame.
+                        Bewegungen werden damit zeit- statt frameabhängig berechnet und bleiben
+                        auch bei unterschiedlichen Bildraten möglichst konstant.
                     </p>
                 </section>
                 <section class="box">
-                    <p class="numeration pink no-margin">02 // Physik</p>
+                    <p class="numeration pink no-margin uppercase">02 // Physik</p>
                     <h3 class="no-margin white">Formeln</h3>
-                    <p class="no-margin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos in ratione reprehenderit!</p>
+                    <p class="no-margin">Position und Fallgeschwindigkeit werden in jedem Frame mithilfe von Delta Time aktualisiert.</p>
                     <div id="formulas">
                         <figure>
                             <img class="figure-img" src="assets/fallbewegung_farbig.svg" alt="y neu = y alt + v y · Δt + ½ · g · Δt²">
@@ -155,15 +158,27 @@
                     </div>
                 </section>
                 <section class="box">
-                    <p class="numeration blue no-margin">03 // Hitbox</p>
-                    <h3 class="no-margin white">Axis-Aligned Bounding Box</h3>
-                    <p class="no-margin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos in ratione reprehenderit!</p>
+                    <p class="numeration blue no-margin uppercase">03 // Canvas</p>
+                    <h3 class="no-margin white">Rendering</h3>
+                    <p class="no-margin">
+                        Die gesamte Spielszene wird auf den Canvas direkt im Browser
+                        gezeichnet. Anders als bei klassischen HTML-Elementen existieren Spieler,
+                        Barrieren und Spielfeld dabei nicht als einzelne DOM-Elemente.
+                        <br><br>
+                        Stattdessen zeichnet jeder Frame den aktuellen Spielzustand neu auf das
+                        Canvas. Positionen und Größen stammen aus den zuvor berechneten
+                        Spieldaten und werden anschließend über den 2D-Kontext dargestellt.
+                        <br><br>
+                        Die Zeichenreihenfolge bestimmt dabei, welche Elemente vor oder hinter anderen erscheinen.
+                        Das Canvas wird deshalb in jedem Frame zunächst geleert und anschließend Schicht für Schicht neu
+                        aufgebaut.
+                    </p>
                 </section>
             </div>
         </section>
         <section class="theme-section" id="audio">
             <header class="hero">
-                <p class="no-margin pink">AUDIO DESIGN.</p>
+                <p class="no-margin pink uppercase">Audio Design.</p>
                 <h2 class="no-margin white">Sounds</h2>
                 <p class="no-margin">
                     Alle Soundeffekte wurden selbst aufgenommen und anschließend zugeschnitten und bearbeitet.
@@ -172,7 +187,7 @@
             </header>
             <div class="concept-grid">
                 <section class="box">
-                    <p class="numeration green no-margin">01 // SPRUNG</p>
+                    <p class="numeration green no-margin uppercase">01 // SPRUNG</p>
                     <h3 class="no-margin white">Jump</h3>
                     <p class="no-margin">
                         Ein kurzer Luftstoß mit den Lippen erzeugt ein weiches „Plopp“.
@@ -186,7 +201,7 @@
                     </audio>
                 </section>
                 <section class="box">
-                    <p class="numeration pink no-margin">02 // KOLLISION</p>
+                    <p class="numeration pink no-margin uppercase">02 // KOLLISION</p>
                     <h3 class="no-margin white">Slap</h3>
                     <p class="no-margin">
                         Ein Schlag mit der flachen Hand auf den nackten Oberschenkel erzeugt den kräftigen Aufprall.
@@ -200,7 +215,7 @@
                     </audio>
                 </section>
                 <section class="box">
-                    <p class="numeration blue no-margin">03 // VOID</p>
+                    <p class="numeration blue no-margin uppercase">03 // VOID</p>
                     <h3 class="no-margin white">Scream</h3>
                     <p class="no-margin">
                         Ein aufgenommener Schrei begleitet den Absturz des Vogels.
@@ -215,7 +230,7 @@
                     </audio>
                 </section>
                 <section class="box">
-                    <p class="numeration no-margin">04 // HIGHSCORE</p>
+                    <p class="numeration no-margin uppercase">04 // HIGHSCORE</p>
                     <h3 class="no-margin white">Highscore</h3>
                     <p class="no-margin">
                         Das helle Klingeln eines Lindt-Goldhasen dient als positives Feedback.
@@ -232,7 +247,7 @@
         </section>
         <section class="theme-section" id="making">
             <header class="hero">
-                <p class="no-margin blue">HINTER DEN KULISSEN.</p>
+                <p class="no-margin blue uppercase">Hinter den Kulissen.</p>
                 <h2 class="no-margin white">Produktion & Dokumentation</h2>
                 <p class="no-margin">
                     Von der Aufnahme mit einfachen Alltagsgegenständen bis zur Nachbearbeitung und Bereitstellung im
@@ -241,7 +256,7 @@
             </header>
             <div class="concept-grid">
                 <section class="box" id="video">
-                    <p class="numeration green no-margin">01 // VIDEO</p>
+                    <p class="numeration green no-margin uppercase">01 // VIDEO</p>
                     <h3 class="no-margin white">Making-of</h3>
                     <p class="no-margin">
                         Das Video zeigt, wie die vier Soundeffekte entstanden sind. Zu sehen sind die ursprünglichen
@@ -254,26 +269,26 @@
                     </video>
                 </section>
                 <section class="box" id="pdf">
-                    <p class="numeration pink no-margin">02 // PDF</p>
-                    <h3 class="no-margin white">Lorem ipsum.</h3>
+                    <p class="numeration pink no-margin uppercase">02 // PDF</p>
+                    <h3 class="no-margin white">Dokumentation</h3>
                     <p class="no-margin">
                         Die PDF fasst die Audioumsetzung kompakt zusammen. Sie dokumentiert Aufnahme, Bearbeitung,
                         verwendete Codecs und die Einbindung der Soundeffekte in das Spiel. Oder befindet sich dahinter
                         doch nur ein Lorem ipsum?
                     </p>
-                    <button class="fancy-button pink">Dokumentation öffnen</button>
+                    <button class="fancy-button pink uppercase">Dokumentation öffnen</button>
                 </section>
                 <section class="box" id="audacity">
-                    <p class="numeration blue no-margin">03 // Audacity</p>
-                    <h3 class="no-margin white">Lorem ipsum.</h3>
+                    <p class="numeration blue no-margin uppercase">03 // Audacity</p>
+                    <h3 class="no-margin white">Honorable Mention</h3>
                     <p class="no-margin">
                         Die aufgenommenen Rohdateien wurden in Audacity zugeschnitten und nachbearbeitet. Dabei wurden
-                        unter anderem Hintergrundrauschen entfernt, Lautstärken angepasst und beim Scream ein Fade-out
-                        erzeugt.
-                    </p>
-                    <p>
-                        Anschließend wurden die Sounds als Mono-Audio in FLAC, Opus und Ogg Vorbis exportiert und für
-                        die Wiedergabe im Browser vorbereitet.
+                        unter anderem Hintergrundrauschen entfernt, Lautstärken angepasst und gegebenenfalls ein
+                        Fade-out erzeugt.
+                        <br><br>
+                        Besonders wichtig war dabei, die Sounds kurz, prägnant und klar voneinander unterscheidbar zu halten.
+                        <br><br>
+                        Anschließend wurden die Sounds als Mono-Audio in FLAC, Opus und Ogg Vorbis exportiert.
                     </p>
                 </section>
             </div>

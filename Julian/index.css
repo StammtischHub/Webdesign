@@ -149,7 +149,6 @@ body {
     margin: 0;
     gap: 0.75rem;
     font-family: "Space Mono", monospace;
-    text-transform: uppercase;
     font-size: 0.6875rem;
 }
 
@@ -258,6 +257,10 @@ body {
     margin: 0;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 .theme-section header {
     display: flex;
     gap: 0.5rem;
@@ -279,8 +282,11 @@ body {
 
 .numeration {
     font-family: "Space Mono", monospace;
-    text-transform: uppercase;
     font-size: 0.6875rem;
+}
+
+.mono {
+    font-family: "Space Mono", monospace;
 }
 
 #formulas {
@@ -291,6 +297,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    margin-top: 0.625rem;
 }
 
 #formulas figure {
@@ -321,7 +328,7 @@ body {
 
 #making .concept-grid {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-rows: min-content 1fr;
 }
 
 #video {
@@ -337,11 +344,11 @@ body {
 #video-element {
     border-radius: 8px;
     border: 1px solid #181f2d;
+    margin-top: 0.625rem;
 }
 
 .fancy-button {
     border-radius: 8px;
-    text-transform: uppercase;
     color: #000000;
     border: none;
     font-weight: bold;
@@ -351,6 +358,7 @@ body {
     transition: box-shadow 0.1s ease-in;
     background: #FF007A;
     box-shadow: 0 0 20px #FF007A66;
+    margin-top: 0.625rem;
 }
 
 #fancy-button:hover {
