@@ -37,11 +37,11 @@
 <main>
     <div class="container">
         <section class="hero">
-            <p id="eyebrow">Lorem ipsum dolor sit amet.</p>
-            <h1 id="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+            <p id="eyebrow" class="uppercase mono green">Flappy Bird</p>
+            <h1 id="title">Einstieg in die Spielentwicklung</h1>
             <p id="description" class="no-margin">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores at atque deserunt est,
-                incidunt ipsum nam omnis sed sequi tempora ullam? A iusto minus nesciunt!
+                Ein eigener Flappy-Bird-Clone mit HTML, CSS und JavaScript. Von Canvas-Rendering und Spielphysik über
+                Game Loop und Kollisionen bis hin zu selbst aufgenommenen Sounds.
             </p>
         </section>
         <article id="playground">
@@ -90,7 +90,7 @@
                             <output for="flap" id="flap-output" class="mono pink bold">360px/s</output>
                         </div>
                         <input type="range" id="flap" min="100" max="800" value="360">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>Legt die vertikale Geschwindigkeit beim Sprung fest.</p>
                     </div>
                     <div class="control">
                         <div class="control-header">
@@ -274,7 +274,9 @@
                         Spielsound.
                     </p>
                     <video id="video-element" controls>
-                        <source src="./assets/sample-1mb.mp4">
+                        <source src="./assets/video.webm">
+                        <source src="./assets/video.mp4">
+                        <source src="./assets/video.ogv">
                         Dein Browser unterstützt Video nicht.
                     </video>
                 </section>
