@@ -344,7 +344,7 @@ canvas{
   justify-content: center;
   padding: 14px;
   gap: 12px;
-  line-height: 25px;
+  line-height: 1.5em;
 }
 
 .title{
