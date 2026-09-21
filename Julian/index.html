@@ -127,8 +127,9 @@
                     Die Spielfigur besitzt eine vertikale Geschwindigkeit, die sich durch Schwerkraft kontinuierlich
                     verändert. Mit jedem Sprung wird diese Geschwindigkeit kurz nach oben gesetzt. Rohrabstand und
                     Schwerkraft beeinflussen dabei direkt den Schwierigkeitsgrad.
-                    <br><br>
-                    <span class="green mono bold uppercase">Leertaste</span> -- Springen
+                </p>
+                <p class="no-margin">
+                    <kbd class="green mono bold uppercase">Leertaste</kbd> -- Springen
                 </p>
             </section>
         </article>
@@ -144,17 +145,19 @@
                     <h3 class="no-margin white">Game Loop</h3>
                     <p class="no-margin longtext">
                         Der Game Loop hält das Spiel kontinuierlich am Laufen. Über
-                        <span class="green bold mono">requestAnimationFrame</span><span
-                            class="white bold mono">()</span>
+                        <code class="green bold mono">requestAnimationFrame<span class="white">()</span></code>
                         wird für jedes neue Browser-Frame ein weiterer Durchlauf gestartet.
-                        <br><br>
+                    </p>
+                    <p class="no-margin longtext">
                         Dabei werden Eingaben verarbeitet, Positionen und Geschwindigkeiten
                         aktualisiert, Kollisionen geprüft und anschließend die aktuelle Szene
                         auf das Canvas gezeichnet.
-                        <br><br>
+                    </p>
+                    <p class="no-margin longtext">
                         Delta Time beschreibt die vergangene Zeit seit dem letzten Frame.
                         Bewegungen werden damit zeit- statt frameabhängig berechnet und bleiben
-                        auch bei unterschiedlichen Bildraten möglichst konstant.
+                        auch bei unterschiedlichen Bildraten möglichst konstant. So bleibt die Bewegung
+                        bildratenunabhängig.
                     </p>
                 </section>
                 <section class="box">
@@ -192,12 +195,15 @@
                         Die gesamte Spielszene wird auf den Canvas direkt im Browser gezeichnet. Anders als bei
                         klassischen HTML-Elementen existieren Spieler, Barrieren und Spielfeld dabei nicht als einzelne
                         DOM-Elemente.
-                        <br><br>
+                    </p>
+                    <p class="no-margin longtext">
                         Stattdessen zeichnet jeder Frame den aktuellen Spielzustand neu auf das Canvas. Positionen und
                         Größen stammen aus zuvor berechneten Spieldaten und werden über den 2D-Kontext dargestellt.
-                        <br><br>
+                    </p>
+                    <p class="no-margin longtext">
                         Die Zeichenreihenfolge bestimmt, welche Elemente vor oder hinter anderen erscheinen. Das Canvas
-                        wird daher in jedem Frame geleert und anschließend Schicht für Schicht neu aufgebaut.
+                        wird daher in jedem Frame geleert und anschließend Schicht für Schicht neu aufgebaut. So wird
+                        aus Spieldaten das sichtbare Spiel.
                     </p>
                 </section>
             </div>
@@ -220,7 +226,7 @@
                         Der Sound wird bei jedem Sprung des Vogels abgespielt und gibt direktes akustisches Feedback.
                     </p>
                     <audio class="audio" controls>
-                        <source src="./assets/jump.opus" type="audio/opus">
+                        <source src="./assets/jump.webm" type="audio/opus">
                         <source src="./assets/jump.ogg" type="audio/ogg">
                         <source src="./assets/jump.flac" type="audio/flac">
                         Dein Browser unterstützt Audio nicht.
@@ -234,7 +240,7 @@
                         Er erklingt, sobald der Vogel mit einer Barriere kollidiert.
                     </p>
                     <audio class="audio" controls>
-                        <source src="./assets/slap.opus" type="audio/opus">
+                        <source src="./assets/slap.webm" type="audio/opus">
                         <source src="./assets/slap.ogg" type="audio/ogg">
                         <source src="./assets/slap.flac" type="audio/flac">
                         Dein Browser unterstützt Audio nicht.
@@ -249,7 +255,7 @@
                         Tiefe.
                     </p>
                     <audio class="audio" controls>
-                        <source src="./assets/scream.opus" type="audio/opus">
+                        <source src="./assets/scream.webm" type="audio/opus">
                         <source src="./assets/scream.ogg" type="audio/ogg">
                         <source src="./assets/scream.flac" type="audio/flac">
                         Dein Browser unterstützt Audio nicht.
@@ -263,7 +269,7 @@
                         Der Sound wird abgespielt, sobald ein neuer Highscore erreicht wurde.
                     </p>
                     <audio class="audio" controls>
-                        <source src="./assets/highscore.opus" type="audio/opus">
+                        <source src="assets/highscore.webm" type="audio/webm">
                         <source src="./assets/highscore.ogg" type="audio/ogg">
                         <source src="./assets/highscore.flac" type="audio/flac">
                         Dein Browser unterstützt Audio nicht.
@@ -314,7 +320,8 @@
                         Die aufgenommenen Rohdateien wurden in Audacity zugeschnitten und nachbearbeitet. Dabei wurden
                         unter anderem Hintergrundrauschen entfernt, Lautstärken angepasst und gegebenenfalls ein
                         Fade-out erzeugt.
-                        <br><br>
+                    </p>
+                    <p class="no-margin longtext">
                         Wichtig war, die Sounds kurz und klar unterscheidbar zu halten. Anschließend wurden sie als
                         Mono-Audio in FLAC, Opus und Ogg Vorbis exportiert.
                     </p>
