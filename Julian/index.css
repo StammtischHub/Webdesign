@@ -138,10 +138,38 @@ body {
     gap: 0.75rem;
 }
 
+.game-stage {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+}
+
 #game canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
     border-radius: 8px;
     border: 1px solid #181f2d;
-    flex: 1;
+}
+
+#game-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(13, 17, 23, 0.85);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#game-overlay[hidden] {
+    display: none;
 }
 
 .scores {
@@ -362,13 +390,20 @@ body {
     padding: 0.875rem 1.5rem;
     cursor: pointer;
     transition: box-shadow 0.1s ease-in;
-    background: #FF007A;
-    box-shadow: 0 0 20px #FF007A66;
     margin-top: 0.625rem;
 }
 
-.fancy-button:hover {
+.fancy-button.pink:hover {
     box-shadow: 0 0 30px #FF007A77;
+}
+
+.fancy-button.green:hover {
+    box-shadow: 0 0 30px #CCFF0077;
+}
+
+.fancy-button.green {
+    background: #CCFF00;
+    box-shadow: 0 0 20px #CCFF0066;
 }
 
 .site-footer {

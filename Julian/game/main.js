@@ -1,13 +1,17 @@
 let previousTime;
 let lastLiveDataUpdate = 0;
 let score = 0;
-const highscoreStorageKey = 'julian-game-highscore';
+let gameState = 'ready';
+const startButton = document.querySelector('#game-start');
+const gameStatus = document.querySelector('#game-status');
+const gameOverlay = document.querySelector('#game-overlay');
+const highscoreStorageKey = 'game-highscore';
 let highscore = loadHighscore();
 let highscoreSoundPlayed = false;
 
 let player;
 let barriers;
-const keyboard = new Keyboard();
+const keyboard = new Keyboard(canvas);
 const collisionSound = new Audio('assets/slap.flac');
 collisionSound.preload = 'auto';
 const voidSound = new Audio('assets/scream.flac');
@@ -51,6 +55,7 @@ function init() {
 }
 
 function resetGame() {
+    keyboard.endFrame();
     score = 0;
     highscoreSoundPlayed = false;
     player = new Player(35, 0, keyboard);
@@ -58,6 +63,25 @@ function resetGame() {
     barriers.reset();
     player.y = barriers.getStartingGapY(player.height);
     updateLiveData();
+}
+
+function startGame() {
+    resetGame();
+    previousTime = undefined;
+    gameState = 'running';
+    gameOverlay.hidden = true;
+    gameStatus.textContent = 'Das Spiel läuft. Mit der Leertaste springst du.';
+    canvas.focus({preventScroll: true});
+}
+
+function endGame() {
+    gameState = 'gameover';
+    keyboard.endFrame();
+    updateLiveData();
+    gameStatus.textContent = `Game Over!`;
+    startButton.textContent = 'Erneut spielen';
+    gameOverlay.hidden = false;
+    startButton.focus({preventScroll: true});
 }
 
 function update(deltaTime) {
@@ -72,15 +96,15 @@ function update(deltaTime) {
         collisionSound.play().catch(error => {
             console.warn('Kollisionssound konnte nicht abgespielt werden:', error);
         });
-        resetGame();
+        endGame();
     } else if (player.y >= canvas.height) {
         voidSound.currentTime = 0;
         voidSound.play().catch(error => {
             console.warn('Void-Sound konnte nicht abgespielt werden:', error);
         });
-        resetGame();
+        endGame();
     } else if (player.y < 0) {
-        resetGame();
+        endGame();
     }
 }
 
@@ -101,10 +125,14 @@ function gameLoop(currentTime) {
     const deltaTime = Math.min(((currentTime - previousTime) / 1000), 0.05);
     previousTime = currentTime;
 
-    update(deltaTime);
+    if (gameState === 'running') {
+        update(deltaTime);
+    } else {
+        keyboard.endFrame();
+    }
     draw();
     if (currentTime - lastLiveDataUpdate >= 100) {
-        updateLiveData(deltaTime);
+        updateLiveData(gameState === 'running' ? deltaTime : 0);
         lastLiveDataUpdate = currentTime;
     }
     requestAnimationFrame(gameLoop);
@@ -112,8 +140,10 @@ function gameLoop(currentTime) {
 
 window.addEventListener('resize', () => {
     resizeCanvas();
-    resetGame();
+    if (gameState === 'ready') resetGame();
 });
+
+startButton.addEventListener('click', startGame);
 
 const gravityInput = document.querySelector('#gravity');
 const flapInput = document.querySelector('#flap');

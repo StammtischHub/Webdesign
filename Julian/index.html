@@ -48,9 +48,15 @@
             <h2 class="visibility-hidden">Lorem ipsum dolor sit amet.</h2>
             <section class="box" id="game">
                 <h3 class="box-title">Canvas 2D</h3>
-                <canvas id="canvas" aria-label="Spielfeld des Spiels">
-                    Dein Browser unterstützt Canvas nicht.
-                </canvas>
+                <div class="game-stage">
+                    <canvas id="canvas" tabindex="0">
+                        Dein Browser unterstützt Canvas nicht.
+                    </canvas>
+                    <div id="game-overlay">
+                        <p id="game-status" role="status">Bereit? Starte das Spiel. Mit der Leertaste springst du.</p>
+                        <button class="fancy-button green uppercase" id="game-start" type="button">Spiel starten</button>
+                    </div>
+                </div>
                 <dl class="scores uppercase">
                     <div class="score">
                         <dt>Score</dt>
@@ -280,7 +286,7 @@
                         verwendete Codecs und die Einbindung der Soundeffekte in das Spiel. Oder befindet sich dahinter
                         doch nur ein Lorem ipsum?
                     </p>
-                    <a href="./assets/Dokumentation.pdf" target="_blank" rel="noopener" class="fancy-button uppercase">Dokumentation öffnen</a>
+                    <a href="./assets/Dokumentation.pdf" target="_blank" rel="noopener" class="fancy-button pink uppercase">Dokumentation öffnen</a>
                 </section>
                 <section class="box" id="audacity">
                     <p class="numeration blue no-margin uppercase">03 // Audacity</p>
