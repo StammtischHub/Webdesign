@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="f1 webseite">
+    <meta name="keywords" content="HTML, CSS3, Formel 1">
+    <meta name="author" content="palash.bhatnagar">
+    <meta name="robots" content="noindex">
+    <title>Main</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="media/F1_logo.svg">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header class="site-header" id="start">
+        <div class="nav-shell">
+            <a class="brand" href="#main-page" aria-label="F1 Startseite">
+                <img src="media/F1_logo.svg" width="132" height="38" alt="F1 Logo">
+            </a>
+            <nav class="main-navigation" aria-label="Hauptnavigation">
+                <ul>
+                    <li><a class="is-active" href="#main-page" aria-current="page">Home</a></li>
+                    <li><a href="#teams">Teams</a></li>
+                    <li><a href="#rules">Regeln</a></li>
+                    <li><a href="#history">Geschichte</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="media/Formel-1-Ausblick.pdf" download="Formel-1-Ausblick.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer" aria-label="PDF-Dokument herunterladen">PDF</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <main id="main-page">
+            <section class="1">
+                <div class="content">
+                    <p class="lead">F1</p>
+                    <h1 id="main-title">Motorsport <span>auf höchstem Niveau</span></h1>
+                    <p>Auf dieser Seite geht es um schnelle Autos, bekannte Rennsport-Technik und die wichtigsten Regeln
+                        auf der Strecke.</p>
+                    <a href="#teams" class="btn">Zu den Teams</a>
+                </div>
+            </section>
+            <div class="video-c1">
+                <video autoplay muted loop playsinline aria-hidden="true" tabindex="-1">
+                    <source src="media/f1-1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </main>
+
+        <div class="team-pannel">
+            <section class="pannel" id="teams">
+                <div class="team-heading">
+                    <h2 class="team-h">Teams 2026</h2>
+                    <p>Klicke auf ein Team, um Auto, Fahrer und Statistiken zu sehen.</p>
+                </div>
+
+                <!-- ohne Scroll-Sprung -->
+                <input type="radio" name="team" id="t-close" checked>
+                <input type="radio" name="team" id="t-redbull">
+                <input type="radio" name="team" id="t-ferrari">
+                <input type="radio" name="team" id="t-mclaren">
+                <input type="radio" name="team" id="t-mercedes">
+                <input type="radio" name="team" id="t-astonmartin">
+                <input type="radio" name="team" id="t-alpine">
+                <input type="radio" name="team" id="t-haas">
+                <input type="radio" name="team" id="t-racingbulls">
+                <input type="radio" name="team" id="t-williams">
+                <input type="radio" name="team" id="t-audi">
+                <input type="radio" name="team" id="t-cadillac">
+
+                <!-- Team-Kacheln  -->
+                <nav class="team-selection" aria-label="Team auswählen">
+                    <label for="t-redbull"><span>01</span> Red Bull Racing </label>
+                    <label for="t-ferrari"><span>02</span> Ferrari </label>
+                    <label for="t-mclaren"><span>03</span> McLaren </label>
+                    <label for="t-mercedes"><span>04</span> Mercedes </label>
+                    <label for="t-astonmartin"><span>05</span> Aston Martin </label>
+                    <label for="t-alpine"><span>06</span> Alpine </label>
+                    <label for="t-haas"><span>07</span> Haas </label>
+                    <label for="t-racingbulls"><span>08</span> Racing Bulls </label>
+                    <label for="t-williams"><span>09</span> Williams </label>
+                    <label for="t-audi"><span>10</span> Audi </label>
+                    <label for="t-cadillac"><span>11</span> Cadillac </label>
+                </nav>
+
+                <!-- Team-Details (öffnet sich unter allen Kacheln) -->
+                <div class="team-card">
+                    <article class="redbull" id="redbull">
+                        <header>
+                            <p>01</p>
+                            <h3>Red Bull Racing</h3>
+                            <label for="t-close" class="team-close">✕<span class="visually-hidden">Teamdetails
+                                    schließen</span></label>
+                        </header>
+                        <div class="driver">
+                            <figure class="driver-card">
+                                <img src="media/Autos/redbullracing.avif" alt="Red Bull Racing F1 Bolide VR26 für die Saison 2026">
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Verstappen.avif" alt="Formel-1-Fahrer Max Verstappen (Red Bull Racing)">
+                                <figcaption>Max Verstappen</figcaption>
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Hadjar.avif" alt="Formel-1-Fahrer Isack Hadjar (Red Bull Racing)">
+                                <figcaption>Isack Hadjar</figcaption>
+                            </figure>
+                            <dl class="team-stats">
+                                <div>
+                                    <dt>Siege</dt>
+                                    <dd>130</dd>
+                                </div>
+                                <div>
+                                    <dt>Punkte</dt>
+                                    <dd>8.492</dd>
+                                </div>
+                                <div>
+                                    <dt>Chassis</dt>
+                                    <dd>RB22</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="ferrari" id="ferrari">
+                        <header>
+                            <p>02</p>
+                            <h3>Ferrari</h3>
+                            <label for="t-close" class="team-close">✕<span class="visually-hidden">Teamdetails
+                                    schließen</span></label>
+                        </header>
+                        <div class="driver">
+                            <figure class="driver-card">
+                                <img src="media/Autos/ferrari.avif" alt="Scuderia Ferrari F1 Bolide für die Saison 2026">
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/leclerc.avif" alt="Formel-1-Fahrer Charles Leclerc (Scuderia Ferrari)">
+                                <figcaption>Charles Leclerc</figcaption>
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Hamilton.avif" alt="Formel-1-Fahrer Lewis Hamilton (Scuderia Ferrari)">
+                                <figcaption>Lewis Hamilton</figcaption>
+                            </figure>
+                            <dl class="team-stats">
+                                <div>
+                                    <dt>Siege</dt>
+                                    <dd>250</dd>
+                                </div>
+                                <div>
+                                    <dt>Punkte</dt>
+                                    <dd>11.068</dd>
+                                </div>
+                                <div>
+                                    <dt>Chassis</dt>
+                                    <dd>SF-26</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="mclaren" id="mclaren">
+                        <header>
+                            <p>03</p>
+                            <h3>McLaren</h3>
+                            <label for="t-close" class="team-close">✕<span class="visually-hidden">Teamdetails
+                                    schließen</span></label>
+                        </header>
+                        <div class="driver">
+                            <figure class="driver-card">
+                                <img src="media/Autos/mclaren.avif" alt="McLaren Formula 1 Team Bolide für die Saison 2026">
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Norris.avif" alt="Formel-1-Fahrer Lando Norris (McLaren)">
+                                <figcaption>Lando Norris</figcaption>
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/piastri.avif" alt="Formel-1-Fahrer Oscar Piastri (McLaren)">
+                                <figcaption>Oscar Piastri</figcaption>
+                            </figure>
+                            <dl class="team-stats">
+                                <div>
+                                    <dt>Siege</dt>
+                                    <dd>205</dd>
+                                </div>
+                                <div>
+                                    <dt>Punkte</dt>
+                                    <dd>8.077</dd>
+                                </div>
+                                <div>
+                                    <dt>Chassis</dt>
+                                    <dd>MCL40</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="mercedes" id="mercedes">
+                        <header>
+                            <p>04</p>
+                            <h3>Mercedes</h3>
+                            <label for="t-close" class="team-close">✕<span class="visually-hidden">Teamdetails
+                                    schließen</span></label>
+                        </header>
+                        <div class="driver">
+                            <figure class="driver-card">
+                                <img src="media/Autos/mercedes.avif" alt="Mercedes-AMG Petronas F1 Bolide für die Saison 2026">
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Russel.avif" alt="Formel-1-Fahrer George Russell (Mercedes-AMG)">
+                                <figcaption>George Russell</figcaption>
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Antonelli.avif" alt="Formel-1-Fahrer Kimi Antonelli (Mercedes-AMG)">
+                                <figcaption>Kimi Antonelli</figcaption>
+                            </figure>
+                            <dl class="team-stats">
+                                <div>
+                                    <dt>Siege</dt>
+                                    <dd>141</dd>
+                                </div>
+                                <div>
+                                    <dt>Punkte</dt>
+                                    <dd>8.627</dd>
+                                </div>
+                                <div>
+                                    <dt>Chassis</dt>
+                                    <dd>F1 W17</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="astonmartin" id="astonmartin">
+                        <header>
+                            <p>05</p>
+                            <h3>Aston Martin</h3>
+                            <label for="t-close" class="team-close">✕<span class="visually-hidden">Teamdetails
+                                    schließen</span></label>
+                        </header>
+                        <div class="driver">
+                            <figure class="driver-card">
+                                <img src="media/Autos/astonmartin.avif" alt="Aston Martin Aramco F1 Bolide für die Saison 2026">
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Alonso.avif" alt="Formel-1-Fahrer Fernando Alonso (Aston Martin)">
+                                <figcaption>Fernando Alonso</figcaption>
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Stroll.avif" alt="Formel-1-Fahrer Lance Stroll (Aston Martin)">
+                                <figcaption>Lance Stroll</figcaption>
+                            </figure>
+                            <dl class="team-stats">
+                                <div>
+                                    <dt>Siege</dt>
+                                    <dd>0</dd>
+                                </div>
+                                <div>
+                                    <dt>Punkte</dt>
+                                    <dd>598</dd>
+                                </div>
+                                <div>
+                                    <dt>Chassis</dt>
+                                    <dd>AMR26</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="alpine" id="alpine">
+                        <header>
+                            <p>06</p>
+                            <h3>Alpine</h3>
+                            <label for="t-close" class="team-close">✕<span class="visually-hidden">Teamdetails
+                                    schließen</span></label>
+                        </header>
+                        <div class="driver">
+                            <figure class="driver-card">
+                                <img src="media/Autos/alpine.avif" alt="BWT Alpine F1 Team Bolide für die Saison 2026">
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Gasly.avif" alt="Formel-1-Fahrer Pierre Gasly (Alpine)">
+                                <figcaption>Pierre Gasly</figcaption>
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Colapinto.avif" alt="Formel-1-Fahrer Franco Colapinto (Alpine)">
+                                <figcaption>Franco Colapinto</figcaption>
+                            </figure>
+                            <dl class="team-stats">
+                                <div>
+                                    <dt>Siege</dt>
+                                    <dd>1</dd>
+                                </div>
+                                <div>
+                                    <dt>Punkte</dt>
+                                    <dd>597</dd>
+                                </div>
+                                <div>
+                                    <dt>Chassis</dt>
+                                    <dd>A526</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="haas" id="haas">
+                        <header>
+                            <p>07</p>
+                            <h3>Haas</h3>
+                            <label for="t-close" class="team-close">✕<span class="visually-hidden">Teamdetails
+                                    schließen</span></label>
+                        </header>
+                        <div class="driver">
+                            <figure class="driver-card">
+                                <img src="media/Autos/haas.avif" alt="MoneyGram Haas F1 Team Bolide für die Saison 2026">
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Ocon.avif" alt="Formel-1-Fahrer Esteban Ocon (Haas)">
+                                <figcaption>Esteban Ocon</figcaption>
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Bearman.avif" alt="Formel-1-Fahrer Oliver Bearman (Haas)">
+                                <figcaption>Oliver Bearman</figcaption>
+                            </figure>
+                            <dl class="team-stats">
+                                <div>
+                                    <dt>Siege</dt>
+                                    <dd>0</dd>
+                                </div>
+                                <div>
+                                    <dt>Punkte</dt>
+                                    <dd>407</dd>
+                                </div>
+                                <div>
+                                    <dt>Chassis</dt>
+                                    <dd>VF-26</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="racingbulls" id="racingbulls">
+                        <header>
+                            <p>08</p>
+                            <h3>Racing Bulls</h3>
+                            <label for="t-close" class="team-close">✕<span class="visually-hidden">Teamdetails
+                                    schließen</span></label>
+                        </header>
+                        <div class="driver">
+                            <figure class="driver-card">
+                                <img src="media/Autos/racingbulls.avif" alt="Visa Cash App RB F1 Bolide für die Saison 2026">
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Lawson.avif" alt="Formel-1-Fahrer Liam Lawson (Racing Bulls)">
+                                <figcaption>Liam Lawson</figcaption>
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Lindblad.avif" alt="Formel-1-Fahrer Arvid Lindblad (Racing Bulls)">
+                                <figcaption>Arvid Lindblad</figcaption>
+                            </figure>
+                            <dl class="team-stats">
+                                <div>
+                                    <dt>Siege</dt>
+                                    <dd>0</dd>
+                                </div>
+                                <div>
+                                    <dt>Punkte</dt>
+                                    <dd>167</dd>
+                                </div>
+                                <div>
+                                    <dt>Chassis</dt>
+                                    <dd>VCARB 03</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="williams" id="williams">
+                        <header>
+                            <p>09</p>
+                            <h3>Williams</h3>
+                            <label for="t-close" class="team-close">✕<span class="visually-hidden">Teamdetails
+                                    schließen</span></label>
+                        </header>
+                        <div class="driver">
+                            <figure class="driver-card">
+                                <img src="media/Autos/williams.avif" alt="Williams Racing F1 Bolide für die Saison 2026">
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Albon.avif" alt="Formel-1-Fahrer Alexander Albon (Williams)">
+                                <figcaption>Alexander Albon</figcaption>
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Sainz.avif" alt="Formel-1-Fahrer Carlos Sainz (Williams)">
+                                <figcaption>Carlos Sainz</figcaption>
+                            </figure>
+                            <dl class="team-stats">
+                                <div>
+                                    <dt>Siege</dt>
+                                    <dd>114</dd>
+                                </div>
+                                <div>
+                                    <dt>Punkte</dt>
+                                    <dd>3.785</dd>
+                                </div>
+                                <div>
+                                    <dt>Chassis</dt>
+                                    <dd>FW48</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="audi" id="audi">
+                        <header>
+                            <p>10</p>
+                            <h3>Audi</h3>
+                            <label for="t-close" class="team-close">✕<span class="visually-hidden">Teamdetails
+                                    schließen</span></label>
+                        </header>
+                        <div class="driver">
+                            <figure class="driver-card">
+                                <img src="media/Autos/audi.avif" alt="Audi Revolut F1 Team Bolide für die Saison 2026">
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Hulkenberg.avif" alt="Formel-1-Fahrer Nico Hülkenberg (Audi)">
+                                <figcaption>Nico Hülkenberg</figcaption>
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Bortoleto.avif" alt="Formel-1-Fahrer Gabriel Bortoleto (Audi)">
+                                <figcaption>Gabriel Bortoleto</figcaption>
+                            </figure>
+                            <dl class="team-stats">
+                                <div>
+                                    <dt>Siege</dt>
+                                    <dd>0</dd>
+                                </div>
+                                <div>
+                                    <dt>Punkte</dt>
+                                    <dd>17</dd>
+                                </div>
+                                <div>
+                                    <dt>Chassis</dt>
+                                    <dd>R26</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="cadillac" id="cadillac">
+                        <header>
+                            <p>11</p>
+                            <h3>Cadillac</h3>
+                            <label for="t-close" class="team-close">✕<span class="visually-hidden">Teamdetails
+                                    schließen</span></label>
+                        </header>
+                        <div class="driver">
+                            <figure class="driver-card">
+                                <img src="media/Autos/cadillac.avif" alt="Cadillac Formula 1 Team Bolide für die Saison 2026">
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Bottas.avif" alt="Formel-1-Fahrer Valtteri Bottas (Cadillac)">
+                                <figcaption>Valtteri Bottas</figcaption>
+                            </figure>
+                            <figure class="driver-p">
+                                <img src="media/fahrer/Perez.avif" alt="Formel-1-Fahrer Sergio Pérez (Cadillac)">
+                                <figcaption>Sergio Pérez</figcaption>
+                            </figure>
+                            <dl class="team-stats">
+                                <div>
+                                    <dt>Siege</dt>
+                                    <dd>0</dd>
+                                </div>
+                                <div>
+                                    <dt>Punkte</dt>
+                                    <dd>0</dd>
+                                </div>
+                                <div>
+                                    <dt>Chassis</dt>
+                                    <dd>MAC-26</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <div class="rules" id="rules">
+            <section class="rules-section">
+                <div class="rules-heading">
+                    <p class="rules-tag">FIA Reglement</p>
+                    <h2>Die Regeln <span>des Sports</span></h2>
+                    <p>Die Regeln sorgen für faire Rennen und schützen Fahrer sowie Streckenpersonal.</p>
+                    <p>Die Regeln werden von der Fédération Internationale de l'Automobile (FIA) festgelegt und
+                        regelmäßig
+                        angepasst.</p>
+                    <p class="rules-hint">Wähle einen Bereich, um mehr zu erfahren</p>
+                </div>
+
+                <!-- ohne Scroll-Sprung -->
+                <input type="radio" name="rule" id="r-close" checked>
+                <input type="radio" name="rule" id="r-technical">
+                <input type="radio" name="rule" id="r-sporting">
+                <input type="radio" name="rule" id="r-points">
+                <input type="radio" name="rule" id="r-flags">
+                <input type="radio" name="rule" id="r-safety">
+
+                <nav class="rules-selection" aria-label="Regelbereiche">
+                    <label for="r-technical"><span>01</span> Technische Regeln</label>
+                    <label for="r-sporting"><span>02</span> Sportliche Regeln</label>
+                    <label for="r-points"><span>03</span> Punktevergabe</label>
+                    <label for="r-flags"><span>04</span> Flaggen &amp; Signale</label>
+                    <label for="r-safety"><span>05</span> Sicherheit</label>
+                </nav>
+
+                <div class="rules-details">
+                    <div class="technical" id="technical">
+                        <header>
+                            <span>⚒</span>
+                            <h3>Technische Regeln</h3>
+                        </header>
+                        <ul>
+                            <li><strong>Motor (Power Unit):</strong> Alle nutzen 1,6-Liter-V6-Turbo-Hybridmotoren mit
+                                einem strikten Spritlimit (max. 110 kg pro Rennen) und fest definierter elektrischer
+                                Leistung.</li>
+                            <li><strong>Aerodynamik:</strong> Die Form von Flügeln und dem Unterboden (Ground-Effect)
+                                ist eng geschnürt. Das Hauptziel: Die verwirbelte Luft ("Dirty Air") hinter dem Auto
+                                reduzieren, damit das Überholen leichter wird.</li>
+                            <li><strong>Gewicht &amp; Maße:</strong> Es gibt feste Maximalabmessungen und ein striktes
+                                Mindestgewicht (aktuell 798 kg), das kein Auto unterschreiten darf.</li>
+                            <li><strong>Reifen:</strong> Alle Teams müssen die exakt gleichen 18-Zoll-Einheitsreifen von
+                                Pirelli verwenden.</li>
+                            <li><strong>Sicherheit:</strong> Verpflichtende, extreme Crashtests, der Titan-Kopfschutz
+                                (Halo) und eine unzerstörbare Fahrerkapsel (Monocoque) sind für jedes Chassis absolute
+                                Pflicht.</li>
+                        </ul>
+                        <label for="r-close" class="rules-close">✕<span class="visually-hidden">Schließen</span></label>
+                    </div>
+
+                    <div class="sporting" id="sporting">
+                        <header>
+                            <span>▤</span>
+                            <h3>Sportliche Regeln</h3>
+                        </header>
+                        <ul>
+                            <li><strong>Wochenend-Ablauf:</strong> Besteht aus freien Trainings, einem dreiteiligen
+                                Knockout-Qualifying (Q1, Q2, Q3) zur Ermittlung der Startaufstellung und dem Grand Prix
+                                am Sonntag (Ausnahme: Wochenenden mit Sprintrennen).</li>
+                            <li><strong>Punkteverteilung:</strong> Nur die ersten 10 Fahrer im Ziel bekommen
+                                Meisterschaftspunkte (25-18-15-12-10-8-6-4-2-1). Es gibt 1 Bonuspunkt für die schnellste
+                                Rennrunde, sofern dieser Fahrer in den Top 10 landet.</li>
+                            <li><strong>Reifen- &amp; Boxenpflicht:</strong> In einem trockenen Rennen ist mindestens
+                                ein Boxenstopp vorgeschrieben. Jeder Fahrer muss dabei mindestens zwei verschiedene
+                                Reifenmischungen (Soft, Medium oder Hard) verwenden.</li>
+                            <li><strong>Strafensystem:</strong> Die Rennkommissare (Stewards) ahnden Regelverstöße wie
+                                das Verursachen von Unfällen, das Überfahren der Streckenbegrenzung (Track Limits) oder
+                                zu schnelles Fahren in der Boxengasse meist mit Zeitstrafen (z.B. 5 oder 10 Sekunden)
+                                oder Strafversetzungen beim Start (Grid Penalties).</li>
+                            <li><strong>Renn-Neutralisierung:</strong> Bei Gefahr auf der Strecke wird das Feld durch
+                                das Safety Car oder das Virtual Safety Car (VSC) eingebremst, wobei absolutes
+                                Überholverbot herrscht. Bei zu großer Gefahr wird das Rennen unterbrochen (Rote Flagge).
+                            </li>
+                        </ul>
+                        <label for="r-close" class="rules-close">✕<span class="visually-hidden">Schließen</span></label>
+                    </div>
+
+                    <div class="points" id="points">
+                        <header>
+                            <span>★</span>
+                            <h3>Punktevergabe</h3>
+                        </header>
+                        <ul>
+                            <li><strong>Grand Prix (Hauptrennen):</strong> Die ersten 10 Fahrer im Ziel erhalten
+                                absteigend Meisterschaftspunkte nach dem festen Schlüssel: 25, 18, 15, 12, 10, 8, 6, 4,
+                                2, 1.</li>
+                            <li><strong>Sprintrennen:</strong> An Wochenenden mit dem verkürzten Sprint-Format bekommen
+                                die ersten 8 Fahrer zusätzliche Punkte nach dem Schlüssel: 8, 7, 6, 5, 4, 3, 2, 1.</li>
+                            <li><strong>Schnellste Rennrunde:</strong> Der Fahrer, der im Hauptrennen die schnellste
+                                Runde fährt, erhält 1 Bonuspunkt – allerdings nur, wenn er das Rennen auch in den Top 10
+                                beendet.</li>
+                            <li><strong>Rennabbruch:</strong> Wird ein Rennen vorzeitig abgebrochen (z.B. durch starkes
+                                Gewitter), gibt es ein gestaffeltes System. Je nach absolvierter Renndistanz werden dann
+                                nur noch reduzierte Punkte vergeben.</li>
+                            <li><strong>Konstrukteurs-WM:</strong> Alle Punkte, die die beiden Fahrer eines Rennstalls
+                                sammeln, werden zusammenaddiert und entscheiden über den Weltmeistertitel der Teams.
+                            </li>
+                        </ul>
+                        <label for="r-close" class="rules-close">✕<span class="visually-hidden">Schließen</span></label>
+                    </div>
+
+                    <div class="flags" id="flags">
+                        <header>
+                            <span>⚑</span>
+                            <h3>Flaggen &amp; Signale</h3>
+                        </header>
+                        <ul>
+                            <li><strong>Gelbe Flagge (Gefahr):</strong> Signalisiert Gefahr auf oder neben der Strecke.
+                                Es herrscht striktes Überholverbot und die Geschwindigkeit muss spürbar reduziert
+                                werden.</li>
+                            <li><strong>Rote Flagge (Abbruch):</strong> Das Rennen oder Training wird wegen zu großer
+                                Gefahr oder schlechtem Wetter abgebrochen. Alle Fahrer müssen sofort in die Boxengasse
+                                zurückkehren.</li>
+                            <li><strong>Blaue Flagge (Überrundung):</strong> Weist einen langsameren Fahrer darauf hin,
+                                dass ein überrundendes, schnelleres Auto naht und er umgehend Platz machen muss.</li>
+                            <li><strong>Grüne Flagge (Freigabe):</strong> Hebt alle vorherigen Gefahrensignale auf. Die
+                                Strecke ist wieder frei, das Rennen geht normal weiter und Überholen ist erlaubt.</li>
+                            <li><strong>Karierte Flagge (Ziel):</strong> Die berühmte schwarz-weiß karierte Flagge
+                                markiert das offizielle Ende des Rennens oder des Qualifyings.</li>
+                        </ul>
+                        <label for="r-close" class="rules-close">✕<span class="visually-hidden">Schließen</span></label>
+                    </div>
+
+                    <div class="safety" id="safety">
+                        <header>
+                            <span>⛑</span>
+                            <h3>Sicherheit</h3>
+                        </header>
+                        <ul>
+                            <li><strong>Halo-System:</strong> Der markante Titan-Bügel über dem Cockpit schützt den Kopf
+                                des Fahrers vor umherfliegenden Trümmerteilen und bei Überschlägen.</li>
+                            <li><strong>Überlebenszelle (Monocoque):</strong> Das Cockpit besteht aus extrem stabilem
+                                Carbon und fungiert als nahezu unzerstörbare Schutzkapsel, die selbst schwerste
+                                Einschläge aushält.</li>
+                            <li><strong>FIA-Crashtests:</strong> Bevor ein neues Auto überhaupt auf die Rennstrecke
+                                darf, muss das Chassis extrem strenge, dynamische und statische Crashtests der FIA
+                                bestehen.</li>
+                            <li><strong>Fahrerausrüstung:</strong> Zur Pflichtausstattung gehören feuerfeste Overalls,
+                                biometrische Handschuhe, hochmoderne Helme und das HANS-System (Head and Neck Support)
+                                zum Schutz der Halswirbelsäule.</li>
+                            <li><strong>Medical Car:</strong> Bei schweren Unfällen rückt sofort ein hochmotorisiertes,
+                                medizinisches Einsatzfahrzeug mit einem Notarzt aus, um binnen Sekunden Erste Hilfe an
+                                der Strecke zu leisten.</li>
+                        </ul>
+                        <label for="r-close" class="rules-close">✕<span class="visually-hidden">Schließen</span></label>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="history" id="history">
+            <div class="history-section">
+                <div class="history-heading">
+                    <p class="history-tag">Historie</p>
+                    <h2>Die Evolution <span>des Rennsports</span></h2>
+                    <p>Seit den ersten Weltmeisterschaftsrennen hat sich viel verändert:
+                        die Autos, die Motoren und die Sicherheit.</p>
+                    <p class="history-hint">Wähle einen Meilenstein aus, um mehr zu erfahren</p>
+                </div>
+
+                <!-- ohne Scroll-Sprung -->
+                <input type="radio" name="history" id="h-close" checked>
+                <input type="radio" name="history" id="h-1950">
+                <input type="radio" name="history" id="h-1981">
+                <input type="radio" name="history" id="h-1994">
+                <input type="radio" name="history" id="h-2009">
+                <input type="radio" name="history" id="h-2014">
+                <input type="radio" name="history" id="h-2018">
+                <input type="radio" name="history" id="h-2022">
+                <input type="radio" name="history" id="h-2026">
+
+                <nav class="history-selection" aria-label="Meilenstein auswählen">
+                    <label for="h-1950">
+                        <picture>
+                            <img src="media/History/1950.jpg" alt="1950 Die Weltmeisterschaft beginnt">
+                        </picture>
+                        <strong>1950</strong>
+                        <span>Die Weltmeisterschaft beginnt</span>
+                    </label>
+                    <label for="h-1981">
+                        <picture>
+                            <img src="media/History/1981.jpg" alt="1981 Carbon verändert den Rennsport">
+                        </picture>
+                        <strong>1981</strong>
+                        <span>Carbon verändert den Rennsport</span>
+                    </label>
+                    <label for="h-1994">
+                        <picture>
+                            <img src="media/History/1994.jpg" alt="1994 Sicherheit im Mittelpunkt">
+                        </picture>
+                        <strong>1994</strong>
+                        <span>Sicherheit im Mittelpunkt</span>
+                    </label>
+                    <label for="h-2009">
+                        <picture>
+                            <img src="media/History/2009.jpg" alt="2009 Energie zurückgewinnen">
+                        </picture>
+                        <strong>2009</strong>
+                        <span>Energie zurückgewinnen</span>
+                    </label>
+                    <label for="h-2014">
+                        <picture>
+                            <img src="media/History/2014.jpg" alt="2014 Die Turbo-Hybridära">
+                        </picture>
+                        <strong>2014</strong>
+                        <span>Die Turbo-Hybridära</span>
+                    </label>
+                    <label for="h-2018">
+                        <picture>
+                            <img src="media/History/2018.jpg" alt="2018 Der Halo schützt die Fahrer">
+                        </picture>
+                        <strong>2018</strong>
+                        <span>Der Halo schützt die Fahrer</span>
+                    </label>
+                    <label for="h-2022">
+                        <picture>
+                            <img src="media/History/2022.jpg" alt="2022 Der Unterboden">
+                        </picture>
+                        <strong>2022</strong>
+                        <span>Der Unterboden</span>
+                    </label>
+                    <label for="h-2026">
+                        <picture>
+                            <img src="media/History/2026.jpg" alt="2026 Der 50/50-Regelung">
+                        </picture>
+                        <strong>2026</strong>
+                        <span>Der 50/50-Regelung</span>
+                    </label>
+                </nav>
+
+                <div class="history-details">
+                    <article class="h-1950" id="history-1950">
+                        <h3><span>1950</span> Die Weltmeisterschaft beginnt</h3>
+                        <ul>
+                            <li>Die erste Formel-1-Weltmeisterschaft findet statt.</li>
+                            <li>Damit beginnt die Geschichte der heutigen Weltmeisterschaft.</li>
+                            <li>Technik und Sicherheit entwickeln sich seitdem stetig weiter.</li>
+                        </ul>
+                        <label for="h-close" class="history-close">✕<span
+                                class="visually-hidden">Schließen</span></label>
+                    </article>
+
+                    <article class="h-1981" id="history-1981">
+                        <h3><span>1981</span> Carbon verändert den Rennsport</h3>
+                        <ul>
+                            <li>McLaren setzt beim MP4/1 auf ein Carbon-Monocoque.</li>
+                            <li>Das Monocoque bildet die zentrale Struktur um den Fahrer.</li>
+                            <li>Carbon verbindet ein geringes Gewicht mit hoher Festigkeit.</li>
+                        </ul>
+                        <label for="h-close" class="history-close">✕<span
+                                class="visually-hidden">Schließen</span></label>
+                    </article>
+
+                    <article class="h-1994" id="history-1994">
+                        <h3><span>1994</span> Sicherheit im Mittelpunkt</h3>
+                        <ul>
+                            <li>Die tödlichen Unfälle in Imola führen zu weiteren Sicherheitsmaßnahmen.</li>
+                            <li>Strecken und Schutzbarrieren werden verbessert.</li>
+                            <li>Auch die Anforderungen an die Helme werden verschärft.</li>
+                        </ul>
+                        <label for="h-close" class="history-close">✕<span
+                                class="visually-hidden">Schließen</span></label>
+                    </article>
+
+                    <article class="h-2009" id="history-2009">
+                        <h3><span>2009</span> Energie zurückgewinnen</h3>
+                        <ul>
+                            <li>Teams dürfen das Energierückgewinnungssystem KERS einsetzen.</li>
+                            <li>Beim Bremsen wird Energie zurückgewonnen und gespeichert.</li>
+                            <li>Diese Energie liefert beim Beschleunigen zusätzliche Leistung.</li>
+                        </ul>
+                        <label for="h-close" class="history-close">✕<span
+                                class="visually-hidden">Schließen</span></label>
+                    </article>
+
+                    <article class="h-2014" id="history-2014">
+                        <h3><span>2014</span> Die Turbo-Hybridära</h3>
+                        <ul>
+                            <li>V6-Turbomotoren mit 1,6 Litern Hubraum werden eingeführt.</li>
+                            <li>Der Antrieb kombiniert Verbrennungsmotor und elektrische Systeme.</li>
+                            <li>Energierückgewinnung wird ein zentraler Bestandteil des Antriebs.</li>
+                        </ul>
+                        <label for="h-close" class="history-close">✕<span
+                                class="visually-hidden">Schließen</span></label>
+                    </article>
+
+                    <article class="h-2018" id="history-2018">
+                        <h3><span>2018</span> Der Halo schützt die Fahrer</h3>
+                        <ul>
+                            <li>Der Halo wird in der Formel 1 verpflichtend eingeführt.</li>
+                            <li>Der Schutzbügel befindet sich über dem Cockpit.</li>
+                            <li>Er bietet zusätzlichen Schutz für den Kopf des Fahrers.</li>
+                        </ul>
+                        <label for="h-close" class="history-close">✕<span
+                                class="visually-hidden">Schließen</span></label>
+                    </article>
+
+                    <article class="h-2022" id="history-2022">
+                        <h3><span>2022</span> Der Unterboden</h3>
+                        <ul>
+                            <li>Rückkehr des Ground-Effects mit Venturi-Kanälen im Unterboden.</li>
+                            <li>Verwirbelte Luft ("Dirty Air") wird reduziert, um engeres Racing zu ermöglichen.</li>
+                            <li>Einführung von 18-Zoll-Niederquerschnittsreifen.</li>
+                        </ul>
+                        <label for="h-close" class="history-close">✕<span
+                                class="visually-hidden">Schließen</span></label>
+                    </article>
+
+                    <article class="h-2026" id="history-2026">
+                        <h3><span>2026</span> Die 50/50-Regelung</h3>
+                        <ul>
+                            <li>50/50-Leistungsaufteilung zwischen Verbrenner und Elektroantrieb.</li>
+                            <li>Kompletter Verzicht auf die MGU-H für Kostensenkung und einfachere Technik.</li>
+                            <li>Einsatz von 100 % nachhaltigem Kraftstoff und aktiver Aerodynamik.</li>
+                        </ul>
+                        <label for="h-close" class="history-close">✕<span
+                                class="visually-hidden">Schließen</span></label>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="media" id="media">
+            <div class="media-section">
+                <div class="media-heading">
+                    <p class="media-tag">Multimedia</p>
+                    <h2>F1 Media <span>&amp; Assets</span></h2>
+                </div>
+
+                <div class="media-grid">
+                    <!-- Linke Spalte: Video -->
+                    <article class="media-card">
+                        <div class="media-card-header">
+                            <h3>F1 Intro 2026</h3>
+                            <p>Offizielles Teaser-Intro mit Startampel und Teamlogos</p>
+                        </div>
+                        <div class="media-video-display">
+                            <video controls playsinline preload="metadata">
+                                <source src="media/f1-1.mp4" type="video/mp4">
+                                <track kind="captions" src="media/f1-intro.vtt" srclang="de" label="Deutsch" default>
+                                Dein Browser unterstützt dieses Video nicht.
+                            </video>
+                        </div>
+                        <div class="media-actions">
+                            <details class="media-prompt">
+                                <summary class="prompt-btn">Text-Transkript</summary>
+                                <div class="prompt-box">
+                                    <p><strong>Visuelle Beschreibung &amp; Ablauf (0:00–0:10):</strong></p>
+                                    <ul>
+                                        <li><strong>0:00–0:01:</strong> Intro-Eröffnung im 16:9-Format vor schwarzem Hintergrund. Die Kamera nähert sich einer F1-Startampel. Das McLaren-Logo wird zentral eingeblendet.</li>
+                                        <li><strong>0:01–0:07:</strong> Schnelle Schnitte durch die offiziellen Teamlogos 2026 (Ferrari, Mercedes, Red Bull Racing, Aston Martin, Alpine, Haas, Racing Bulls, Williams, Audi, Cadillac). Zeitgleich schalten synchron die fünf roten Startampel-Leuchten nacheinander von links nach rechts ein.</li>
+                                        <li><strong>0:07–0:09:</strong> Alle fünf Startampel-Lichter leuchten rot. Die Logos blenden aus, die Kamera fokussiert die Ampel.</li>
+                                        <li><strong>0:09–0:10:</strong> Startsignal: Sämtliche roten Leuchten erlöschen und wechseln schlagartig auf leuchtendes Grün – Rennstart der Formel 1 2026.</li>
+                                    </ul>
+                                    <p><strong>Audiodeskription:</strong> Ansteigendes Motorenbrummen und synthetischer Spannungsaufbau, der beim Umschalten auf die grünen Startleuchten in kraftvollem Beschleunigungssound gipfelt.</p>
+                                </div>
+                            </details>
+                            <details class="media-prompt">
+                                <summary class="prompt-btn">Prompt</summary>
+                                <div class="prompt-box">
+                                    <p>Erstelle ein etwa 8-10 Sekunden langes Formel-1-Intro nach dem hochgeladenen
+                                        Referenzvideo. Übernimm dessen dunklen, kontrastreichen Look, die schnellen
+                                        Logo-Wechsel und die große Startampel mit 4 Lichtern. Nutze dasselbe
+                                        Seitenverhältnis wie die Vorlage, in hoher Auflösung.</p>
+                                    <p><strong>Design:</strong> Schwarzer Hintergrund, eine realistische metallische
+                                        F1-Startampel mit fünf nebeneinanderliegenden Lichtgruppen und jeweils vier runden
+                                        Leuchten. Intensive Lichtreflexionen, dezenter Rauch und ein hochwertiger
+                                        Motorsport-Look. Die oberen zwei Reihen sind rot und die unteren sind Grün. Die
+                                        Ampel bleibt während der Logo-Sequenz deutlich sichtbar.</p>
+                                    <p><strong>Logos:</strong> Zeige nacheinander die aktuellen offiziellen Teamlogos von
+                                        McLaren, Ferrari, Mercedes, Red Bull Racing, Aston Martin, Alpine, Haas, Racing
+                                        Bulls, Williams, Audi und Cadillac. Jedes Team erscheint einmal deutlich erkennbar
+                                        und groß in der Bildmitte. Originalfarben, korrekte Proportionen und scharfe
+                                        Konturen beibehalten.</p>
+                                    <p><strong>Ablauf:</strong></p>
+                                    <ul>
+                                        <li><strong>0–1 Sek.:</strong> Die Kamera nähert sich langsam der zunächst
+                                            unbeleuchteten Startampel. Die ersten Teamlogos erscheinen.</li>
+                                        <li><strong>1–7 Sek.:</strong> Schnelle, rhythmische Wechsel durch die übrigen
+                                            Teamlogos, mit kurzen Zoom- und Lichtimpulsen wie in der Vorlage. Gleichzeitig
+                                            leuchten die fünf Lichtgruppen nacheinander von links nach rechts rot auf.
+                                            Bereits eingeschaltete Leuchten bleiben rot.</li>
+                                        <li><strong>7–9 Sek.:</strong> Alle fünf Lichtgruppen leuchten kräftig rot. Das
+                                            letzte Teamlogo verschwindet, die Kamera fokussiert die Ampel. Kurzer
+                                            spannungsvoller Moment.</li>
+                                        <li><strong>Finale:</strong> Zum Finale wechseln ALLE roten Leuchten gleichzeitig
+                                            auf kräftiges GRÜN. Der Wechsel muss eindeutig sichtbar sein. Das grüne
+                                            Schlussbild mindestens eine Sekunde halten.</li>
+                                    </ul>
+                                    <p><strong>Format und Auflösung:</strong> Erstelle das Video im horizontalen Querformat
+                                        (16:9) in 4K UHD mit 3840 × 2160 Pixeln. Die gesamte Bildfläche soll ausgefüllt
+                                        sein, ohne schwarze Balken. Ordne Logos und Startampel passend zum Querformat an,
+                                        sodass nichts abgeschnitten oder verzerrt wird.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- Rechte Spalte: Audio & Logo -->
+                    <div class="media-col-right">
+                        <article class="media-card">
+                            <div class="media-card-header">
+                                <h3>F1 Motorensound</h3>
+                                <p>V6 Turbo-Hybrid Flyby (10 Sekunden)</p>
+                            </div>
+                            <div class="media-audio-display">
+                                <audio controls preload="metadata">
+                                    <source src="media/F1-Flyby-10-Sekunden.mp3" type="audio/mpeg">
+                                    Dein Browser unterstützt kein Audio.
+                                </audio>
+                            </div>
+                            <div class="media-actions">
+                                <details class="media-prompt">
+                                    <summary class="prompt-btn">Text-Transkript</summary>
+                                    <div class="prompt-box">
+                                        <p><strong>Audiodeskription &amp; Klangverlauf (0:00–0:10):</strong></p>
+                                        <ul>
+                                            <li><strong>0:00–0:03:</strong> Aus der Ferne kündigt sich das hochfrequente Heulen eines 1,6-Liter-V6-Turbo-Hybrid-Motors an, das mit rasanter Annäherung anschwillt.</li>
+                                            <li><strong>0:03–0:06:</strong> Strecken-Vorbeiflug (Flyby) an der Boxenmauer unter Volllast mit markantem Dopplereffekt, Turbolader-Pfeifen und lautem Abgassound.</li>
+                                            <li><strong>0:06–0:10:</strong> Gangwechsel unter Volllast, kurzes Absinken und sofortiges Wiederansteigen der Drehzahl, bevor der Klang in der Kurvenanfahrt verhallt.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+                                <details class="media-prompt">
+                                    <summary class="prompt-btn">Prompt</summary>
+                                    <div class="prompt-box">
+                                        <p>Erstelle mir einen Flyby-Sound von einem f1 auto 10 Sekunden lang in mp3</p>
+                                    </div>
+                                </details>
+                            </div>
+                        </article>
+
+                        <article class="media-card">
+                            <div class="media-card-header">
+                                <h3>F1 Vektor-Logo</h3>
+                                <p>Offizielles Formel 1 Logo als SVG</p>
+                            </div>
+                            <div class="media-logo-display">
+                                <object data="media/F1_logo.svg" type="image/svg+xml" width="200" height="50" aria-label="Offizielles Formel 1 Vektor-Logo">
+                                    <img src="media/F1_logo.svg" alt="Offizielles Formel 1 Vektor-Logo" width="200" height="50">
+                                </object>
+                            </div>
+                            <div class="media-actions">
+                                <details class="media-prompt">
+                                    <summary class="prompt-btn">Text-Transkript</summary>
+                                    <div class="prompt-box">
+                                        <p><strong>Detaillierte Bildbeschreibung / Transkript:</strong></p>
+                                        <ul>
+                                            <li><strong>Buchstabe „F“:</strong> Links positioniert, in leuchtendem Rot gehalten und stark nach rechts geneigt (kursiv), um Vorwärtsdrang und hohe Geschwindigkeit zu verkörpern.</li>
+                                            <li><strong>Ziffer „1“:</strong> Entsteht als optische Täuschung im Negativraum zwischen dem roten „F“ und den angrenzenden weißen Elementen.</li>
+                                            <li><strong>Geschwindigkeitsstreifen:</strong> Mehrere horizontale weiße Linien mit schrägen Abschlusskanten symbolisieren aerodynamische Luftströmung und Dynamik.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+                                <details class="media-prompt">
+                                    <summary class="prompt-btn">Prompt</summary>
+                                    <div class="prompt-box">
+                                        <p>gebe mir das f1 logo als svg datei, das F soll rot sein und 1 soll weiß sein</p>
+                                    </div>
+                                </details>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="media-canvas-container" id="canvas">
+                    <article class="media-card canvas-card">
+                        <div class="media-card-header">
+                            <h3>2D Canvas: Formel-1-Auto</h3>
+                            <p>Klicke auf die Strecke, damit das Auto weiterfährt.</p>
+                        </div>
+                        <div class="canvas-display">
+                            <canvas id="raceCanvas" width="800" height="200">
+                                Dein Browser unterstützt das HTML5-Canvas-Element leider nicht. Hier wird ein
+                                vereinfachtes rotes Formel-1-Auto auf einer Rennstrecke dargestellt.
+                            </canvas>
+                        </div>
+                        <div class="media-actions">
+                            <details class="media-prompt">
+                                <summary class="prompt-btn">Text-Transkript</summary>
+                                <div class="prompt-box">
+                                    <p><strong>Visuelle Beschreibung der interaktiven Canvas-Animation:</strong></p>
+                                    <p>Ein vereinfachter roter Formel-1-Rennwagen fährt auf einer asphaltgrauen Fahrbahn mit weiß gestrichelter Mittelmarkierung. Mit jedem Klick auf die Leinwand fährt das Auto in Rennrichtung nach rechts weiter; erreicht es den rechten Bildschirmrand, startet es nahtlos wieder links.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div id="footer">
+            <footer>
+                <p>palash bhatnagar f1 webseite</p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

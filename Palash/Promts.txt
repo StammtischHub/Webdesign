@@ -1,0 +1,25 @@
+f1_logo.svg 
+gebe mir das f1 logo als svg datei, das F soll rot sein und 1 soll weiß sein
+
+video 1:
+Erstelle ein etwa 8-10 Sekunden langes Formel-1-Intro nach dem hochgeladenen Referenzvideo. Übernimm dessen dunklen, kontrastreichen Look, die schnellen Logo-Wechsel und die große Startampel mit 4 Lichtern. Nutze dasselbe Seitenverhältnis wie die Vorlage, in hoher Auflösung.
+
+Design: Schwarzer Hintergrund, eine realistische metallische F1-Startampel mit fünf nebeneinanderliegenden Lichtgruppen und jeweils vier runden Leuchten. Intensive Lichtreflexionen, dezenter Rauch und ein hochwertiger Motorsport-Look. die Oberen zwei reigen sind rot und die unteren sind Grün. Die Ampel bleibt während der Logo-Sequenz deutlich sichtbar.
+
+Logos: Zeige nacheinander die aktuellen offiziellen Teamlogos von McLaren, Ferrari, Mercedes, Red Bull Racing, Aston Martin, Alpine, Haas, Racing Bulls, Williams, Audi und Cadillac. Jedes Team erscheint einmal deutlich erkennbar und groß in der Bildmitte. Originalfarben, korrekte Proportionen und scharfe Konturen beibehalten. Keine erfundenen oder miteinander verschmolzenen Logos. Verwende bereitgestellte Logo-Dateien unverändert als grafische Einblendungen.
+
+Ablauf:
+
+– 0–1 Sekunden: Die Kamera nähert sich langsam der zunächst unbeleuchteten Startampel. Die ersten Teamlogos erscheinen.
+
+– 1–7 Sekunden: Schnelle, rhythmische Wechsel durch die übrigen Teamlogos, mit kurzen Zoom- und Lichtimpulsen wie in der Vorlage. Gleichzeitig leuchten die fünf Lichtgruppen nacheinander von links nach rechts rot auf. Bereits eingeschaltete Leuchten bleiben rot.
+
+– 7–9 Sekunden: Alle fünf Lichtgruppen leuchten kräftig rot. Das letzte Teamlogo verschwindet, die Kamera fokussiert die Ampel. Kurzer spannungsvoller Moment.
+
+– Zum Finale wechseln ALLE roten Leuchten gleichzeitig auf kräftiges GRÜN. Der Wechsel muss eindeutig sichtbar sein. Das grüne Schlussbild mindestens eine Sekunde halten.
+
+Format und Auflösung: Erstelle das Video im horizontalen Querformat (16:9) in 4K UHD mit 3840 × 2160 Pixeln. Die gesamte Bildfläche soll ausgefüllt sein, ohne schwarze Balken. Ordne Logos und Startampel passend zum Querformat an, sodass nichts abgeschnitten oder verzerrt wird.  
+
+
+audio 1 
+Erstelle mir einen Flyby-Sound von einem f1 auto 10 Sekunden lang in mp3
