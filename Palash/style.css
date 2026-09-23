@@ -1,5 +1,5 @@
 :root {
-    --red: #ed1b24;
+    --red: #d3141d;
     --ink: #05080a;
     --line: #263037;
     --edge: #2a353d;
@@ -43,7 +43,7 @@ figcaption {
 .site-header {
     position: fixed;
     inset: 0 0 auto;
-    z-index: 1000;
+    z-index: 10;
     width: 100%;
     background: rgba(0, 0, 0, 0.959)
 }
@@ -62,7 +62,7 @@ figcaption {
 }
 
 .main-navigation a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
     font: bold 1rem var(--font);
     text-transform: uppercase
@@ -70,7 +70,7 @@ figcaption {
 
 .main-navigation a:hover,
 .main-navigation .is-active {
-    color: red
+    color: var(--red)
 }
 
 /* Startbereich mit Video */
@@ -82,7 +82,7 @@ figcaption {
 .video-c1 {
     position: absolute;
     inset: 0;
-    z-index: 0;
+    z-index: 1;
     overflow: hidden
 }
 
@@ -91,16 +91,16 @@ figcaption {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background: black;
+    background: var(--ink);
     filter: brightness(0.45)
 }
 
 .content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: 50rem;
     padding: 180px 5% 60px;
-    color: white;
+    color: var(--white);
     font-family: var(--font);
     text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.918)
 }
@@ -131,7 +131,7 @@ figcaption {
     display: inline-block;
     padding: 18px 25px;
     background: var(--red);
-    color: rgb(255, 255, 255);
+    color: var(--white);
     text-decoration: none;
     font-weight: bold;
     text-shadow: none
@@ -155,7 +155,7 @@ figcaption {
 
 .team-h {
     margin: 1em 0;
-    color: rgb(255, 4, 4);
+    color: var(--red);
     font-size: xx-large;
     font-weight: normal
 }
@@ -223,7 +223,7 @@ input[name=history] {
 .team-selection label:hover,
 .team-selection label:focus-visible {
     transform: translateY(-5px);
-    border-color: rgb(252, 4, 4)
+    border-color: var(--red)
 }
 
 
@@ -238,7 +238,7 @@ input[name=history] {
 #t-williams:checked~.team-selection label[for=t-williams],
 #t-audi:checked~.team-selection label[for=t-audi],
 #t-cadillac:checked~.team-selection label[for=t-cadillac] {
-    border-color: rgb(252, 4, 4)
+    border-color: var(--red)
 }
 
 .team-card article {
@@ -270,7 +270,7 @@ input[name=history] {
 }
 
 .team-card header p {
-    color: rgb(255, 4, 4);
+    color: var(--red);
     font-size: xx-large;
     font-weight: bold;
     line-height: 1
@@ -297,7 +297,7 @@ input[name=history] {
     top: 15px;
     padding: 0;
     border: 0;
-    z-index: 2
+    z-index: 3
 }
 
 .team-close:hover,
@@ -312,7 +312,7 @@ input[name=history] {
     grid-template-rows: 1fr auto;
     grid-template-areas: "car links rechts" "stats links rechts";
     text-align: center;
-    background: radial-gradient(var(--line) 1px, transparent 1px) 0 0 / 10px 10px #1f273181
+    background: radial-gradient(var(--line) 1px, transparent 1px) 0 0 / 10px 10px var(--card)
 }
 
 .driver>figure {
@@ -530,7 +530,7 @@ input[name=history] {
 .rules-selection label:hover,
 .rules-selection label:focus-visible {
     transform: translateX(6px);
-    background: #1c2730;
+    background: var(--edge);
     border-color: var(--red);
     border-left-color: var(--red)
 }
@@ -547,7 +547,7 @@ input[name=history] {
 #r-safety:checked~.rules-selection label[for=r-safety] {
     background: var(--red);
     border-color: var(--red);
-    border-left-color: #fff;
+    border-left-color: var(--white);
     box-shadow: 0 0 15px var(--red);
     color: var(--white)
 }
@@ -676,13 +676,13 @@ input[name=history] {
     transform: translateY(-3px);
     border-color: var(--red);
     border-left-color: var(--red);
-    box-shadow: 0 4px 15px rgba(237, 27, 36, 0.25)
+    box-shadow: 0 0 15px var(--red)
 }
 
 .history-selection picture {
     position: absolute;
     inset: 0;
-    z-index: 0
+    z-index: 1
 }
 
 .history-selection picture img {
@@ -701,7 +701,7 @@ input[name=history] {
 .history-selection strong,
 .history-selection span {
     position: relative;
-    z-index: 1
+    z-index: 2
 }
 
 .history strong {
@@ -715,7 +715,7 @@ input[name=history] {
 }
 
 .history-selection span {
-    color: #e0e5eb;
+    color: var(--soft);
     font-size: 0.92rem;
     line-height: 1.35;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
@@ -750,7 +750,7 @@ input[name=history] {
     position: relative;
     grid-column: 1 / -1;
     padding: 25px;
-    background: #1c252b;
+    background: var(--card);
     border: 1px solid var(--white)
 }
 
@@ -841,7 +841,7 @@ input[name=history] {
 .media-video-display video {
     display: block;
     width: 100%;
-    background: #000;
+    background: var(--ink);
     border: 1px solid var(--line)
 }
 
@@ -862,7 +862,7 @@ input[name=history] {
     justify-content: center;
     flex: 1;
     min-height: 90px;
-    background: #090d10;
+    background: var(--ink);
     border: 1px solid var(--line)
 }
 
@@ -885,7 +885,7 @@ input[name=history] {
     gap: 8px;
     width: fit-content;
     padding: 8px 18px;
-    background: #1c252b;
+    background: var(--card-light);
     border: 1px solid var(--line);
     border-left: 3px solid var(--red);
     color: var(--white);
@@ -917,7 +917,7 @@ input[name=history] {
 .media-prompt[open]>.prompt-btn {
     color: var(--white);
     border-color: var(--red);
-    box-shadow: 0 0 10px rgba(237, 27, 36, 0.35)
+    box-shadow: 0 0 10px var(--red)
 }
 
 .prompt-box {
@@ -968,7 +968,7 @@ input[name=history] {
     justify-content: center;
     width: 100%;
     overflow: hidden;
-    background: #0b0f12;
+    background: var(--ink);
     border: 1px solid var(--line)
 }
 
