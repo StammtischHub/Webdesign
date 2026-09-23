@@ -11,7 +11,7 @@
     --font: Arial, sans-serif
 }
 
-/* Grundregeln:einheitlicher Startpunkt für alle Browser. */
+
 * {
     margin: 0;
     padding: 0
@@ -39,7 +39,7 @@ figcaption {
     font-style: italic
 }
 
-/* Navigation */
+
 .site-header {
     position: fixed;
     inset: 0 0 auto;
@@ -189,7 +189,7 @@ input[name=history] {
     display: none
 }
 
-/* Teams:das Raster platziert die Kacheln automatisch in der richtigen Reihenfolge. */
+
 .team-selection {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -226,7 +226,7 @@ input[name=history] {
     border-color: rgb(252, 4, 4)
 }
 
-/* Der passende ID-Haken markiert nur seine eigene Teamkachel. */
+
 #t-redbull:checked~.team-selection label[for=t-redbull],
 #t-ferrari:checked~.team-selection label[for=t-ferrari],
 #t-mclaren:checked~.team-selection label[for=t-mclaren],
@@ -314,7 +314,7 @@ input[name=history] {
     text-align: center;
     background: radial-gradient(var(--line) 1px, transparent 1px) 0 0 / 10px 10px #1f273181
 }
-/* Die Prüfungsregel für figure/figcaption gilt global;im Grid bleibt die Kartenbreite erhalten. */
+
 .driver>figure {
     width: 100%;
     float: none;
@@ -394,7 +394,7 @@ input[name=history] {
     font-weight: bold
 }
 
-/* Regeln,Historie und gemeinsame Überschriften */
+
 .rules,
 .history,
 .media {
@@ -485,7 +485,7 @@ input[name=history] {
     font-size: 0.9rem
 }
 
-/* Regeln:Auswahlkarten und Zustände */
+
 .rules-selection {
     display: grid;
     grid-template-columns: 1fr;
