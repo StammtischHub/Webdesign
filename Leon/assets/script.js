@@ -11,7 +11,7 @@ function drawBasketballCourt() {
   const centerX = canvasWidth / 2;
   const centerY = canvasHeight / 2;
 
-  ctx.strokeStyle = '#0e0e0e';
+  ctx.strokeStyle = '#000000';
   ctx.lineWidth = 2;
 
   // Spielfeld-Umriss
